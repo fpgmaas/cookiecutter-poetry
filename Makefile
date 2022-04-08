@@ -11,8 +11,11 @@ format: ## Format code using isort and black.
 
 test-format: ## Check code formatting using isort, black, and flake8.
 	@echo "🚀 Checking code formatting: Running black, isort and flake8"
+	@echo "Running isort..."
 	@isort --check-only --diff .
+	@echo "Running black..."
 	@black --check .
+	@echo "Running flake8..."
 	@flake8 .
 
 test: ## Test the code with pytest

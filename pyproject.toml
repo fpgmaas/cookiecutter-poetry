@@ -18,3 +18,26 @@ black = "^22.3.0"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+target-version = ['py39']
+fast = true
+exclude = '''
+(
+  /(                        # exclude a few common directories in the
+    | \.git                 # root of the project
+    | \.pytest_cache
+    | python-venv
+    | \.venv
+    | build
+    | dist
+    | {{cookiecutter.project_slug}}
+  ))
+'''
+
+[tool.isort]
+profile = "black"
+skip = ["{{cookiecutter.project_slug}}",".venv"]

@@ -1,13 +1,10 @@
-from contextlib import contextmanager
-from cookiecutter.utils import rmtree
-import subprocess
-import shlex
 import os
-import pytest
+import shlex
+import subprocess
 
-    
+
 def test_bake_project(cookies):
-    
+
     result = cookies.bake(extra_context={"project_slug": "my-project"})
 
     assert result.exit_code == 0
@@ -28,5 +25,5 @@ def test_using_pytest(cookies, tmpdir):
 
     # Install the poetry environment and run the tests.
     os.chdir(str(result.project_path))
-    subprocess.check_call(shlex.split('make install')) == 0
-    subprocess.check_call(shlex.split('make test')) == 0
+    subprocess.check_call(shlex.split("make install")) == 0
+    subprocess.check_call(shlex.split("make test")) == 0
