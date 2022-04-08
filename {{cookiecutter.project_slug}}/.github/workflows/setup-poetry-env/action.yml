@@ -28,14 +28,14 @@ runs:
     #----------------------------------------------
     #       load cached venv if cache exists
     #----------------------------------------------
-{% raw -%}
+    {% raw -%}
     - name: Load cached venv
       id: cached-poetry-dependencies
       uses: actions/cache@v2
       with:
         path: .venv
         key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-{%- endraw %}
+    {%- endraw %}
 
     #----------------------------------------------
     # install dependencies if cache does not exist

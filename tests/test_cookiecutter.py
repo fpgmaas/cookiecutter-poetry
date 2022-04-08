@@ -43,7 +43,7 @@ def run_inside_dir(command, dirpath):
 
 def test_using_pytest(cookies, tmpdir):
     result = cookies.bake(extra_context={"project_slug": "helloworld"})
-    
+
     assert result.project_path.name == "helloworld"
     assert result.project_path.is_dir()
 
@@ -53,5 +53,5 @@ def test_using_pytest(cookies, tmpdir):
     lines = test_file_path.readlines()
     assert "import pytest" in ''.join(lines)
     # Test the new pytest target
-    run_inside_dir('make install', str(result.project))
-    run_inside_dir('pytest', str(result.project)) == 0
+    run_inside_dir('make install', str(result.project_path))
+    run_inside_dir('pytest', str(result.project_path)) == 0
