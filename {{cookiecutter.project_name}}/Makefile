@@ -17,7 +17,6 @@ test: ## Test the code with pytest
 
 install: ## Install the poetry environment
 	@echo "🚀 Creating virtual environment using pyenv and poetry"
-	@poetry config --local virtualenvs.in-project true
 	@poetry install	
 	@poetry shell
 
