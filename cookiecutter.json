@@ -1,8 +1,8 @@
 {
     "author": "Florian Maas",
     "email": "fpgmaas@gmail.com",
-    "module_name": "example-project",
-    "project_slug": "{{cookiecutter.module_name|lower|replace('-', '_')}}",
+    "project_name": "example-project",
+    "project_slug": "{{cookiecutter.project_name|lower|replace('-', '_')}}",
     "project_description": "example-project",
     "python_version": "3.9.7",
     "pyenv_local_file": ["y","n"],
