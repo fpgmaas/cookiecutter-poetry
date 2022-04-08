@@ -1,0 +1,19 @@
+on:
+    pull_request:
+        types: [opened, synchronize, reopened]
+
+name: on-pull-request
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Check out
+        uses: actions/checkout@v2
+
+      - name: Set up the environment
+        uses: ./.github/workflows/setup-poetry-env
+
+      - name: Run checks
+        uses: ./.github/workflows/run-checks
