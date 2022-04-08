@@ -34,10 +34,10 @@ exclude = '''
     | \.venv
     | build
     | dist
-    | {{cookiecutter.project_slug}}
+    | {{cookiecutter.project_name}}
   ))
 '''
 
 [tool.isort]
 profile = "black"
-skip = ["{{cookiecutter.project_slug}}",".venv"]
+skip = ["{{cookiecutter.project_name}}",".venv"]
