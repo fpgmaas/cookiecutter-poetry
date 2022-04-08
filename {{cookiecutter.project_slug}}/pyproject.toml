@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "{{cookiecutter.project_slug}}"
+version = "0.0.1"
+description = "{{cookiecutter.project_description}}"
+authors = ["{{cookiecutter.author}} <f{{cookiecutter.email}}>"]
+
+[tool.poetry.dependencies]
+python = "{{cookiecutter.python_version}}"
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+flake8 = "^4.0.1"
+isort = "^5.10.1"
+pytest = "^7.1.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+target-version = ['py39']
+fast = true
+exclude = '''
+(
+  /(                        # exclude a few common directories in the
+    | \.git                 # root of the project
+    | \.pytest_cache
+    | python-venv
+    | \.venv
+    | build
+    | dist
+  ))
+'''
+
+[tool.isort]
+profile = "black"
