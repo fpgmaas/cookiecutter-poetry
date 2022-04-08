@@ -1,8 +1,32 @@
-BAKE_OPTIONS=--no-input
+PYTHON_VERSION := 3.9.7
 
 bake: ## Run cookiecutter with default arguments.
 	@echo "🚀 Running cookiecutter with default arguments."
 	@cookiecutter --no-input . --overwrite-if-exists
+
+format: ## Format code using isort and black.
+	@echo "🚀 Formatting code: Running isort and black"
+	@isort .
+	@black .
+
+test-format: ## Check code formatting using isort, black, and flake8.
+	@echo "🚀 Checking code formatting: Running black, isort and flake8"
+	@echo "Running isort..."
+	@isort --check-only --diff .
+	@echo "Running black..."
+	@black --check .
+	@echo "Running flake8..."
+	@flake8 .
+
+test: ## Test the code with pytest
+	@echo "🚀 Testing code: Running pytest"
+	@pytest tests --doctest-modules
+
+install: ## Install the poetry environment
+	@echo "🚀 Creating virtual environment using pyenv and poetry"
+	@poetry config --local virtualenvs.in-project true
+	@poetry install	
+	@poetry shell
 
 .PHONY: help
 

@@ -7,10 +7,37 @@ authors = ["Florian Maas <fpgmaas@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.9"
 cookiecutter = "^1.7.3"
+pytest-cookies = "^0.6.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.1"
+flake8 = "^4.0.1"
+isort = "^5.10.1"
+black = "^22.3.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+target-version = ['py39']
+fast = true
+exclude = '''
+(
+  /(                        # exclude a few common directories in the
+      \.git                 # root of the project
+    | \.pytest_cache
+    | python-venv
+    | \.venv
+    | build
+    | dist
+    | {{cookiecutter.project_name}}
+  ))
+'''
+
+[tool.isort]
+profile = "black"
+skip = ["{{cookiecutter.project_name}}",".venv"]
