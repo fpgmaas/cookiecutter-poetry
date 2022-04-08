@@ -5,7 +5,7 @@ import subprocess
 
 def test_bake_project(cookies):
 
-    result = cookies.bake(extra_context={"project_slug": "my-project"})
+    result = cookies.bake(extra_context={"module_name": "my-project"})
 
     assert result.exit_code == 0
     assert result.exception is None
