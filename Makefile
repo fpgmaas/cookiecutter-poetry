@@ -17,7 +17,7 @@ test-format: ## Check code formatting using isort, black, and flake8.
 
 test: ## Test the code with pytest
 	@echo "🚀 Testing code: Running pytest"
-	@pytest --doctest-modules
+	@pytest tests --doctest-modules
 
 install: ## Install the poetry environment
 	@echo "🚀 Creating virtual environment using pyenv and poetry"
