@@ -14,7 +14,7 @@ runs:
     - name: Set up python
       uses: actions/setup-python@v2
       with:
-        python-version: { { cookiecutter.python_version } }
+        python-version: {{cookiecutter.python_version}}
     #----------------------------------------------
     #  -----  install & configure poetry  -----
     #----------------------------------------------
