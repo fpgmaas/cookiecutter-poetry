@@ -28,7 +28,7 @@ fast = true
 exclude = '''
 (
   /(                        # exclude a few common directories in the
-    | \.git                 # root of the project
+      \.git                 # root of the project
     | \.pytest_cache
     | python-venv
     | \.venv
