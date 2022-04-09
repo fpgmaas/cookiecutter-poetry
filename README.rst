@@ -28,6 +28,15 @@ Cookiecutter Poetry
 
 This is a `cookiecutter <https://github.com/cookiecutter/cookiecutter>`_ repository to generate the file structure for a Python project that uses `Poetry <https://python-poetry.org/>`_ for its dependency management.
 
++-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| **Github repository**         | `https://github.com/fpgmaas/cookiecutter-poetry/actions <https://github.com/fpgmaas/cookiecutter-poetry/actions>`_   |
++-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| **Documentation**             | `https://fpgmaas.github.io/cookiecutter-poetry/ <https://fpgmaas.github.io/cookiecutter-poetry/>`_                   |
++-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+
+
+
+
 Features
 --------
 
@@ -42,7 +51,7 @@ Features
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
 | **Formatting**                            | Adds code formatting with ``isort``, ``black`` and ``flake8``.                                                  |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
-| **Pyenv** (Optional)                      | Automatically adds a ``.python-version`` file for `pyenv <https://github.com/pyenv/pyenv>`_` support.           |
+| **Pyenv** (Optional)                      | Automatically adds a ``.python-version`` file for `pyenv <https://github.com/pyenv/pyenv>`_ support.            |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
 | **CI/CD with Github actions** (Optional)  | Adds Github actions that run the formatting checks and unittests for pull requests and when merged to `main`.   |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
