@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "poetry-cookiecutter"
+project = "cookiecutter-poetry"
 copyright = "2022, Florian Maas"
 author = "Florian Maas"
 

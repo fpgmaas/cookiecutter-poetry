@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "poetry-cookiecutter"
+name = "cookiecutter-poetry"
 version = "0.1.0"
 description = ""
 authors = ["Florian Maas <fpgmaas@gmail.com>"]

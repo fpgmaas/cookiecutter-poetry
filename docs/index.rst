@@ -1,4 +1,4 @@
-Welcome to cookiecutter-poetry's documentation!
+cookiecutter-poetry
 ==================================================
 
 .. image:: https://img.shields.io/github/workflow/status/fpgmaas/cookiecutter-poetry/merge-to-main
@@ -25,7 +25,8 @@ Welcome to cookiecutter-poetry's documentation!
 	:target: https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry
 	:alt: License
 
-This is a `cookiecutter <https://github.com/cookiecutter/cookiecutter>`_ repository to generate the file structure for a Python project that uses `Poetry <https://python-poetry.org/>`_ for its dependency management.
+This is the documentation of `cookiecutter-poetry <https://github.com/fpgmaas/cookiecutter-poetry>`_, a `cookiecutter <https://github.com/cookiecutter/cookiecutter>`_ repository to 
+generate the file structure for a Python project that uses `Poetry <https://python-poetry.org/>`_ for its dependency management.
 
 
 Getting Started
