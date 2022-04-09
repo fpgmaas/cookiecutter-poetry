@@ -1,4 +1,3 @@
-import pytest
 from {{cookiecutter.project_slug}}.foo import foo
 
 
