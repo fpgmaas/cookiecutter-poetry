@@ -67,3 +67,11 @@ you are likely still using `master` as the default branch. You can change this w
 ## Credits
 
 This project is partially based on [Audrey Feldroy's](https://github.com/audreyfeldroy)'s great [cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage) repository.
+
+----
+
+create token on PYPI
+for local:
+poetry config pypi-token.pypi my-token
+for github:
+add as environemtn variable

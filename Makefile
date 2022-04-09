@@ -9,7 +9,7 @@ format: ## Format code using isort and black.
 	@isort .
 	@black .
 
-test-format: ## Check code formatting using isort, black, and flake8.
+lint: ## Check code formatting using isort, black, and flake8.
 	@echo "🚀 Checking code formatting: Running black, isort and flake8"
 	@echo "Running isort..."
 	@isort --check-only --diff .
