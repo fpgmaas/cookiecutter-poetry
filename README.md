@@ -18,7 +18,8 @@ This is a [cookiecutter](https://github.com/cookiecutter/cookiecutter) repositor
 |  <span style="color:white">**Pytest**</span> | Adds a pytest template.|
 |  <span style="color:white">**Formatting**</span> | Adds code formatting with `isort`, `black` and `flake8`.|
 |  <span style="color:white">**CI/CD with Github actions**</span> (Optional) | Adds Github actions that run the formatting checks and unittests for pull requests and when merged to `main`. |
-|  <span style="color:white">**Release to Pypi**</span> (Optional) | Release to Pypi manually, or by creating a new release on Github. |
+|  <span style="color:white">**Release to Pypi**</span> (Optional) | Release to [Pypi](https://pypi.org/) manually, or by creating a new release on Github. |
+|  <span style="color:white">**Release to Artifactory**</span> (Optional) | Release to [Artifactory](https://jfrog.com/artifactory/) manually, or by creating a new release on Github. |
 
 ## How to use?
 
@@ -67,8 +68,3 @@ This project is partially based on [Audrey Feldroy's](https://github.com/audreyf
 
 ----
 
-create token on PYPI
-for local:
-poetry config pypi-token.pypi my-token
-for github:
-add as environemtn variable
