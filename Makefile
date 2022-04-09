@@ -18,7 +18,7 @@ lint: ## Check code formatting using isort, black, and flake8.
 
 test: ## Test the code with pytest
 	@echo "🚀 Testing code: Running pytest"
-	@pytest --doctest-modules
+	@pytest --doctest-modules tests
 
 build: clean-build ## Build wheel file using poetry
 	@echo "🚀 Creating wheel file"

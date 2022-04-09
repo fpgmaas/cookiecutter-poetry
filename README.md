@@ -25,14 +25,10 @@ This is a [cookiecutter](https://github.com/cookiecutter/cookiecutter) repositor
 
 First, create an empty [new repository](https://github.com/new) on Github. Give it a name that only contains alphanumeric characters and optionally `-`. <u>Do not check any boxes under the option *'Initialize this repository with'*.</u> 
 
-Then, on your local machine, either install `cookiecutter` in a pre-existing `pip`- or `poetry` managed environment with:
+Then, on your local machine, install `cookiecutter` with:
 
 ```bash
 pip install -U cookiecutter
-```
-or
-```
-poetry add cookiecutter
 ```
 
 Then, navigate to the directory in which you want to create your project and run:
