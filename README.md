@@ -1,7 +1,6 @@
 # Cookiecutter Poetry
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/fpgmaas/cookiecutter-poetry/merge-to-main)
-![PyPI](https://img.shields.io/pypi/v/cookiecutter-poetry)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1)](https://pycqa.github.io/isort/)
 [![Dependency management: poetry](https://img.shields.io/badge/tool-poetry-orange)](https://pycqa.github.io/isort/)
