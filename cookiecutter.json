@@ -8,6 +8,6 @@
     "python_version": "3.9.7",
     "include_pyenv_local_file": ["y","n"],
     "include_github_actions": ["y","n"],
-    "deploy_to": ["pypi", "artifactory", "none"],
+    "publish_to": ["pypi", "artifactory", "none"],
     "open_source_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"]
 }
