@@ -88,7 +88,7 @@ Pyenv
 A `.python-version` file is added with the specified ``python_version`` from the ``cookiecutter`` command, so that the right python version is used when ``make install`` is run.
 
 CI/CD with Github actions (Optional)
------------------------------------
+---------------------------------------
 
 when ``include_github_actions`` is set to ``"y"``, a ``.github`` directory is added with the following structure:
 

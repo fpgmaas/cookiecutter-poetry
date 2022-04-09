@@ -6,26 +6,12 @@ Releasing to Pypi or Artifactory
     :depth: 3
 
 
-when ``include_github_actions`` is set to ``"y"``, a ``.github`` directory is added with the following structure:
+Releasing from Github
+-------------------------
 
-::
-
-    .github
-    ├── workflows
-    ├─── run-checks
-    │    └── action.yml    
-    ├─── setup-poetry-env
-    │    └── action.yml         
-    ├── on-merge-to-main.yml
-    ├── on-pull-request.yml          
-    └── on-release-main.yml
-      
-``on-merge-to-main.yml`` and ``on-pull-request.tml`` are identical except for their trigger conditions; the first is run whenever a new commit is made to ``main`` 
-(which should only happen through merge requests, hence the name), and the latter is run whenever a pull request is opened or updated. They call the ``action.yml`` files
-to set-up the environment, run the tests, and check the code formatting.
-
-``on-release-main.yml`` does all of the former whenever a new release is made on the ``main`` branch. A new release can be made by clicking the 
-``Draft a new release`` button on your repository's homepage:
+When ``publish_to`` is set to ``"pypi"`` or ``"artifactory"``, the ``.github/on-release-main.yml`` publishes the code to 
+`Pypi <https://pypi.org>`_ or `Artifactory <https://jfrog.com/artifactory>`_ respectively whenever a new release is made. 
+To do so, click the ``Draft a new release`` button on your repository's homepage:
 
 .. image:: images/release-1.png
    :width: 500
@@ -42,13 +28,33 @@ To finish, press ``Publish release``
 .. image:: images/release-3.png
    :width: 300
 
+Before you can publish your code, you should first set your repository's secrets. 
+See the following two sections on how to do so for both ``Pypi`` and ``Artifactory``
 
-In addition, when ``publish_to`` is set to ``"pypi"`` or ``"artifactory"``, this github action publishes the code to 
-`Pypi <https://pypi.org>`_ or `Artifactory <https://jfrog.com/artifactory>`_ respectively. To get these to work, 
+Pypi prerequisites
+~~~~~~~~~~~~~~~~~~~~~~~~
 
+In order to release to Pypi, the secret ``PYPI_TOKEN`` should be set in your repository. To do so, go to ``Settings > Secrets > Actions`` and press
+``New repository secret``. As the name, set ``PYPI_TOKEN``. Then, in a new tab go to your `Pypi Account settings <https://pypi.org/manage/account/>`_ 
+and select `Add API token`. Copy and paste the token in the ``Value`` field for the Github secret in your first tab, and you're all set!
 
-:::::::::::::::::::
-Pypi
-:::::::::::
+Artifactory prerequisites
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-testmake
+In order to release to `Artifactory`, visit your Artifactory instance and open ``Quick setup``. You should see something like this:
+
+.. image:: images/artifactory.png
+   :width: 700
+
+You should add these as secrets to your repository with the names ``ARTIFACTORY_URL``, ``ARTIFACTORY_USERNAME`` and ``ARTIFACTORY_PASSWORD`` respectively.
+To do so, for each entry go to ``Settings > Secrets > Actions`` and press ``New repository secret``.
+
+Releasing locally
+----------------------
+
+It is also possible to release locally, although it is not recommended. To do so, set the repository secrets listed in the sections above 
+as environment variables on your local machine instead, and run
+
+.. code-block:: bash
+    
+    make build-and-publish

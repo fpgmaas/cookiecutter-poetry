@@ -20,4 +20,3 @@ jobs:
 
       - name: Run checks
         uses: ./.github/workflows/run-checks 
-        

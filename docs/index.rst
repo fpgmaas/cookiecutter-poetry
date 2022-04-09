@@ -1,10 +1,32 @@
-.. poetry-cookiecutter documentation master file, created by
-   sphinx-quickstart on Sat Apr  9 20:16:15 2022.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Welcome to cookiecutter-poetry's documentation!
 ==================================================
+
+.. image:: https://img.shields.io/github/workflow/status/fpgmaas/cookiecutter-poetry/merge-to-main
+	:target: https://img.shields.io/github/workflow/status/fpgmaas/cookiecutter-poetry/merge-to-main
+	:alt: Build status
+
+.. image:: https://img.shields.io/github/commit-activity/m/fpgmaas/cookiecutter-poetry
+    :target: https://img.shields.io/github/commit-activity/m/fpgmaas/cookiecutter-poetry
+    :alt: Commit activity
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+	:target: https://img.shields.io/badge/code%20style-black-000000.svg
+	:alt: Code style with black
+
+.. image:: https://img.shields.io/badge/%20imports-isort-%231674b1
+	:target: https://img.shields.io/badge/%20imports-isort-%231674b1
+	:alt: Imports with isort
+
+.. image:: https://img.shields.io/badge/tool-poetry-orange
+	:target: https://img.shields.io/badge/tool-poetry-orange
+	:alt: Dependency management with poetry
+
+.. image:: https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry
+	:target: https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry
+	:alt: License
+
+This is a `cookiecutter <https://github.com/cookiecutter/cookiecutter>`_ repository to generate the file structure for a Python project that uses `Poetry <https://python-poetry.org/>`_ for its dependency management.
+
 
 Getting Started
 ---------------
