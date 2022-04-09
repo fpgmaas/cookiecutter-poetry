@@ -1,5 +1,11 @@
 PYTHON_VERSION := 3.9.7
 
+bake: ## bake without inputs and overwrite if exists.
+	@cookiecutter --no-input . --overwrite-if-exists
+
+bake-with-inputs: ## bake with inputs and overwrite if exists.
+	@cookiecutter . --overwrite-if-exists
+
 install: ## Install the poetry environment
 	@echo "🚀 Creating virtual environment using pyenv and poetry"
 	@poetry install	

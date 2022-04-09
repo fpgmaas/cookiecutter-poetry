@@ -67,8 +67,3 @@ This project is partially based on [Audrey Feldroy's](https://github.com/audreyf
 
 ----
 
-create token on PYPI
-for local:
-poetry config pypi-token.pypi my-token
-for github:
-add as environemtn variable
