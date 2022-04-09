@@ -18,6 +18,7 @@ This is a [cookiecutter](https://github.com/cookiecutter/cookiecutter) repositor
 |  <span style="color:white">**Pytest**</span> | Adds a pytest template.|
 |  <span style="color:white">**Formatting**</span> | Adds code formatting with `isort`, `black` and `flake8`.|
 |  <span style="color:white">**CI/CD with Github actions**</span> (Optional) | Adds Github actions that run the formatting checks and unittests for pull requests and when merged to `main`. |
+|  <span style="color:white">**Release to Pypi**</span> (Optional) | Release to Pypi manually, or by creating a new release on Github. |
 
 ## How to use?
 
@@ -39,14 +40,14 @@ Then, navigate to the directory in which you want to create your project and run
 cookiecutter https://github.com/fpgmaas/cookiecutter-poetry.git
 ```
 
-Then, run the following commands, replacing `<project-name>`, with the name that you also gave the Github repository and `<github_handle>` with your Github username.
+Then, run the following commands, replacing `<project-name>`, with the name that you also gave the Github repository and `<github_author_handle>` with your Github username.
 
 ```
 cd <project_name>
 git init .
 git add .
 git commit -m "Init commit"
-git remote add origin git@github.com:<github_handle>/<project_name>.git
+git remote add origin git@github.com:<github_author_handle>/<project_name>.git
 git push -u origin main
 ```
 
