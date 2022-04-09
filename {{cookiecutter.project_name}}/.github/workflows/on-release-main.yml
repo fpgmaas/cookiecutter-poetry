@@ -40,12 +40,12 @@ jobs:
             poetry version $RELEASE_VERSION
             make build-and-publish
           env: 
-            {% if cookiecutter.deploy_to == "pypi" -%}
+            {% if cookiecutter.publish_to == "pypi" -%}
             {%- raw -%}
             PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
             RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
             {%- endraw -%}
-            {%- elif cookiecutter.deploy_to == "artifactory" -%}
+            {%- elif cookiecutter.publish_to == "artifactory" -%}
             {%- raw -%}
             ARTIFACTORY_URL: ${{ secrets.ARTIFACTORY_URL }}
             ARTIFACTORY_USERNAME: ${{ secrets.ARTIFACTORY_USERNAME }}

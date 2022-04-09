@@ -26,6 +26,17 @@ test: ## Test the code with pytest
 	@echo "🚀 Testing code: Running pytest"
 	@pytest --doctest-modules tests
 
+docs-test: ## Test Sphinx documentation.
+	@sphinx-build docs docs/_build -W --keep-going 
+
+docs-build: ## Build the documentation
+	@sphinx-build docs docs/_build
+
+docs-open: ## Open the documentation
+	@open docs/_build/index.html
+
+docs: docs-build docs-open ## Build and open the documentation
+
 .PHONY: help
 
 help:
