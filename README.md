@@ -25,19 +25,19 @@ This is a [cookiecutter](https://github.com/cookiecutter/cookiecutter) repositor
 
 First, create an empty [new repository](https://github.com/new) on Github. Give it a name that only contains alphanumeric characters and optionally `-`. <u>Do not check any boxes under the option *'Initialize this repository with'*.</u> 
 
-Then, on your local machine, install `cookiecutter` with:
+On your local machine, install `cookiecutter` with:
 
 ```bash
 pip install -U cookiecutter
 ```
 
-Then, navigate to the directory in which you want to create your project and run:
+Navigate to the directory in which you want to create your project and run:
 
 ```
 cookiecutter https://github.com/fpgmaas/cookiecutter-poetry.git
 ```
 
-Then, run the following commands, replacing `<project-name>`, with the name that you also gave the Github repository and `<github_author_handle>` with your Github username.
+Run the following commands, replacing `<project-name>`, with the name that you also gave the Github repository and `<github_author_handle>` with your Github username.
 
 ```
 cd <project_name>
