@@ -109,5 +109,5 @@ when ``include_github_actions`` is set to ``"y"``, a ``.github`` directory is ad
 to set-up the environment, run the tests, and check the code formatting.
 
 ``on-release-main.yml`` does all of the former whenever a new release is made on the ``main`` branch. To learn more about releasing, 
-see :doc:`Releasing to Pypi or Artifactory <./releasing>` 
+see :doc:`Releasing to Pypi or Artifactory <./releasing>`. 
 
