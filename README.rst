@@ -82,11 +82,13 @@ Run the following commands, replacing ``<project-name>``, with the name that you
 .. code-block:: bash
     
     cd <project_name>
-    git init .
+    git init -b main
     git add .
     git commit -m "Init commit"
     git remote add origin git@github.com:<github_author_handle>/<project_name>.git
     git push -u origin main
+
+Note: If this raises an 
 
 Finally, install the environment with ``make install``.
 

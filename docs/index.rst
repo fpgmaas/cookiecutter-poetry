@@ -37,6 +37,14 @@ Getting Started
 
    readme
    features
+
+User guide
+---------------
+
+.. toctree::
+   :maxdepth: 2
+
+   prompt_arguments
    releasing
 
 
