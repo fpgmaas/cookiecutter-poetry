@@ -30,7 +30,7 @@ docs-test: ## Test Sphinx documentation.
 	@sphinx-build docs docs/_build -W --keep-going 
 
 docs-clean: ## Clean the docs/_build folder 
-	@rm -r docs/_build
+	@rm -rf docs/_build/*
 
 docs-build: ## Build the documentation
 	@sphinx-build docs docs/_build

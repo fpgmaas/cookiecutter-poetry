@@ -40,7 +40,7 @@ Getting Started
    :maxdepth: 2
 
    readme
-   features
+   feature_details
 
 User guide
 ---------------
