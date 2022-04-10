@@ -1,6 +1,10 @@
 cookiecutter-poetry
 ==================================================
 
+.. image:: https://img.shields.io/github/v/release/fpgmaas/cookiecutter-poetry
+	:target: https://img.shields.io/github/v/release/fpgmaas/cookiecutter-poetry
+	:alt: Release
+
 .. image:: https://img.shields.io/github/workflow/status/fpgmaas/cookiecutter-poetry/merge-to-main
 	:target: https://img.shields.io/github/workflow/status/fpgmaas/cookiecutter-poetry/merge-to-main
 	:alt: Build status
@@ -9,17 +13,17 @@ cookiecutter-poetry
     :target: https://img.shields.io/github/commit-activity/m/fpgmaas/cookiecutter-poetry
     :alt: Commit activity
 
+.. image:: https://img.shields.io/badge/docs-gh--pages-blue
+    :target: https://fpgmaas.github.io/cookiecutter-poetry/
+    :alt: Docs
+
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
-	:target: https://img.shields.io/badge/code%20style-black-000000.svg
+	:target: https://github.com/psf/black
 	:alt: Code style with black
 
 .. image:: https://img.shields.io/badge/%20imports-isort-%231674b1
-	:target: https://img.shields.io/badge/%20imports-isort-%231674b1
+	:target: https://pycqa.github.io/isort/
 	:alt: Imports with isort
-
-.. image:: https://img.shields.io/badge/tool-poetry-orange
-	:target: https://img.shields.io/badge/tool-poetry-orange
-	:alt: Dependency management with poetry
 
 .. image:: https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry
 	:target: https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry
