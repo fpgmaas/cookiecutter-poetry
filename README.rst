@@ -43,25 +43,27 @@ This is a `cookiecutter <https://github.com/cookiecutter/cookiecutter>`_ reposit
 Features
 --------
 
-+-------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
-| Feature                                   | Description                                                                                                     |
-+===========================================+=================================================================================================================+
-| **Poetry**                                | Generates a poetry environment file, ready to be installed with a single command.                               |
-+-------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
-| **Makefile**                              | A makefile with pre-configured commands, type `make help` to list the options.                                  |
-+-------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
-| **Pytest**                                | Adds a pytest template.                                                                                         |
-+-------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
-| **Formatting**                            | Adds code formatting with ``isort``, ``black`` and ``flake8``.                                                  |
-+-------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
-| **Pyenv** (Optional)                      | Automatically adds a ``.python-version`` file for `pyenv <https://github.com/pyenv/pyenv>`_ support.            |
-+-------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
-| **CI/CD with Github actions** (Optional)  | Adds Github actions that run the formatting checks and unittests for pull requests and when merged to `main`.   |
-+-------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
-| **Release to Pypi** (Optional)            | Release to `Pypi <https://pypi.org>`_ manually, or by creating a new release on Github.                         |
-+-------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
-| **Release to Artifactory** (Optional)     | Release to `Artifactory <https://jfrog.com/artifactory>`_ manually, or by creating a new release on Github.     |
-+-------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
++----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| Feature                                      | Description                                                                                                     |
++==============================================+=================================================================================================================+
+| **Poetry**                                   | Generates a poetry environment file, ready to be installed with a single command.                               |
++----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| **Makefile**                                 | A makefile with pre-configured commands, type `make help` to list the options.                                  |
++----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| **Pytest**                                   | Adds a pytest template.                                                                                         |
++----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| **Formatting**                               | Adds code formatting with ``isort``, ``black`` and ``flake8``.                                                  |
++----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| **Pyenv** (Optional)                         | Automatically adds a ``.python-version`` file for `pyenv <https://github.com/pyenv/pyenv>`_ support.            |
++----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| **CI/CD with Github actions** (Optional)     | Adds Github actions that run the formatting checks and unittests for pull requests and when merged to `main`.   |
++----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| **Release to Pypi** (Optional)               | Release to `Pypi <https://pypi.org>`_ manually, or by creating a new release on Github.                         |
++----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| **Release to Artifactory** (Optional)        | Release to `Artifactory <https://jfrog.com/artifactory>`_ manually, or by creating a new release on Github.     |
++----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| **Documentation with Sphinx** (Optional)     | Automatically build documentation of your project and it's code with `Sphinx <https://www.sphinx-doc.org/>`_.   |
++----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
 
 Quickstart
 ------------
@@ -91,7 +93,6 @@ Run the following commands, replacing ``<project-name>``, with the name that you
     git remote add origin git@github.com:<github_author_handle>/<project_name>.git
     git push -u origin main
 
-Note: If this raises an 
 
 Finally, install the environment with ``make install``.
 

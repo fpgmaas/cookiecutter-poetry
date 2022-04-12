@@ -32,6 +32,13 @@ cookiecutter-poetry
 This is the documentation of `cookiecutter-poetry <https://github.com/fpgmaas/cookiecutter-poetry>`_, a `cookiecutter <https://github.com/cookiecutter/cookiecutter>`_ repository to 
 generate the file structure for a Python project that uses `Poetry <https://python-poetry.org/>`_ for its dependency management.
 
+.. container:: index-visit-on-github
+
+    |pic1| `Visit on Github <https://github.com/fpgmaas/cookiecutter-poetry>`_
+
+.. |pic1| image:: ./images/GitHub-Mark-120px-plus.png
+    :width: 40
+    :target: https://github.com/fpgmaas/cookiecutter-poetry
 
 Getting Started
 ---------------

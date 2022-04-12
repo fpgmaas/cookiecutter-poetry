@@ -49,6 +49,12 @@ A ``Makefile`` is available with the following commands:
 +------------------------+-----------------------------------------------------------------------------------------------------------+
 | ``build-and-publish``  | Available if ``publish_to`` is set to ``"pypi"`` or ``"artifactory"``. Build and publish.                 |
 +------------------------+-----------------------------------------------------------------------------------------------------------+
+| ``docs-generate``      | Convert docstrings to ``rst``-files to prepare for building documentation with Sphinx.                    |
++------------------------+-----------------------------------------------------------------------------------------------------------+
+| ``docs-build``         | Build documentation with sphinx.                                                                          |
++------------------------+-----------------------------------------------------------------------------------------------------------+
+| ``docs``               | Generate and build documentation with Sphinx, and directly open the documentation in the browser.         |
++------------------------+-----------------------------------------------------------------------------------------------------------+
 
 Pytest
 ----------
@@ -110,4 +116,18 @@ to set-up the environment, run the tests, and check the code formatting.
 
 ``on-release-main.yml`` does all of the former whenever a new release is made on the ``main`` branch. To learn more about releasing, 
 see :doc:`Releasing to Pypi or Artifactory <./releasing>`. 
+
+
+Release to Pypi (Optional)
+----------------------------
+
+See :doc:`Releasing to Pypi or Artifactory <./releasing>`
+
+Release to Artifactory (Optional)
+----------------------------------
+
+See :doc:`Releasing to Pypi or Artifactory <./releasing>`
+
+Documentation with Sphinx (Optional)
+------------------------------------
 

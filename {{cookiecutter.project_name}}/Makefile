@@ -47,6 +47,19 @@ publish: ## Publish to the Artifactory repository using poetry. Requires ARTIFAC
 build-and-publish: build publish ## Build and publish.
 {%- endif %}
 
+{% if cookiecutter.sphinx_docs == "y" -%}
+docs-generate: ## convert docstrings to docs
+	@sphinx-apidoc -o docs/source/ {{cookiecutter.project_slug}}
+
+docs-build: ## Build the docs
+	@sphinx-build -b html docs docs/_build
+
+docs-open: ## Build the docs
+	@open docs/_build/index.html
+
+docs: docs-generate docs-build docs-open ## Generate, build and open the docs.
+{% endif -%}
+
 .PHONY: help
 
 help:
