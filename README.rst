@@ -38,7 +38,7 @@ This is a `cookiecutter <https://github.com/cookiecutter/cookiecutter>`_ reposit
 +-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
 | **Documentation**             | `https://fpgmaas.github.io/cookiecutter-poetry/ <https://fpgmaas.github.io/cookiecutter-poetry/>`_                                   |
 +-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-| **Example Repository**        | `https://fpgmaas.github.io/cookiecutter-poetry-example/ <https://fpgmaas.github.io/cookiecutter-poetry-example/>`_                   |
+| **Example Repository**        | `https://github.com/fpgmaas/cookiecutter-poetry-example/ <https://github.com/fpgmaas/cookiecutter-poetry-example/>`_                 |
 +-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
 
 
