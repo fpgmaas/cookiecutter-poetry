@@ -10,13 +10,21 @@ Cookiecutter Poetry
 	:target: https://img.shields.io/github/workflow/status/fpgmaas/cookiecutter-poetry/merge-to-main
 	:alt: Build status
 
-.. image:: https://img.shields.io/github/commit-activity/m/fpgmaas/cookiecutter-poetry
-    :target: https://img.shields.io/github/commit-activity/m/fpgmaas/cookiecutter-poetry
-    :alt: Commit activity
+.. image:: https://img.shields.io/pypi/pyversions/cookiecutter-poetry
+    :target: https://pypi.org/project/cookiecutter-poetry/
+    :alt: Supported Python versions
 
 .. image:: https://img.shields.io/badge/docs-gh--pages-blue
     :target: https://fpgmaas.github.io/cookiecutter-poetry/
     :alt: Docs
+
+.. image:: https://img.shields.io/github/commit-activity/m/fpgmaas/cookiecutter-poetry
+    :target: https://img.shields.io/github/commit-activity/m/fpgmaas/cookiecutter-poetry
+    :alt: Commit activity
+
+.. image:: https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry
+	:target: https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry
+	:alt: License
 
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
 	:target: https://github.com/psf/black
@@ -25,10 +33,6 @@ Cookiecutter Poetry
 .. image:: https://img.shields.io/badge/%20imports-isort-%231674b1
 	:target: https://pycqa.github.io/isort/
 	:alt: Imports with isort
-
-.. image:: https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry
-	:target: https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry
-	:alt: License
 
 
 This is a `cookiecutter <https://github.com/cookiecutter/cookiecutter>`_ repository to generate the file structure for a Python project that uses `Poetry <https://python-poetry.org/>`_ for its dependency management.
@@ -56,7 +60,7 @@ Features
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Pytest**                                   | Adds a `pytest <https://docs.pytest.org/en/7.1.x/>`_ template.                                                                                             |
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Formatting**                               | Adds code formatting with `isort <https://github.com/PyCQA/isort>`_, `black <https://pypi.org/project/black/>`_ and `flake8 <https://flake8.pycqa.org/>`_. |
+| **Formatting**                               | Adds code formatting with `isort <https://github.com/PyCQA/isort>`_ and `black <https://pypi.org/project/black/>`_.                                       |
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Pyenv** (Optional)                         | Automatically adds a ``.python-version`` file for `pyenv <https://github.com/pyenv/pyenv>`_ support.                                                       |
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+

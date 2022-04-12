@@ -2,7 +2,7 @@
 Formatting
 ===============
 
-`isort <https://pycqa.github.io/isort/index.html>`_, `black <https://pypi.org/project/black/>`_ and `flake8 <https://flake8.pycqa.org/en/latest/>`_ are added 
+`isort <https://pycqa.github.io/isort/index.html>`_ and `black <https://pypi.org/project/black/>`_ are added 
 as development dependencies. ``black`` and ``isort`` can be used to format the code with 
 
 .. code-block:: bash
