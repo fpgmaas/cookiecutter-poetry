@@ -16,11 +16,10 @@ format: ## Format code using isort and black.
 	@isort .
 	@black .
 
-lint: ## Check code formatting using isort, black, and flake8.
-	@echo "🚀 Checking code formatting: Running black, isort and flake8"
+lint: ## Check code formatting using isort and black.
+	@echo "🚀 Checking code formatting: Running isort and black"
 	@isort --check-only --diff .
 	@black --check .
-	@flake8 .
 
 test: ## Test the code with pytest
 	@echo "🚀 Testing code: Running pytest"
