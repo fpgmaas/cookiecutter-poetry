@@ -32,45 +32,39 @@ It is also recommended to run
 
 which will by default create new virtual environments in ``./.venv`` whenever you create them with ``poetry init``.
 
-Step 2: Install cookiecutter
+Step 2: Generate your project
 ------------------------------
 
-First, navigate to the directory in which you want the project to be created. Then, we need to install cookiecutter.
-
-There are multiple ways of installing cookiecutter. If you have ``pip`` installed, you could install it simply with
+First, navigate to the directory in which you want the project to be created. Then, we need to install ``cookiecutter-poetry`` with the following command:
 
 .. code-block:: bash
 
-    pip install cookiecutter
-
-You could also create a temporary poetry environment and install it there:
-
-.. code-block::
-
-    pyenv local 3.9.7
-    poetry init
-    poetry add cookiecutter
-    poetry shell
-
-Step 3: Generate your project
----------------------------------
+    pip install cookiecutter-poetry
 
 Within the directory in which you want to create your project, run:
 
 .. code-block:: bash
 
-    cookiecutter https://github.com/fpgmaas/cookiecutter-poetry.git
+    ccp
 
 For an explanation of the prompt arguments, see :doc:`Prompt arguments <./prompt_arguments>`.
 
-Step 4: Set up your Github repository
+An alternative to the steps above would be to install ``cookiecutter`` and directly pass the URL to Github repository to the ``cookiecutter`` command:
+
+.. code-block:: bash
+
+    pip install cookiecutter-poetry
+    cookiecutter https://github.com/fpgmaas/cookiecutter-poetry.git
+
+
+Step 3: Set up your Github repository
 ----------------------------------------
 
 Create an empty `new repository <https://github.com/new>`_ on Github. 
 Give it a name that only contains alphanumeric characters and optionally ``-``. 
 DO NOT check any boxes under the option *'Initialize this repository with'*.
 
-Step 5: Upload your project to Github
+Step 4: Upload your project to Github
 --------------------------------------
 
 Run the following commands, replacing ``<project-name>`` with the name that you also gave the Github repository and ``<github_author_handle>`` with your Github username.
@@ -84,7 +78,7 @@ Run the following commands, replacing ``<project-name>`` with the name that you 
     git remote add origin git@github.com:<github_author_handle>/<project_name>.git
     git push -u origin main
 
-Step 6: Activate your environment
+Step 5: Activate your environment
 --------------------------------------
 
 Install and activate the environment by running:
