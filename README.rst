@@ -102,8 +102,8 @@ If you want to deploy to Pypi or Artifactory automatically on each release, you 
 some secrets in your repository on Github. For more information, see `the documentation <https://fpgmaas.github.io/cookiecutter-poetry/features/releasing.html>`_
 
 
-Credits
----------
+Acknowledgements
+-----------------
 
 This project is partially based on 
 `Audrey Feldroy's <https://github.com/audreyfeldroy>`_'s great `cookiecutter-pypackage <https://github.com/audreyfeldroy/cookiecutter-pypackage>`_ repository.
