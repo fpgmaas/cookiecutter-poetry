@@ -45,10 +45,10 @@ a prompt will start which enables you to configure your repository. The prompt v
 **publish_to**
     ``"pypi"``, ``"artifactory"``, or ``"none"``. Adds functionality to the ``Makefile`` and Github workflows to make publishing 
     your code as simple as creating a new release release on Github. 
-    For more info, see :doc:`Releasing to Pypi or Artifactory <./releasing>`.
+    For more info, see :doc:`Releasing to Pypi or Artifactory <./features/releasing>`.
 
 **sphinx_docs**
-    ``"y"`` or ``"n"``. Adds `sphinx <https://www.sphinx-doc.org/en/master/>`_` documentation to your project. This includes automatically parsing your
+    ``"y"`` or ``"n"``. Adds `sphinx <https://www.sphinx-doc.org/en/master/>`_ documentation to your project. This includes automatically parsing your
     docstrings and adding them to the documentation. Documentation will be deployed to the ``gh-pages`` branch.
 
 **open_source_license**

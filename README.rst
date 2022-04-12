@@ -33,11 +33,13 @@ Cookiecutter Poetry
 
 This is a `cookiecutter <https://github.com/cookiecutter/cookiecutter>`_ repository to generate the file structure for a Python project that uses `Poetry <https://python-poetry.org/>`_ for its dependency management.
 
-+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| **Github repository**         | `https://github.com/fpgmaas/cookiecutter-poetry/ <https://github.com/fpgmaas/cookiecutter-poetry/>`_                 |
-+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| **Documentation**             | `https://fpgmaas.github.io/cookiecutter-poetry/ <https://fpgmaas.github.io/cookiecutter-poetry/>`_                   |
-+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
++-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| **Github repository**         | `https://github.com/fpgmaas/cookiecutter-poetry/ <https://github.com/fpgmaas/cookiecutter-poetry/>`_                                 |
++-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| **Documentation**             | `https://fpgmaas.github.io/cookiecutter-poetry/ <https://fpgmaas.github.io/cookiecutter-poetry/>`_                                   |
++-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| **Example Repository**        | `https://fpgmaas.github.io/cookiecutter-poetry-example/ <https://fpgmaas.github.io/cookiecutter-poetry-example/>`_                   |
++-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
 
 
 Features
@@ -58,11 +60,11 @@ Features
 +----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
 | **CI/CD with Github actions** (Optional)     | Adds Github actions that run the formatting checks and unittests for pull requests and when merged to `main`.   |
 +----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
-| **Release to Pypi** (Optional)               | Release to `Pypi <https://pypi.org>`_ manually, or by creating a new release on Github.                         |
+| **Release to Pypi** (Optional)               | Release to `Pypi <https://pypi.org>`_ by creating a new release on Github.                                      |
 +----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
-| **Release to Artifactory** (Optional)        | Release to `Artifactory <https://jfrog.com/artifactory>`_ manually, or by creating a new release on Github.     |
+| **Release to Artifactory** (Optional)        | Release to `Artifactory <https://jfrog.com/artifactory>`_ by creating a new release on Github.                  |
 +----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
-| **Documentation with Sphinx** (Optional)     | Automatically build documentation of your project and it's code with `Sphinx <https://www.sphinx-doc.org/>`_.   |
+| **Documentation with Sphinx** (Optional)     | Automatically add documentation to your project and its code with `Sphinx <https://www.sphinx-doc.org/>`_.      |
 +----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
 
 Quickstart
@@ -74,7 +76,7 @@ On your local machine, install ``cookiecutter`` with:
 
 .. code-block:: bash
 
-    pip install -U cookiecutter 
+    pip install -U cookiecutter
 
 Navigate to the directory in which you want to create your project and run:
 
@@ -94,11 +96,14 @@ Run the following commands, replacing ``<project-name>``, with the name that you
     git push -u origin main
 
 
-Finally, install the environment with ``make install``.
+Finally, install the environment with ``make install``. 
+
+If you want to deploy to Pypi or Artifactory automatically on each release, you need to set
+some secrets in your repository on Github. For more information, see `the documentation <https://fpgmaas.github.io/cookiecutter-poetry/features/releasing.html>`_
 
 
-Credits
----------
+Acknowledgements
+-----------------
 
 This project is partially based on 
 `Audrey Feldroy's <https://github.com/audreyfeldroy>`_'s great `cookiecutter-pypackage <https://github.com/audreyfeldroy/cookiecutter-pypackage>`_ repository.
