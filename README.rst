@@ -60,7 +60,7 @@ Features
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Pytest**                                   | Adds a `pytest <https://docs.pytest.org/en/7.1.x/>`_ template.                                                                                             |
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Formatting**                               | Adds code formatting with `isort <https://github.com/PyCQA/isort>`_ and `black <https://pypi.org/project/black/>`_.                                       |
+| **Formatting**                               | Adds code formatting with `isort <https://github.com/PyCQA/isort>`_ and `black <https://pypi.org/project/black/>`_.                                        |
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Pyenv** (Optional)                         | Automatically adds a ``.python-version`` file for `pyenv <https://github.com/pyenv/pyenv>`_ support.                                                       |
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -76,19 +76,19 @@ Features
 Quickstart
 ------------
 
-First, create an empty `new repository <https://github.com/new>`_ on Github. Give it a name that only contains alphanumeric characters and optionally ``-``. DO NOT check any boxes under the option *'Initialize this repository with'*.
-
-On your local machine, install this package with:
+On your local machine, navigate to the directory in which you want to create a project directory, and run the following two commands:
 
 .. code-block:: bash
 
-    pip install cookiecutter-poetry
-
-Navigate to the directory in which you want to create your project and run:
-
-.. code-block:: bash
-
+    pip install cookiecutter-poetry 
     ccp
+
+Alternatively, install ``cookiecutter`` and directly pass the URL to this Github repository to the ``cookiecutter`` command:
+
+.. code-block:: bash
+
+    pip install cookiecutter
+    cookiecutter https://github.com/fpgmaas/cookiecutter-poetry.git
 
 Then run the following commands, replacing ``<project-name>``, with the name that you also gave the Github repository and ``<github_author_handle>`` with your Github username.
 
