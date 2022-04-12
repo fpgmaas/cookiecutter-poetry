@@ -47,6 +47,10 @@ a prompt will start which enables you to configure your repository. The prompt v
     your code as simple as creating a new release release on Github. 
     For more info, see :doc:`Releasing to Pypi or Artifactory <./releasing>`.
 
+**sphinx_docs**
+    ``"y"`` or ``"n"``. Adds `sphinx <https://www.sphinx-doc.org/en/master/>`_` documentation to your project. This includes automatically parsing your
+    docstrings and adding them to the documentation. Documentation will be deployed to the ``gh-pages`` branch.
+
 **open_source_license**
     Choose a `license <https://choosealicense.com/>`_. Options: ``["1. MIT License", "2. BSD license", "3. ISC license", 
     "4. Apache Software License 2.0", "5. GNU General Public License v3", "6. Not open source"]``
