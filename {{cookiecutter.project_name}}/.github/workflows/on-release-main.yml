@@ -6,6 +6,7 @@ on:
 name: release-main
 
 jobs:
+
   quality:
     runs-on: ubuntu-latest
     steps:
@@ -53,3 +54,29 @@ jobs:
             RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
             {%- endraw -%}
             {%- endif %}
+
+  {% if cookiecutter.publish_to == "pypi" -%}
+  documentation:
+    needs: Release
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Check out
+        uses: actions/checkout@v2
+
+      - name: Set up the environment
+        uses: ./.github/workflows/setup-poetry-env
+        
+      - name: Generate documentation
+        run: |
+            source .venv/bin/activate
+            make docs-build
+
+      - name: Deploy documentation to GitHub pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          {% raw -%}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/_build
+          {%- endraw -%}
+  {% endif -%}
