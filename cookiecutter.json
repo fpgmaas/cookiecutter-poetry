@@ -2,7 +2,7 @@
     "author": "Florian Maas",
     "email": "fpgmaas@gmail.com",
     "github_author_handle" : "fpgmaas",
-    "project_name": "cookiecutter-poetry-example",
+    "project_name": "example-project",
     "project_slug": "{{cookiecutter.project_name|lower|replace('-', '_')}}",
     "project_description": "This is a template repository for Python projects that use Poetry for their dependency management.",
     "python_version": "3.9.7",
