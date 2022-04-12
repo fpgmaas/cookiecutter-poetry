@@ -54,4 +54,4 @@ profile = "black"
 skip = ["{{cookiecutter.project_name}}",".venv"]
 
 [tool.poetry.scripts]
-pcc = 'poetry_cookiecutter.cli:main'
+ccp = 'poetry_cookiecutter.cli:main'
