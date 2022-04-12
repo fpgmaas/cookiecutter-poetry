@@ -32,6 +32,9 @@
 
 {{cookiecutter.project_description}}
 
+* **Github repository**: `https://github.com/{{cookiecutter.github_author_handle}}/{{cookiecutter.project_name}}/ <https://github.com/{{cookiecutter.github_author_handle}}/{{cookiecutter.project_name}}/>`_
+* **Documentation**: `https://{{cookiecutter.github_author_handle}}.github.io/{{cookiecutter.project_name}}/ <https://{{cookiecutter.github_author_handle}}.github.io/{{cookiecutter.project_name}}/>`_
+
 
 Releasing a new version
 -----------------------------
