@@ -26,6 +26,22 @@ test: ## Test the code with pytest
 	@echo "🚀 Testing code: Running pytest"
 	@pytest --doctest-modules tests
 
+build: clean-build ## Build wheel file using poetry
+	@echo "🚀 Creating wheel file"
+	@poetry build
+
+clean-build: ## clean build artifacts
+	@rm -rf dist
+
+publish: ## publish a release to pypi.
+	@echo "🚀 Publishing: Dry run."
+	@poetry config pypi-token.pypi $(PYPI_TOKEN)
+	@poetry publish --dry-run
+	@echo "🚀 Publishing."
+	@poetry publish
+
+build-and-publish: build publish ## Build and publish.
+
 docs-test: ## Test Sphinx documentation.
 	@sphinx-build docs docs/_build -W --keep-going 
 
