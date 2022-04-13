@@ -19,7 +19,6 @@ include = [
 [tool.poetry.dependencies]
 python = ">=3.7,<4.0"
 cookiecutter = "^1.7.3"
-tox = "^3.25.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.1"
@@ -28,6 +27,7 @@ black = "^22.3.0"
 pytest-cookies = "^0.6.1"
 Sphinx = "^4.5.0"
 sphinx-rtd-theme = "^1.0.0"
+tox = "^3.25.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
