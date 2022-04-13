@@ -18,6 +18,10 @@ jobs:
 
       - name: Set up the environment
         uses: ./.github/workflows/setup-poetry-env
+        with: 
+          python-version: ${{ matrix.python-version }}
 
-      - name: Run checks
-        uses: ./.github/workflows/run-checks
+      - name: Test with tox 
+        run: |
+          poetry add tox-gh-actions
+          tox-gh-actions
