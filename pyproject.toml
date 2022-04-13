@@ -48,6 +48,7 @@ exclude = '''
     | build
     | dist
     | {{cookiecutter.project_name}}
+    | \.tox
   ))
 '''
 
