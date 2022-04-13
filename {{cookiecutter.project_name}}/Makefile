@@ -1,5 +1,3 @@
-PYTHON_VERSION := {{cookiecutter.python_version}}
-
 install: ## Install the poetry environment
 	@echo "🚀 Creating virtual environment using pyenv and poetry"
 	@poetry install	
