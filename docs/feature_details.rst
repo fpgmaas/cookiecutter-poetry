@@ -9,7 +9,7 @@ Feature Details
    features/makefile
    features/pytest
    features/formatting
-   features/pyenv
    features/cicd
    features/releasing
    features/sphinx
+   features/tox

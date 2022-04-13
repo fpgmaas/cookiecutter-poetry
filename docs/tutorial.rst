@@ -22,7 +22,7 @@ Select a version and install it with
 
     pyenv install -v 3.9.7
 
-Replacing ``3.9.7`` with a version of your choosing. For the rest of this tutorial, replace ``3.9.7`` with the version you have chosen here.
+Replacing ``3.9.7`` with a version of your choosing.
 
 It is also recommended to run
 

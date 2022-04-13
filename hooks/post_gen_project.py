@@ -15,8 +15,8 @@ def remove_dir(filepath):
 
 if __name__ == "__main__":
 
-    if "{{cookiecutter.include_pyenv_local_file}}" != "y":
-        remove_file(".python-version")
-
     if "{{cookiecutter.include_github_actions}}" != "y":
         remove_dir(".github")
+
+    if "{{cookiecutter.tox}}" != "y":
+        remove_file("tox.ini")
