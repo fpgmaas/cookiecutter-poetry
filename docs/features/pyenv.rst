@@ -1,5 +1,5 @@
 ==================
-Pyenv (Optional)
+Pyenv 
 ==================
 
 When working with poetry, my recommendation is to use `pyenv <https://github.com/pyenv/pyenv>`_ to manage your python versions.

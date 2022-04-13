@@ -1,5 +1,5 @@
 =====================================
-Documentation with Sphinx (Optional)
+Documentation with Sphinx 
 =====================================
 
 If ``sphinx_docs`` is set to ``"y"``, documentation of your project is automatically added using `sphinx <https://www.sphinx-doc.org/en/master/>`_.

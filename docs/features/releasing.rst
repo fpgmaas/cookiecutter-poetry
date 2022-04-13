@@ -1,5 +1,5 @@
 =============================================
-Releasing to Pypi or Artifactory (Optional)
+Releasing to Pypi or Artifactory 
 =============================================
 
 .. contents:: :local:

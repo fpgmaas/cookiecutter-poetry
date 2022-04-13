@@ -1,4 +1,4 @@
-CI/CD with Github actions (Optional)
+CI/CD with Github actions 
 ---------------------------------------
 
 when ``include_github_actions`` is set to ``"y"``, a ``.github`` directory is added with the following structure:
