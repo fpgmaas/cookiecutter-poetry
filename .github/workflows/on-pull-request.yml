@@ -23,5 +23,6 @@ jobs:
 
       - name: Test with tox 
         run: |
+          source .venv/bin/activate
           poetry add tox-gh-actions
           tox
