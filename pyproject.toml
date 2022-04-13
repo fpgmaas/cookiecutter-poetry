@@ -19,6 +19,7 @@ include = [
 [tool.poetry.dependencies]
 python = ">=3.7,<4.0"
 cookiecutter = "^1.7.3"
+tox = "^3.25.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.1"
