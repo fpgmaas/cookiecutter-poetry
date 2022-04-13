@@ -62,15 +62,15 @@ Features
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Formatting**                               | Adds code formatting with `isort <https://github.com/PyCQA/isort>`_ and `black <https://pypi.org/project/black/>`_.                                        |
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Pyenv** (Optional)                         | Automatically adds a ``.python-version`` file for `pyenv <https://github.com/pyenv/pyenv>`_ support.                                                       |
+| **Pyenv**                                    | Automatically adds a ``.python-version`` file for `pyenv <https://github.com/pyenv/pyenv>`_ support.                                                       |
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **CI/CD with Github actions** (Optional)     | Adds Github actions that run the formatting checks and unittests for pull requests and when merged to `main`.                                              |
+| **CI/CD with Github actions**                | Adds Github actions that run the formatting checks and unittests for pull requests and when merged to `main`.                                              |
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Release to Pypi** (Optional)               | Release to `Pypi <https://pypi.org>`_ by creating a new release on Github.                                                                                 |
+| **Release to Pypi**                          | Release to `Pypi <https://pypi.org>`_ by creating a new release on Github.                                                                                 |
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Release to Artifactory** (Optional)        | Release to `Artifactory <https://jfrog.com/artifactory>`_ by creating a new release on Github.                                                             |
+| **Release to Artifactory**                   | Release to `Artifactory <https://jfrog.com/artifactory>`_ by creating a new release on Github.                                                             |
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Documentation with Sphinx** (Optional)     | Automatically add documentation to your project and its code with `Sphinx <https://www.sphinx-doc.org/>`_.                                                 |
+| **Documentation with Sphinx**                | Automatically add documentation to your project and its code with `Sphinx <https://www.sphinx-doc.org/>`_.                                                 |
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Quickstart
