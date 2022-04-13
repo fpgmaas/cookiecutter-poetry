@@ -33,12 +33,6 @@ a prompt will start which enables you to configure your repository. The prompt v
 **project_description**
     A short description of your project.
 
-**python_version**
-    The python version of your project.
-
-**include_pyenv_local_file**
-    ``"y"`` or ``"n"``. Adds a ``.python-version`` file to the root directory for pyenv.
-
 **include_github_actions**
     ``"y"`` or ``"n"``. Adds a ``.github`` directory with various actions and workflows to setup the environment and run code formatting checks and unittests.
 

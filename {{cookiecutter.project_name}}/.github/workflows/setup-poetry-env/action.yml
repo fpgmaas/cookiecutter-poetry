@@ -2,6 +2,11 @@
 
 name: "setup-poetry-env"
 description: "Composite action to setup the Python and poetry environment."
+inputs:
+   python-version:
+     required: false
+     description: "The python version to use"
+     default: 3.9.7
 runs:
   using: "composite"
   steps:
@@ -14,7 +19,7 @@ runs:
     - name: Set up python
       uses: actions/setup-python@v2
       with:
-        python-version: {{cookiecutter.python_version}}
+        python-version: {% raw %}${{ inputs.python-version }}{% endraw %}
     #----------------------------------------------
     #  -----  install & configure poetry  -----
     #----------------------------------------------
@@ -28,14 +33,12 @@ runs:
     #----------------------------------------------
     #       load cached venv if cache exists
     #----------------------------------------------
-    {% raw -%}
     - name: Load cached venv
       id: cached-poetry-dependencies
       uses: actions/cache@v2
       with:
         path: .venv
-        key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-    {%- endraw %}
+        key: {% raw %}venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}{% endraw %}
 
     #----------------------------------------------
     # install dependencies if cache does not exist

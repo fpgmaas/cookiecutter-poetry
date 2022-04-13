@@ -5,7 +5,7 @@ description = "{{cookiecutter.project_description}}"
 authors = ["{{cookiecutter.author}} <f{{cookiecutter.email}}>"]
 
 [tool.poetry.dependencies]
-python = "{{cookiecutter.python_version}}"
+python = ">=3.7,<4.0"
 
 
 [tool.poetry.dev-dependencies]
