@@ -6,7 +6,6 @@ on:
 name: release-main
 
 jobs:
-
   quality:
     runs-on: ubuntu-latest
     steps:
@@ -20,8 +19,29 @@ jobs:
       - name: Run checks
         uses: ./.github/workflows/run-checks
 
+  tox:
+    runs-on: ubuntu-latest
+    needs: Quality
+    strategy:
+      matrix:
+        python-version: ['3.7', '3.8', '3.9']
+    steps:
+      - name: Check out
+        uses: actions/checkout@v2
+
+      - name: Set up the environment
+        uses: ./.github/workflows/setup-poetry-env
+        with: 
+          python-version: ${{ matrix.python-version }}
+
+      - name: Test with tox 
+        run: |
+          source .venv/bin/activate
+          poetry add tox-gh-actions
+          tox
+
   release:
-      needs: Quality
+      needs: Tox
       runs-on: ubuntu-latest
       steps:
 
