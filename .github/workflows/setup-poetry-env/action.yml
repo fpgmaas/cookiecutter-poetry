@@ -2,6 +2,11 @@
 
 name: "setup-poetry-env"
 description: "Composite action to setup the Python and poetry environment."
+inputs:
+   python-version:
+     required: false
+     description: "The python version to use"
+     default: 3.9.7
 runs:
   using: "composite"
   steps:
@@ -14,7 +19,7 @@ runs:
     - name: Set up python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.9.7
+        python-version: ${{ inputs.python-version }}
     #----------------------------------------------
     #  -----  install & configure poetry  -----
     #----------------------------------------------

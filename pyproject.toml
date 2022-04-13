@@ -27,6 +27,7 @@ black = "^22.3.0"
 pytest-cookies = "^0.6.1"
 Sphinx = "^4.5.0"
 sphinx-rtd-theme = "^1.0.0"
+tox = "^3.25.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -47,6 +48,7 @@ exclude = '''
     | build
     | dist
     | {{cookiecutter.project_name}}
+    | \.tox
   ))
 '''
 

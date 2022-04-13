@@ -17,4 +17,3 @@ runs:
               source .venv/bin/activate
               make test
         shell: bash
-        
