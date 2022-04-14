@@ -27,7 +27,7 @@ Set-up for Artifactory
 
 In order to release to `Artifactory`, visit your Artifactory instance and open ``Quick setup``. You should see something like this:
 
-.. image:: ../images/artifactory.png
+.. image:: ../_static/images/artifactory.png
    :width: 700
 
 You should add these as secrets to your repository with the names ``ARTIFACTORY_URL``, ``ARTIFACTORY_USERNAME`` and ``ARTIFACTORY_PASSWORD`` respectively.
