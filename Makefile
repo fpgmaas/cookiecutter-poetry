@@ -42,7 +42,7 @@ publish: ## publish a release to pypi.
 build-and-publish: build publish ## Build and publish.
 
 docs-test: ## Test Sphinx documentation.
-	@sphinx-build docs docs/_build -W --keep-going 
+	@sphinx-build docs docs/_build -W --keep-going
 
 docs-clean: ## Clean the docs/_build folder 
 	@rm -rf docs/_build/*
