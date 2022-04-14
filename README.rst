@@ -72,8 +72,12 @@ Features
 | **Tox testing**                              | Setup and CI/CD integration to easily test for different Python versions with `Tox <https://tox.wiki/>`_.                                                  |
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
+
+Example CI/CD Pipeline
+--------------------------
+
 .. image:: https://raw.githubusercontent.com/fpgmaas/cookiecutter-poetry/main/static/images/pipeline.png
-	:target: https://github.com/fpgmaas/cookiecutter-poetry-example/actions
+	:target: https://raw.githubusercontent.com/fpgmaas/cookiecutter-poetry/main/static/images/pipeline.png
 	:alt: Example pipeline
     
 Quickstart
