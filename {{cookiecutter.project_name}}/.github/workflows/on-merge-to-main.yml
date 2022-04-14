@@ -20,7 +20,17 @@ jobs:
 
       - name: Run checks
         uses: ./.github/workflows/run-checks 
-  {% if cookiecutter.tox== "y" %}
+
+      {%- if cookiecutter.sphinx_docs == "y" %}
+
+      - name: Documentation Test
+        run: |
+          source .venv/bin/activate
+          make docs-test
+      {%- endif %}
+        
+  {%- if cookiecutter.tox== "y" %}
+
   tox:
     runs-on: ubuntu-latest
     strategy:
@@ -40,4 +50,4 @@ jobs:
           source .venv/bin/activate
           poetry add tox-gh-actions
           tox
-  {% endif %}
+  {%- endif %}
