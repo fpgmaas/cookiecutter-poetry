@@ -24,7 +24,8 @@ build: clean-build ## Build wheel file using poetry
 clean-build: ## clean build artifacts
 	@rm -rf dist
 
-{% if cookiecutter.publish_to == "pypi" -%}
+{%- if cookiecutter.publish_to == "pypi"%}
+
 publish: ## publish a release to pypi.
 	@echo "🚀 Publishing: Dry run."
 	@poetry config pypi-token.pypi $(PYPI_TOKEN)
@@ -33,7 +34,8 @@ publish: ## publish a release to pypi.
 	@poetry publish
 
 build-and-publish: build publish ## Build and publish.
-{%- elif cookiecutter.publish_to == "artifactory" -%}
+{%- elif cookiecutter.publish_to == "artifactory" %}
+
 publish: ## Publish to the Artifactory repository using poetry. Requires ARTIFACTORY_TOKEN for DPS-FF-ILO to be set.
 	@echo "🚀 Publishing: Dry run."
 	@poetry config repositories.artifactory $(ARTIFACTORY_URL)
@@ -42,23 +44,29 @@ publish: ## Publish to the Artifactory repository using poetry. Requires ARTIFAC
 	@poetry publish --repository artifactory --username $(ARTIFACTORY_USERNAME) --password $(ARTIFACTORY_PASSWORD)
 
 build-and-publish: build publish ## Build and publish.
-{%- endif %}
+{%- endif%}
 
-{% if cookiecutter.sphinx_docs == "y" -%}
+{%- if cookiecutter.sphinx_docs == "y" %}
+
 docs-generate: ## convert docstrings to docs
 	@sphinx-apidoc -o docs/source/ {{cookiecutter.project_slug}}
 
 docs-build: ## Build the docs
 	@sphinx-build -b html docs docs/_build
 
-docs-open: ## Build the docs
+docs-open: ## Open the docs in the browser
 	@open docs/_build/index.html
 
 docs-test: ## Build the docs
 	@open docs/_build/index.html
 
 docs: docs-generate docs-build docs-open ## Generate, build and open the docs.
-{% endif -%}
+
+docs-build-test: ## Test if the documentation can be built without errors.
+	@sphinx-build -b html -W --keep-going docs docs/_build
+
+docs-test: docs-generate docs-build-test ## Test if the documentation can be generated and built without errors.
+{%- endif %}
 
 .PHONY: help
 

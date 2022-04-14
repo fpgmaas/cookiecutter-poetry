@@ -19,8 +19,19 @@ jobs:
 
       - name: Run checks
         uses: ./.github/workflows/run-checks
-  {% if cookiecutter.tox== "y" %}
+
+      {%- if cookiecutter.sphinx_docs == "y" %}
+
+      - name: Documentation Test
+        run: |
+          source .venv/bin/activate
+          make docs-test
+      {%- endif %} 
+
+  {%- if cookiecutter.tox== "y" %}
+
   tox:
+    needs: quality
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -39,10 +50,17 @@ jobs:
           source .venv/bin/activate
           poetry add tox-gh-actions
           tox
-  {% endif %}
+  {%- endif %}
+
   {%- if cookiecutter.publish_to != "none" %}
-  release:
+
+  publish:
       runs-on: ubuntu-latest
+      needs: {% if cookiecutter.tox== "y" -%}
+                tox
+            {%- else -%}
+            quality
+            {%- endif %}
       steps:
 
         - name: Check out
@@ -74,10 +92,19 @@ jobs:
             RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
             {%- endraw -%}
             {%- endif %}
-  {% endif %}
-  {% if cookiecutter.sphinx_docs == "y" -%}
+  {%- endif %}
+
+  {%- if cookiecutter.sphinx_docs == "y" %}
+
   documentation:
     runs-on: ubuntu-latest
+    needs: {% if cookiecutter.publish_to != "none" -%}
+              publish
+           {%- elif cookiecutter.tox== "y" -%}
+              tox
+           {%- else -%}
+              quality
+           {%- endif %}
     steps:
 
       - name: Check out
@@ -98,4 +125,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs/_build
           {%- endraw -%}
-  {% endif -%}
+  {%- endif %}

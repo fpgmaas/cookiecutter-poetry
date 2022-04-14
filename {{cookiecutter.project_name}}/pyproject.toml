@@ -3,6 +3,12 @@ name = "{{cookiecutter.project_slug}}"
 version = "0.0.1"
 description = "{{cookiecutter.project_description}}"
 authors = ["{{cookiecutter.author}} <f{{cookiecutter.email}}>"]
+repository = "https://github.com/{{cookiecutter.github_author_handle}}/{{cookiecutter.project_name}}"
+documentation = "https://{{cookiecutter.github_author_handle}}.github.io/{{cookiecutter.project_name}}/"
+readme = "README.rst"
+packages = [
+  {include = "{{cookiecutter.project_slug}}"}
+]
 
 [tool.poetry.dependencies]
 python = ">=3.7,<4.0"
