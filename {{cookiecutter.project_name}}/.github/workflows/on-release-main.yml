@@ -31,6 +31,7 @@ jobs:
   {%- if cookiecutter.tox== "y" %}
 
   tox:
+    needs: quality
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -53,8 +54,13 @@ jobs:
 
   {%- if cookiecutter.publish_to != "none" %}
 
-  release:
+  publish:
       runs-on: ubuntu-latest
+      needs: {% if cookiecutter.tox== "y" -%}
+                tox
+            {%- else -%}
+            quality
+            {%- endif %}
       steps:
 
         - name: Check out
@@ -92,6 +98,13 @@ jobs:
 
   documentation:
     runs-on: ubuntu-latest
+    needs: {% if cookiecutter.publish_to != "none" -%}
+              publish
+           {%- elif cookiecutter.tox== "y" -%}
+              tox
+           {%- else -%}
+              quality
+           {%- endif %}
     steps:
 
       - name: Check out
