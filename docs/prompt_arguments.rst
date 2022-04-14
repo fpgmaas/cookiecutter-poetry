@@ -6,6 +6,12 @@ When running the command
 
 .. code-block:: bash
 
+    ccp
+
+or
+
+.. code-block:: bash
+
     cookiecutter https://github.com/fpgmaas/cookiecutter-poetry.git
 
 a prompt will start which enables you to configure your repository. The prompt values and their explanation are as follows:
@@ -44,6 +50,9 @@ a prompt will start which enables you to configure your repository. The prompt v
 **sphinx_docs**
     ``"y"`` or ``"n"``. Adds `sphinx <https://www.sphinx-doc.org/en/master/>`_ documentation to your project. This includes automatically parsing your
     docstrings and adding them to the documentation. Documentation will be deployed to the ``gh-pages`` branch.
+
+**tox**
+    ``"y"`` or ``"n"`` Adds automatic `Tox <https://tox.wiki/>`_ testing for compatibility with multiple versions of Python.  
 
 **open_source_license**
     Choose a `license <https://choosealicense.com/>`_. Options: ``["1. MIT License", "2. BSD license", "3. ISC license", 

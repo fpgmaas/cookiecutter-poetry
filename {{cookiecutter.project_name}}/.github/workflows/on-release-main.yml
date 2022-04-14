@@ -41,6 +41,7 @@ jobs:
           poetry add tox-gh-actions
           tox
   {% endif %}
+  {%- if cookiecutter.publish_to != "none" %}
   release:
       needs: {% if cookiecutter.tox== "y" %}Tox{% else %}Quality{% endif %}
       runs-on: ubuntu-latest
@@ -55,7 +56,7 @@ jobs:
         - name: Set output
           id: vars
           run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
-
+        
         - name: Build and publish
           run: |
             source .venv/bin/activate
@@ -75,8 +76,8 @@ jobs:
             RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
             {%- endraw -%}
             {%- endif %}
-
-  {% if cookiecutter.publish_to == "pypi" -%}
+  {% endif %}
+  {% if cookiecutter.sphinx_docs == "y" -%}
   documentation:
     needs: Release
     runs-on: ubuntu-latest

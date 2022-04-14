@@ -34,7 +34,6 @@ Cookiecutter Poetry
 	:target: https://pycqa.github.io/isort/
 	:alt: Imports with isort
 
-
 This is a `cookiecutter <https://github.com/cookiecutter/cookiecutter>`_ repository to generate the file structure for a Python project that uses `Poetry <https://python-poetry.org/>`_ for its dependency management.
 
 +-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
@@ -105,7 +104,7 @@ Then run the following commands, replacing ``<project-name>``, with the name tha
 Finally, install the environment with ``make install``. 
 
 If you want to deploy to Pypi or Artifactory automatically on each release, you need to set
-some secrets in your repository on Github. For more information, see `the documentation <https://fpgmaas.github.io/cookiecutter-poetry/features/releasing.html>`_
+some secrets in your repository on Github. For more information, see `the documentation <https://fpgmaas.github.io/cookiecutter-poetry/features/releasing.html>`_.
 
 
 Acknowledgements

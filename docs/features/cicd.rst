@@ -27,5 +27,4 @@ call the ``action.yml`` files to set-up the environment, run the tests, and chec
 these features, see :doc:`Releasing to Pypi or Artifactory <./releasing>` and :doc:`Documentation with Sphinx
 <./sphinx>`
 
-
-
+Additionally, all workflows check for compatibility with multiple Python versions if ``tox`` is set to ``"y"``.
