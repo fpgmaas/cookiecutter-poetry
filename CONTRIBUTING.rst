@@ -123,7 +123,14 @@ development. Please note this documentation assumes you already have
    This step is also triggered in the CI/CD pipeline, so you could also choose to skip this
    step locally.
 
-| 9. Commit your changes and push your branch to GitHub:
+| 9. Reflect your changes in the dcoumentation. Update relevant files in the ``docs`` directory, 
+   and potentially the ``README``.You can check the updated documentation with 
+
+   .. code-block:: bash
+
+        make docs
+
+| 10. Commit your changes and push your branch to GitHub:
 
    .. code-block:: bash
 
@@ -131,7 +138,7 @@ development. Please note this documentation assumes you already have
         git commit -m "Your detailed description of your changes."
         git push origin name-of-your-bugfix-or-feature
 
-| 10. Submit a pull request through the GitHub website.
+| 11. Submit a pull request through the GitHub website.
 
 Pull Request Guidelines
 ---------------------------
