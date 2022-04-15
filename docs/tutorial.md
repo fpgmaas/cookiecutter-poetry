@@ -105,9 +105,12 @@ instructions on how to do that, see [here](./features/publishing.md#set-up-for-p
 
 ## Step 8: Create a new release
 
-If you want to deploy your project to Pypi or Artifactory using the
-Github Actions, you will have to set some repository secrets. For
-instructions on how to do that, see [Publishing to Pypi or Artifactory](./features/publishing.md).
+To trigger a new release, navigate to your repository on GitHub, click ``Releases`` on the right, and then select `Draft
+a new release`. If you fail to find the button, you could also directly visit
+`https://github.com/<username>/<repository-name>/releases/new`.
+
+Give your release a title, and add a new tag in the form `*.*.*` where the
+`*`'s are alphanumeric. To finish, press `Publish release`.
 
 ## Step 9: Enable your documentation
 

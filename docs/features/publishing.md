@@ -19,7 +19,7 @@ your repository. In your Github repository, navigate to
 name of the secret, set `PYPI_TOKEN`. Then, in a new tab go to your
 [Pypi Account settings](https://pypi.org/manage/account/) and select
 `Add API token`. Copy and paste the token in the `Value`
-field for the Github secret in your first tab, and you\'re all set!
+field for the Github secret in your first tab, and you're all set!
 
 ## Set-up for Artifactory
 
@@ -36,13 +36,12 @@ respectively. To do so, in your Github repository, navigate to
 
 # How to trigger a release?
 
-To trigger a new release, click the `Draft a new release` button on your
-repository\'s homepage. If you fail to find the button, you could also
-directly visit
+To trigger a new release, navigate to your repository on GitHub, click ``Releases`` on the right, and then select `Draft
+a new release`. If you fail to find the button, you could also directly visit
 `https://github.com/<username>/<repository-name>/releases/new`.
 
-Give your release a title, add a new tag in the form `*.*.*` where the
-`*`\'s are alphanumeric. To finish, press `Publish release`.
+Give your release a title, and add a new tag in the form `*.*.*` where the
+`*`'s are alphanumeric. To finish, press `Publish release`.
 
 # Releasing locally
 
