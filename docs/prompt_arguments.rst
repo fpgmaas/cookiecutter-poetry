@@ -22,7 +22,7 @@ a prompt will start which enables you to configure your repository. The prompt v
 **email**
     Your email address.
 
-**github_author_handle**
+**author_github_handle**
     Your github handle, i.e. ``<handle>`` in ``https://github.com/<handle>``
 
 **project_name**

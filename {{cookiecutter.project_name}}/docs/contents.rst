@@ -3,3 +3,4 @@
    
    Readme <index>
    Modules <source/modules>
+   Contributing <contributing>
