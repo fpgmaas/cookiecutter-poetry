@@ -8,6 +8,7 @@ repository to generate the file structure for a Python project that uses
 
 A project generated with ``cookiecutter-poetry`` supports the following features:
 
+- [Poetry](https://python-poetry.org/) for dependency management.
 - CI/CD with [GitHub Actions](https://github.com/features/actions)
 - Formatting with [black](https://pypi.org/project/black/) and [isort](https://pycqa.github.io/isort/index.html)
 - Publishing to [Pypi](https://pypi.org) or [Artifactory](https://jfrog.com/artifactory) by creating a new release on GitHub.
@@ -54,20 +55,6 @@ If you want to deploy to Pypi or Artifactory automatically on each
 release, you need to set some secrets in your repository on Github. For
 more information, see [the
 documentation](https://fpgmaas.github.io/cookiecutter-poetry/features/releasing.html).
-
-## Features
-
-- **Poetry**: Generates a [poetry](https://python-poetry.org/) environment file, ready to be installed with a single command.
-- **Makefile**: A makefile with pre-configured commands, type `make help` to list the options.
-- **Pytest**: Adds a [pytest](https://docs.pytest.org/en/7.1.x/) template.
-- **Formatting**: Adds code formatting with [isort](https://github.com/PyCQA/isort) and [black](https://pypi.org/project/black/).
-- **CI/CD with Github actions**: Adds Github actions that run the formatting checks and unittests for pull requests and when merged to `main`.
-- **Release to Pypi**: Release to [Pypi](https://pypi.org) by creating a new release on Github.
-- **Release to Artifactory**: Release to [Artifactory](https://jfrog.com/artifactory) by creating a new release on Github.
-- **Documentation with Sphinx**: Automatically add documentation to your project and its code with [Sphinx](https://www.sphinx-doc.org/).
-- **Tox testing** Setup and CI/CD integration to easily test for different Python versions with [Tox](https://tox.wiki/).
-
-
 
 ## Acknowledgements
 
