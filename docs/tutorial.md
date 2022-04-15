@@ -121,4 +121,5 @@ To finalize deploying your documentation, under ``Source``, select the branch ``
 
 ## Step 10: You're all set!
 
-That's it! 
+That's it! I hope this repository saved you a lot of manual configuration. If you have any improvement suggestions, feel
+free to raise an issue or open a PR on Github!

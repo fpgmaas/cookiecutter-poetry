@@ -6,6 +6,15 @@ This is a [cookiecutter](https://github.com/cookiecutter/cookiecutter)
 repository to generate the file structure for a Python project that uses
 [Poetry](https://python-poetry.org/) for its dependency management. 
 
+A project generated with ``cookiecutter-poetry`` supports the following features:
+
+- CI/CD with [GitHub Actions](https://github.com/features/actions)
+- Formatting with [black](https://pypi.org/project/black/) and [isort](https://pycqa.github.io/isort/index.html)
+- Publishing to [Pypi](https://pypi.org) or [Artifactory](https://jfrog.com/artifactory) by creating a new release on GitHub.
+- Testing with [pytest](https://docs.pytest.org/en/7.1.x/)
+- Documentation with [sphinx](https://www.sphinx-doc.org/en/master/)
+- Compatibility testing with [Tox](https://tox.wiki/en/latest/)
+
 An example of a repository generated with this package can be found [here](https://github.com/fpgmaas/cookiecutter-poetry-example).
 
 ## Quickstart
