@@ -5,3 +5,4 @@
    Tutorial <tutorial>
    Feature Details <feature_details>
    Prompt arguments <prompt_arguments>
+   Contributing <contributing>
