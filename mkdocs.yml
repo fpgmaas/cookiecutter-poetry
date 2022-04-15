@@ -1,0 +1,34 @@
+site_name: cookiecutter-poetry
+repo_url: https://github.com/fpgmaas/cookiecutter-poetry
+site_url: https://fpgmaas.github.io/cookiecutter-poetry
+site_description: A cookiecutter template for Python projects that use Poetry for its dependency management
+site_author: Florian Maas
+
+nav:
+  - Home: index.md
+  - Features:
+    - CI/CD with Github Actions: features/cicd.md
+    - Formatting with black and isort: features/formatting.md
+    - Makefile: features/makefile.md
+    - Dependency management with Poetry: features/poetry.md
+    - Publishing to PyPi or Artifactory: features/publishing.md
+    - Testing with Pytest: features/pytest.md
+    - Documentation with Sphinx: features/sphinx.md
+    - Compatibility testing with Tox: features/tox.md
+  - Tutorial: tutorial.md
+  - Prompt Arguments: prompt_arguments.md
+plugins:
+  - search
+copyright: Maintained by <a href="https://fpgmaas.com">Florian</a>.
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    primary: white
+    accent: blue
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true

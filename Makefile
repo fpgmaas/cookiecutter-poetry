@@ -41,19 +41,11 @@ publish: ## publish a release to pypi.
 
 build-and-publish: build publish ## Build and publish.
 
-docs-test: ## Test Sphinx documentation.
-	@sphinx-build docs docs/_build -W --keep-going
+docs-verify: ## Check if MkDocs build does not return warnings or errors
+	@mkdocs build -s
 
-docs-clean: ## Clean the docs/_build folder 
-	@rm -rf docs/_build/*
-
-docs-build: ## Build the documentation
-	@sphinx-build docs docs/_build
-
-docs-open: ## Open the documentation
-	@open docs/_build/index.html
-
-docs: docs-clean docs-build docs-open ## Build and open the documentation
+docs-serve: ## Build and serve the MkDocs documentation
+	@mkdocs serve
 
 .PHONY: help
 

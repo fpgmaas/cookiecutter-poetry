@@ -22,7 +22,7 @@ jobs:
       - name: Documentation Test
         run: |
           source .venv/bin/activate
-          make docs-test
+          make docs-verify
 
   tox:
     runs-on: ubuntu-latest
@@ -83,10 +83,4 @@ jobs:
       - name: Generate documentation
         run: |
             source .venv/bin/activate
-            make docs-build
-
-      - name: Deploy documentation to GitHub pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/_build
+            mkdocs gh-deploy

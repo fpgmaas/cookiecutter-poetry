@@ -37,8 +37,6 @@ Cookiecutter Poetry
 This is a `cookiecutter <https://github.com/cookiecutter/cookiecutter>`_ repository to generate the file structure for a Python project that uses `Poetry <https://python-poetry.org/>`_ for its dependency management.
 
 +-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-| **Github repository**         | `https://github.com/fpgmaas/cookiecutter-poetry/ <https://github.com/fpgmaas/cookiecutter-poetry/>`_                                 |
-+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
 | **Documentation**             | `https://fpgmaas.github.io/cookiecutter-poetry/ <https://fpgmaas.github.io/cookiecutter-poetry/>`_                                   |
 +-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
 | **Example Repository**        | `https://github.com/fpgmaas/cookiecutter-poetry-example/ <https://github.com/fpgmaas/cookiecutter-poetry-example/>`_                 |
