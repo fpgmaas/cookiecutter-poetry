@@ -116,6 +116,7 @@ jobs:
       - name: Generate documentation
         run: |
             source .venv/bin/activate
+            make docs-generate
             make docs-build
 
       - name: Deploy documentation to GitHub pages
