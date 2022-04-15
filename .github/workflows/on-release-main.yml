@@ -83,4 +83,4 @@ jobs:
       - name: Generate documentation
         run: |
             source .venv/bin/activate
-            mkdocs gh-deploy
+            mkdocs gh-deploy --force
