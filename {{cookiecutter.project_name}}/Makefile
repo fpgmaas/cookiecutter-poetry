@@ -57,9 +57,6 @@ docs-build: ## Build the docs
 docs-open: ## Open the docs in the browser
 	@open docs/_build/index.html
 
-docs-test: ## Build the docs
-	@open docs/_build/index.html
-
 docs: docs-generate docs-build docs-open ## Generate, build and open the docs.
 
 docs-build-test: ## Test if the documentation can be built without errors.
