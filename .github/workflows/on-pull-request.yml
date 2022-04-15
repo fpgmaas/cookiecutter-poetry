@@ -1,13 +1,13 @@
 on:
-  release:
-    types: [published]
-    branches: [main]
+    pull_request:
+        types: [opened, synchronize, reopened]
 
-name: release-main
+name: on-pull-request
 
 jobs:
   documentation:
     runs-on: ubuntu-latest
+    needs: publish
     steps:
 
       - name: Check out

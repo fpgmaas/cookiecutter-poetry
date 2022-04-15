@@ -100,4 +100,22 @@ poetry shell
 
 If you want to deploy your project to Pypi or Artifactory using the
 Github Actions, you will have to set some repository secrets. For
+instructions on how to do that, see [here](./features/publishing.md#set-up-for-pypi) for PyPi, or 
+[here](./features/publishing.md#set-up-for-artifactory) for Artifactory.
+
+## Step 8: Create a new release
+
+If you want to deploy your project to Pypi or Artifactory using the
+Github Actions, you will have to set some repository secrets. For
 instructions on how to do that, see [Publishing to Pypi or Artifactory](./features/publishing.md).
+
+## Step 9: Enable your documentation
+
+In your repository, navigate to ``Settings > Code and Automation > Pages``. If you succesfully created a new release,
+you should see a notification saying `` Your site is ready to be published at https://<author_github_handle>.github.io/<project_name>/``.
+
+To finalize deploying your documentation, under ``Source``, select the branch ``gh-pages``. 
+
+## Step 10: You're all set!
+
+That's it! 
