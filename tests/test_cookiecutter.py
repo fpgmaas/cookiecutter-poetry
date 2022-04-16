@@ -79,7 +79,9 @@ def test_mkdocs(cookies, tmp_path):
 def test_not_mkdocs(cookies, tmp_path):
     with run_within_dir(tmp_path):
         result = cookies.bake(extra_context={"mkdocs": "n"})
-        assert not file_contains_text(f"{result.project_path}/.github/workflows/on-release-main.yml", "mkdocs gh-deploy")
+        assert not file_contains_text(
+            f"{result.project_path}/.github/workflows/on-release-main.yml", "mkdocs gh-deploy"
+        )
         assert not file_contains_text(f"{result.project_path}/Makefile", "docs:")
         assert not os.path.isdir(f"{result.project_path}/docs")
 
