@@ -61,7 +61,7 @@ git remote add origin git@github.com:<github_author_handle>/<project_name>.git
 git push -u origin main
 ```
 
-Finally, install the environment with [make install]{.title-ref}.
+Finally, install the environment with `make install`.
 
 You are now ready to start development on your project! The CI/CD
 pipeline will be triggered when you open a pull request, merge to main,
