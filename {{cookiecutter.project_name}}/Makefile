@@ -48,7 +48,7 @@ build-and-publish: build publish ## Build and publish.
 
 {%- if cookiecutter.mkdocs == "y" %}
 
-docs-verify: ## Check if documentation can be built without warnings or errors
+docs-test: ## Test if documentation can be built without warnings or errors
 	@mkdocs build -s
 
 docs: ## Build and serve the documentation

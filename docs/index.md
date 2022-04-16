@@ -12,7 +12,7 @@ repository to generate the file structure for a Python project that uses
 
 A project generated with ``cookiecutter-poetry`` supports the following features:
 
-- [Poetry](https://python-poetry.org/) for dependency management.
+- [Poetry](https://python-poetry.org/), obviously.
 - CI/CD with [GitHub Actions](https://github.com/features/actions)
 - Formatting with [black](https://pypi.org/project/black/) and [isort](https://pycqa.github.io/isort/index.html)
 - Publishing to [Pypi](https://pypi.org) or [Artifactory](https://jfrog.com/artifactory) by creating a new release on GitHub.
@@ -55,10 +55,9 @@ git push -u origin main
 
 Finally, install the environment with `make install`.
 
-If you want to deploy to Pypi or Artifactory automatically on each
-release, you need to set some secrets in your repository on Github. For
-more information, see [the
-documentation](https://fpgmaas.github.io/cookiecutter-poetry/features/releasing.html).
+You are now ready to start development on your project! The CI/CD pipeline will be triggered when you open a pull request, merge to main, or when you create a new release. 
+
+To finalize the set-up for publishing to PyPi or Artifactory through CI/CD, see [here](./features/publishing.md#set-up-for-pypi). For activating the automatic documentation with MkDocs, see [here](./features/mkdocs.md#enabling-the-documentation-on-github). 
 
 ## Acknowledgements
 
