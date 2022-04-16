@@ -1,16 +1,22 @@
-
 # Cookiecutter Poetry
 
 [![Release](https://img.shields.io/github/v/release/fpgmaas/cookiecutter-poetry)](https://pypi.org/project/cookiecutter-poetry/)
 [![Build status](https://img.shields.io/github/workflow/status/fpgmaas/cookiecutter-poetry/merge-to-main)](https://img.shields.io/github/workflow/status/fpgmaas/cookiecutter-poetry/merge-to-main)
 [![Supported Python versions](https://img.shields.io/pypi/pyversions/cookiecutter-poetry)](https://pypi.org/project/cookiecutter-poetry/)
+[![Docs](https://img.shields.io/badge/docs-gh--pages-blue)](https://fpgmaas.github.io/cookiecutter-poetry/)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/fpgmaas/cookiecutter-poetry)](https://img.shields.io/github/commit-activity/m/fpgmaas/cookiecutter-poetry)
 [![License](https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry)](https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry)
+
 
 This is a [cookiecutter](https://github.com/cookiecutter/cookiecutter)
 repository to generate the file structure for a Python project that uses
-[Poetry](https://python-poetry.org/) for its dependency management. 
+[Poetry](https://python-poetry.org/) for its dependency management.
 
-A project generated with ``cookiecutter-poetry`` supports the following features:
+- **Documentation**: [Link](https://fpgmaas.github.io/cookiecutter-poetry/)
+- **Example repository**: [Link](https://github.com/fpgmaas/cookiecutter-poetry-example)
+- **PyPi**: [Link](https://pypi.org/project/cookiecutter-poetry/)
+
+## Features
 
 - [Poetry](https://python-poetry.org/), obviously.
 - CI/CD with [GitHub Actions](https://github.com/features/actions)
@@ -20,7 +26,9 @@ A project generated with ``cookiecutter-poetry`` supports the following features
 - Documentation with [MkDocs](https://www.mkdocs.org/)
 - Compatibility testing for multiple versions of Python with [Tox](https://tox.wiki/en/latest/)
 
-An example of a repository generated with this package can be found [here](https://github.com/fpgmaas/cookiecutter-poetry-example).
+## Example CI/CD Pipeline
+
+[![Example pipeline](https://raw.githubusercontent.com/fpgmaas/cookiecutter-poetry/main/static/images/pipeline.png)](https://raw.githubusercontent.com/fpgmaas/cookiecutter-poetry/main/static/images/pipeline.png)
 
 ## Quickstart
 
@@ -53,15 +61,20 @@ git remote add origin git@github.com:<github_author_handle>/<project_name>.git
 git push -u origin main
 ```
 
-Finally, install the environment with `make install`.
+Finally, install the environment with [make install]{.title-ref}.
 
-You are now ready to start development on your project! The CI/CD pipeline will be triggered when you open a pull request, merge to main, or when you create a new release. 
+You are now ready to start development on your project! The CI/CD
+pipeline will be triggered when you open a pull request, merge to main,
+or when you create a new release.
 
-To finalize the set-up for publishing to PyPi or Artifactory, see [here](./features/publishing.md#set-up-for-pypi). For activating the automatic documentation with MkDocs, see [here](./features/mkdocs.md#enabling-the-documentation-on-github). 
+To finalize the set-up for publishing to PyPi or Artifactory, see
+[here](https://fpgmaas.github.io/cookiecutter-poetry/features/publishing/#set-up-for-pypi).
+For activating the automatic documentation with MkDocs, see
+[here](https://fpgmaas.github.io/cookiecutter-poetry/features/mkdocs/#enabling-the-documentation-on-github).
 
 ## Acknowledgements
 
 This project is partially based on [Audrey
-Feldroy's](https://github.com/audreyfeldroy) great
-[cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage).
-
+Feldroy\'s](https://github.com/audreyfeldroy)\'s great
+[cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage)
+repository.
