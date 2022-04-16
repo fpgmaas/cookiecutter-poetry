@@ -1,0 +1,30 @@
+site_name: {{cookiecutter.project_name}}
+repo_url: https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}
+site_url: https://{{cookiecutter.author_github_handle}}.github.io/{{cookiecutter.project_name}}
+site_description: {{cookiecutter.project_description}}
+site_author: {{cookiecutter.author}}
+
+nav:
+  - Home: index.md
+  - Modules: modules.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+            setup_commands:
+                - import sys
+                - sys.path.append('../')
+copyright: Maintained by {{cookiecutter.author}}.
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    primary: white
+    accent: blue
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true

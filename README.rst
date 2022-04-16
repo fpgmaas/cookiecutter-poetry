@@ -65,7 +65,7 @@ Features
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Release to Artifactory**                   | Release to `Artifactory <https://jfrog.com/artifactory>`_ by creating a new release on Github.                                                             |
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Documentation with Sphinx**                | Automatically add documentation to your project and its code with `Sphinx <https://www.sphinx-doc.org/>`_.                                                 |
+| **Documentation with MkDocs**                | Automatically add documentation to your project and its code with `MkDocs <https://www.mkdocs.org/>`_.                                                     |
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Tox testing**                              | Setup and CI/CD integration to easily test for different Python versions with `Tox <https://tox.wiki/>`_.                                                  |
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+

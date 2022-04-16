@@ -49,9 +49,9 @@ simple as creating a new release release on Github. For more info,
 see
 [Publishing to Pypi or Artifactory](./features/publishing.md).
 
-**sphinx_docs**
+**mkdocs**
 
-`"y"` or `"n"`. Adds [Sphinx](https://www.sphinx-doc.org/en/master/)
+`"y"` or `"n"`. Adds [MkDocs](https://www.mkdocs.org/)
 documentation to your project. This includes automatically parsing
 your docstrings and adding them to the documentation. Documentation
 will be deployed to the `gh-pages` branch.

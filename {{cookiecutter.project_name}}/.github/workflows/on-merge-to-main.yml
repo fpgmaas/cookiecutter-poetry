@@ -21,12 +21,12 @@ jobs:
       - name: Run checks
         uses: ./.github/workflows/run-checks 
 
-      {%- if cookiecutter.sphinx_docs == "y" %}
+      {%- if cookiecutter.mkdocs == "y" %}
 
       - name: Documentation Test
         run: |
           source .venv/bin/activate
-          make docs-test
+          make docs-verify
       {%- endif %}
         
   {%- if cookiecutter.tox== "y" %}

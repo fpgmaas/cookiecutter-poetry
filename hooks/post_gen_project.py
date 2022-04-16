@@ -21,5 +21,5 @@ if __name__ == "__main__":
     if "{{cookiecutter.tox}}" != "y":
         remove_file("tox.ini")
 
-    if "{{cookiecutter.sphinx_docs}}" != "y":
+    if "{{cookiecutter.mkdocs}}" != "y":
         remove_dir("docs")
