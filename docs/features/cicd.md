@@ -1,6 +1,5 @@
----
-title: CI/CD with Github actions
----
+
+# CI/CD with Github actions
 
 when `include_github_actions` is set to `"y"`, a `.github` directory is
 added with the following structure:
@@ -28,13 +27,20 @@ formatting.
 made on the `main` branch. In addition, `on-release-main.yml` also
 publishes the project to Pypi or Artifactory if `publish_to` is set to
 `"pypi"` or `"artifactory"`, and it builds and deploys the documentation
-if `sphinx_docs` is set to `"y"`. To learn more about these features,
-see `Releasing to Pypi or Artifactory <./releasing>`{.interpreted-text
-role="doc"} and `Documentation with Sphinx
-<./sphinx>`{.interpreted-text role="doc"}
+if `mkdocs` is set to `"y"`. To learn more about these features,
+see [Publishing to PyPi or Artifactory](./publishing.md) and [Documentation with MkDocs](./mkdocs.md) 
 
 Additionally, all workflows check for compatibility with multiple Python
 versions if `tox` is set to `"y"`.
+
+# How to trigger a release?
+
+To trigger a new release, navigate to your repository on GitHub, click ``Releases`` on the right, and then select `Draft
+a new release`. If you fail to find the button, you could also directly visit
+`https://github.com/<username>/<repository-name>/releases/new`.
+
+Give your release a title, and add a new tag in the form `*.*.*` where the
+`*`'s are alphanumeric. To finish, press `Publish release`.
 
 ## Example CI/CD Pipeline
 

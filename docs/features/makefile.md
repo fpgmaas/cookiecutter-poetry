@@ -19,7 +19,6 @@ build-and-publish    Build and publish.
 docs-generate        convert docstrings to docs
 docs-build           Build the docs
 docs-open            Open the docs in the browser
-docs                 Generate, build and open the docs.
-docs-build-test      Test if the documentation can be built without errors.
+docs                 Build and serve the documentation
 docs-test            Test if the documentation can be generated and built without errors.
 ```

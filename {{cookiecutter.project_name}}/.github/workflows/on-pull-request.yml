@@ -18,7 +18,7 @@ jobs:
       - name: Run checks
         uses: ./.github/workflows/run-checks
 
-      {%- if cookiecutter.sphinx_docs == "y" %}
+      {%- if cookiecutter.mkdocs == "y" %}
 
       - name: Documentation Test
         run: |

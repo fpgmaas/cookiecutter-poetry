@@ -41,11 +41,13 @@ publish: ## publish a release to pypi.
 
 build-and-publish: build publish ## Build and publish.
 
-docs-verify: ## Check if MkDocs build does not return warnings or errors
+docs-test: ## Test if documentation can be built without warnings or errors
 	@mkdocs build -s
 
-docs-serve: ## Build and serve the MkDocs documentation
+docs: ## Build and serve the documentation
 	@mkdocs serve
+
+.PHONY: docs	
 
 .PHONY: help
 

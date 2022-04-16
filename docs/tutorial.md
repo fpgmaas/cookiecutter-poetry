@@ -16,13 +16,13 @@ whenever you create them with `poetry init`.
 
 ## Step 2: Install pyenv (Optional)
 
-I would recommend to use `pyenv` for managing your different Python versions. However, if you prefer anohter method of
+I would recommend to use `pyenv` for managing your different Python versions. However, if you prefer another method of
 managing your Python versions, feel free to skip this step and continue to [step 3](#step-3-generate-your-project).  
 
 The instructions to install pyenv can be found [here](https://github.com/pyenv/pyenv). The instructions to install
 poetry can be found [here](https://python-poetry.org/docs/).
 
-Then, install a version of Python with pyenv. To see a list of available
+Install a version of Python with pyenv. To see a list of available
 versions, run:
 
 ``` bash
@@ -89,7 +89,13 @@ git push -u origin main
 
 ## Step 6: Activate your environment
 
-Install and activate the environment by running:
+If you are using `pyenv`, you might want to set the local `python` version to be used:
+
+```bash
+pyenv local x.y.z
+```
+
+Install and activate the `poetry` environment by running:
 
 ``` bash
 poetry install

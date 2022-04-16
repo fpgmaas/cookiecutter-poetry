@@ -65,7 +65,7 @@ Features
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Release to Artifactory**                   | Release to `Artifactory <https://jfrog.com/artifactory>`_ by creating a new release on Github.                                                             |
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Documentation with Sphinx**                | Automatically add documentation to your project and its code with `Sphinx <https://www.sphinx-doc.org/>`_.                                                 |
+| **Documentation with MkDocs**                | Automatically add documentation to your project and its code with `MkDocs <https://www.mkdocs.org/>`_.                                                     |
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Tox testing**                              | Setup and CI/CD integration to easily test for different Python versions with `Tox <https://tox.wiki/>`_.                                                  |
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -107,10 +107,13 @@ Then run the following commands, replacing ``<project-name>``, with the name tha
     git push -u origin main
 
 
-Finally, install the environment with ``make install``. 
+Finally, install the environment with `make install`. 
 
-If you want to deploy to Pypi or Artifactory automatically on each release, you need to set
-some secrets in your repository on Github. For more information, see `the documentation <https://fpgmaas.github.io/cookiecutter-poetry/features/releasing.html>`_.
+You are now ready to start development on your project! The CI/CD pipeline will be triggered when you open a pull
+request, merge to main, or when you create a new release.
+
+To finalize the set-up for publishing to PyPi or Artifactory through CI/CD, see `here <https://fpgmaas.github.io/cookiecutter-poetry/features/publishing/#set-up-for-pypi>`_. 
+For activating the automatic documentation with MkDocs, see `here <https://fpgmaas.github.io/cookiecutter-poetry/features/mkdocs/#enabling-the-documentation-on-github>`_.
 
 
 Acknowledgements

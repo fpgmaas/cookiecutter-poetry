@@ -20,7 +20,7 @@ jobs:
       - name: Run checks
         uses: ./.github/workflows/run-checks
 
-      {%- if cookiecutter.sphinx_docs == "y" %}
+      {%- if cookiecutter.mkdocs == "y" %}
 
       - name: Documentation Test
         run: |
@@ -94,7 +94,7 @@ jobs:
             {%- endif %}
   {%- endif %}
 
-  {%- if cookiecutter.sphinx_docs == "y" %}
+  {%- if cookiecutter.mkdocs == "y" %}
 
   documentation:
     runs-on: ubuntu-latest
@@ -116,14 +116,5 @@ jobs:
       - name: Generate documentation
         run: |
             source .venv/bin/activate
-            make docs-generate
-            make docs-build
-
-      - name: Deploy documentation to GitHub pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          {% raw -%}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/_build
-          {%- endraw -%}
+            mkdocs gh-deploy --force
   {%- endif %}
