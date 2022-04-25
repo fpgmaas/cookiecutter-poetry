@@ -24,6 +24,7 @@ repository to generate the file structure for a Python project that uses
 - Publishing to [Pypi](https://pypi.org) or [Artifactory](https://jfrog.com/artifactory) by creating a new release on GitHub
 - Testing with [pytest](https://docs.pytest.org/en/7.1.x/)
 - Documentation with [MkDocs](https://www.mkdocs.org/)
+- Static type checking with [mypy](https://mypy.readthedocs.io/en/stable/)
 - Compatibility testing for multiple versions of Python with [Tox](https://tox.wiki/en/latest/)
 
 ## Example CI/CD Pipeline

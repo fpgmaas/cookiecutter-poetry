@@ -8,10 +8,23 @@ format: ## Format code using isort and black.
 	@isort .
 	@black .
 
-lint: ## Check code formatting using isort and black.
-	@echo "🚀 Checking code formatting: Running isort and black"
+{%- if cookiecutter.mypy == "y"%}
+
+check: ## Check code formatting using isort, black and mypy.
+	@echo "🚀 Checking code formatting: Running isort"
 	@isort --check-only --diff .
+	@echo "🚀 Checking code formatting: Running black"
 	@black --check .
+	@echo "🚀 Checking code formatting: Running mypy"
+	@mypy .
+{%- else %}
+
+check: ## Check code formatting using isort and black.
+	@echo "🚀 Checking code formatting: Running isort"
+	@isort --check-only --diff .
+	@echo "🚀 Checking code formatting: Running black"
+	@black --check .
+{%- endif%}
 
 test: ## Test the code with pytest
 	@echo "🚀 Testing code: Running pytest"

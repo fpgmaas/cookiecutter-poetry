@@ -15,15 +15,11 @@ format: ## Format code using isort and black.
 	@echo "🚀 Formatting code: Running isort and black"
 	@isort .
 	@black .
-	@mypy .
 
-lint: ## Check code formatting using isort and black.
+check: ## Check code formatting using isort, black, and mypy.
 	@echo "🚀 Checking code formatting: Running isort and black"
 	@isort --check-only --diff .
 	@black --check .
-
-mypy: ## Check types with mypy
-	@echo "🚀 Checking types with mypy"
 	@mypy .
 
 test: ## Test the code with pytest
