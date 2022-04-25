@@ -15,6 +15,7 @@ nav:
     - Testing with Pytest: features/pytest.md
     - Documentation with MkDocs: features/mkdocs.md
     - Compatibility testing with Tox: features/tox.md
+    - Static type checking with mypy: features/mypy.md
   - Tutorial: tutorial.md
   - Prompt Arguments: prompt_arguments.md
 plugins:

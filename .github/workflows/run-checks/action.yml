@@ -9,7 +9,7 @@ runs:
       - name: Formatting check
         run: |
               source .venv/bin/activate
-              make lint
+              make check
         shell: bash
 
       - name: Test with pytest

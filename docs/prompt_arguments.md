@@ -61,6 +61,10 @@ will be deployed to the `gh-pages` branch.
 `"y"` or `"n"` Adds automatic [Tox](https://tox.wiki/) testing for
 compatibility with multiple versions of Python.
 
+**mypy**
+
+`"y"` or `"n"` Adds automatic static type checking with [mypy](https://mypy.readthedocs.io/en/stable/).
+
 **open_source_license**
 
 Choose a [license](https://choosealicense.com/). Options:
