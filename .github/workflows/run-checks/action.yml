@@ -12,6 +12,12 @@ runs:
               make lint
         shell: bash
 
+      - name: Test types with mypy
+        run: |
+              source .venv/bin/activate
+              make mypy
+        shell: bash
+
       - name: Test with pytest
         run: |
               source .venv/bin/activate
