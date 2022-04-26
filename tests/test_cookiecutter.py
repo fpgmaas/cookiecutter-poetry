@@ -99,6 +99,7 @@ def test_tox(cookies, tmp_path):
             f"{result.project_path}/.github/workflows/on-pull-request.yml", "poetry add tox-gh-actions"
         )
         assert os.path.isfile(f"{result.project_path}/tox.ini")
+        assert file_contains_text(f"{result.project_path}/tox.ini", "[tox]")
 
 
 def test_not_tox(cookies, tmp_path):
@@ -107,4 +108,4 @@ def test_not_tox(cookies, tmp_path):
         assert not file_contains_text(
             f"{result.project_path}/.github/workflows/on-release-main.yml", "poetry add tox-gh-actions"
         )
-        assert not os.path.isfile(f"{result.project_path}/tox.ini")
+        assert not file_contains_text(f"{result.project_path}/tox.ini", "[tox]")
