@@ -1,7 +1,6 @@
-
 # Publishing to Pypi or Artifactory
 
-# Releasing from Github
+## Releasing from Github
 
 When `publish_to` is set to `"pypi"` or `"artifactory"`, the
 `on-release-main.yml` workflow publishes the code to

@@ -10,20 +10,24 @@ format: ## Format code using isort and black.
 
 {%- if cookiecutter.mypy == "y"%}
 
-check: ## Check code formatting using isort, black and mypy.
+check: ## Check code formatting using isort, black, flake8 and mypy.
 	@echo "🚀 Checking code formatting: Running isort"
 	@isort --check-only --diff .
 	@echo "🚀 Checking code formatting: Running black"
 	@black --check .
+	@echo "🚀 Checking code formatting: Running flake8"
+	@flake8 .
 	@echo "🚀 Checking code formatting: Running mypy"
 	@mypy .
 {%- else %}
 
-check: ## Check code formatting using isort and black.
+check: ## Check code formatting using isort, black and flake8.
 	@echo "🚀 Checking code formatting: Running isort"
 	@isort --check-only --diff .
 	@echo "🚀 Checking code formatting: Running black"
 	@black --check .
+	@echo "🚀 Checking code formatting: Running flake8"
+	@flake8 .
 {%- endif%}
 
 test: ## Test the code with pytest

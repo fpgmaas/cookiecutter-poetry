@@ -1,6 +1,5 @@
----
-title: Poetry
----
+# Dependency management with Poetry
+
 
 The generated repository will uses [Poetry](https://python-Poetry.org/)
 for its dependency management. When you have created your repository

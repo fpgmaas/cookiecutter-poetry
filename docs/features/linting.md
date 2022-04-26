@@ -1,20 +1,9 @@
-[tox]
-skipsdist = true
-envlist = py38, py39, py310
+# Linting with flake8
 
-[gh-actions]
-python =
-    3.8: py38
-    3.9: py39
-    3.10: py310
-    
-[testenv]
-passenv = PYTHON_VERSION
-whitelist_externals = poetry
-commands =
-    poetry install -v
-    pytest --doctest-modules tests
+[flake8](https://flake8.pycqa.org/en/latest/) is added as development
+dependency. The settings for `flake8` can be found in `tox.ini`, and they are defaulted to:
 
+```
 [flake8]
 per-file-ignores = __init__.py:F401
 # PEP-8 The following are ignored:
@@ -32,6 +21,9 @@ exclude =
     build,
     dist,
     .venv,
-    {{cookiecutter.project_name}}
 max-complexity = 10
 max-line-length = 120
+```
+
+If `include_github_actions` is set to `"y"`, code linting is checked with `flake8`
+for every merge request, every merge to main, and every release.
