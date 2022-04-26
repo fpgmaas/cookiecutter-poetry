@@ -18,8 +18,5 @@ if __name__ == "__main__":
     if "{{cookiecutter.include_github_actions}}" != "y":
         remove_dir(".github")
 
-    if "{{cookiecutter.tox}}" != "y":
-        remove_file("tox.ini")
-
     if "{{cookiecutter.mkdocs}}" != "y":
         remove_dir("docs")

@@ -15,6 +15,7 @@ A project generated with ``cookiecutter-poetry`` supports the following features
 - [Poetry](https://python-poetry.org/), obviously.
 - CI/CD with [GitHub Actions](https://github.com/features/actions)
 - Formatting with [black](https://pypi.org/project/black/) and [isort](https://pycqa.github.io/isort/index.html)
+- Linting with [flake8](https://flake8.pycqa.org/en/latest/)
 - Publishing to [Pypi](https://pypi.org) or [Artifactory](https://jfrog.com/artifactory) by creating a new release on GitHub
 - Testing with [pytest](https://docs.pytest.org/en/7.1.x/)
 - Documentation with [MkDocs](https://www.mkdocs.org/)

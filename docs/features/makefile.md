@@ -1,6 +1,4 @@
----
-title: Makefile
----
+# Makefile
 
 The generated repository will have a `Makefile` available. A list of all
 available commands that are available can be obtained by running
@@ -10,7 +8,7 @@ available:
 ```
 install              Install the poetry environment
 format               Format code using isort and black.
-check                Check code formatting using isort, black and mypy.
+check                Check code formatting using isort, black, flake8 and mypy.
 test                 Test the code with pytest
 mypy                 Check types with mypy
 build                Build wheel file using poetry

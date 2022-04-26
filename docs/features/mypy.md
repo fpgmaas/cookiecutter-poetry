@@ -1,6 +1,4 @@
----
-title: Mypy
----
+# Static type checking with Mypy
 
 If `mypy` is set to `"y"`, static type checking is added with [mypy](https://mypy.readthedocs.io/en/stable/). 
 If `"github_actions` is also set to `"y"`, the code is checked with `mypy` during every workflow that is triggered.
