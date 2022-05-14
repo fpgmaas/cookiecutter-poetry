@@ -99,7 +99,7 @@ Now you can make your changes locally.
   formatting tests.
 
 ``` bash
-make lint
+make check
 ```
 
 7. Now, validate that all unit tests are passing:
