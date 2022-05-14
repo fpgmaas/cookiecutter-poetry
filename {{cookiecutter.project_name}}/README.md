@@ -1,17 +1,17 @@
 # {{cookiecutter.project_name}}
 
-[![Release](https://img.shields.io/github/v/release/fpgmaas/{{cookiecutter.project_name}})](https://img.shields.io/github/v/release/fpgmaas/{{cookiecutter.project_name}})
-[![Build status](https://img.shields.io/github/workflow/status/fpgmaas/{{cookiecutter.project_name}}/merge-to-main)](https://img.shields.io/github/workflow/status/fpgmaas/{{cookiecutter.project_name}}/merge-to-main)
-[![Commit activity](https://img.shields.io/github/commit-activity/m/fpgmaas/{{cookiecutter.project_name}})](https://img.shields.io/github/commit-activity/m/fpgmaas/{{cookiecutter.project_name}})
-[![Docs](https://img.shields.io/badge/docs-gh--pages-blue)](https://fpgmaas.github.io/{{cookiecutter.project_name}}/)
+[![Release](https://img.shields.io/github/v/release/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}})](https://img.shields.io/github/v/release/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}})
+[![Build status](https://img.shields.io/github/workflow/status/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}/merge-to-main)](https://img.shields.io/github/workflow/status/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}/merge-to-main)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}})](https://img.shields.io/github/commit-activity/m/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}})
+[![Docs](https://img.shields.io/badge/docs-gh--pages-blue)](https://{{cookiecutter.author_github_handle}}.github.io/{{cookiecutter.project_name}}/)
 [![Code style with black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Imports with isort](https://img.shields.io/badge/%20imports-isort-%231674b1)](https://pycqa.github.io/isort/)
-[![License](https://img.shields.io/github/license/fpgmaas/{{cookiecutter.project_name}})](https://img.shields.io/github/license/fpgmaas/{{cookiecutter.project_name}})
+[![License](https://img.shields.io/github/license/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}})](https://img.shields.io/github/license/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}})
 
 {{cookiecutter.project_description}}
 
-- **Github repository**: <https://github.com/fpgmaas/{{cookiecutter.project_name}}/>
-- **Documentation** <https://fpgmaas.github.io/{{cookiecutter.project_name}}/>
+- **Github repository**: <https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}/>
+- **Documentation** <https://{{cookiecutter.author_github_handle}}.github.io/{{cookiecutter.project_name}}/>
 
 ## Releasing a new version
 
