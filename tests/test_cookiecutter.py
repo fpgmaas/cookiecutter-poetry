@@ -109,3 +109,14 @@ def test_not_tox(cookies, tmp_path):
             f"{result.project_path}/.github/workflows/on-release-main.yml", "poetry add tox-gh-actions"
         )
         assert not file_contains_text(f"{result.project_path}/tox.ini", "[tox]")
+
+def test_dockerfile(cookies, tmp_path):
+    with run_within_dir(tmp_path):
+        result = cookies.bake(extra_context={"Dockerfile": "y"})
+        assert os.path.isfile(f"{result.project_path}/Dockerfile")
+
+
+def test_not_dockerfile(cookies, tmp_path):
+    with run_within_dir(tmp_path):
+        result = cookies.bake(extra_context={"Dockerfile": "n"})
+        assert not os.path.isfile(f"{result.project_path}/Dockerfile")

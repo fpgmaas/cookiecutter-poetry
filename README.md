@@ -4,7 +4,7 @@
 [![Build status](https://img.shields.io/github/workflow/status/fpgmaas/cookiecutter-poetry/merge-to-main)](https://img.shields.io/github/workflow/status/fpgmaas/cookiecutter-poetry/merge-to-main)
 [![Supported Python versions](https://img.shields.io/pypi/pyversions/cookiecutter-poetry)](https://pypi.org/project/cookiecutter-poetry/)
 [![Docs](https://img.shields.io/badge/docs-gh--pages-blue)](https://fpgmaas.github.io/cookiecutter-poetry/)
-[![Commit activity](https://img.shields.io/github/commit-activity/m/fpgmaas/cookiecutter-poetry)](https://img.shields.io/github/commit-activity/m/fpgmaas/cookiecutter-poetry)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/cookiecutter-poetry)](https://img.shields.io/pypi/dm/cookiecutter-poetry?style=flat-square)
 [![License](https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry)](https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry)
 
 
@@ -27,6 +27,7 @@ repository to generate the file structure for a Python project that uses
 - Documentation with [MkDocs](https://www.mkdocs.org/)
 - Static type checking with [mypy](https://mypy.readthedocs.io/en/stable/)
 - Compatibility testing for multiple versions of Python with [Tox](https://tox.wiki/en/latest/)
+- Containerization with [Docker](https://www.docker.com/)
 
 ## Example CI/CD Pipeline
 
