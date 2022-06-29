@@ -21,6 +21,7 @@ A project generated with ``cookiecutter-poetry`` supports the following features
 - Documentation with [MkDocs](https://www.mkdocs.org/)
 - Static type checking with [mypy](https://mypy.readthedocs.io/en/stable/)
 - Compatibility testing for multiple versions of Python with [Tox](https://tox.wiki/en/latest/)
+- Containerization with [Docker](https://www.docker.com/)
 
 An example of a repository generated with this package can be found [here](https://github.com/fpgmaas/cookiecutter-poetry-example).
 

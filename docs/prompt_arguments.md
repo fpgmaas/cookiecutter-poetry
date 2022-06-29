@@ -58,12 +58,16 @@ will be deployed to the `gh-pages` branch.
 
 **tox**
 
-`"y"` or `"n"` Adds automatic [Tox](https://tox.wiki/) testing for
+`"y"` or `"n"`. Adds automatic [Tox](https://tox.wiki/) testing for
 compatibility with multiple versions of Python.
 
 **mypy**
 
-`"y"` or `"n"` Adds automatic static type checking with [mypy](https://mypy.readthedocs.io/en/stable/).
+`"y"` or `"n"`. Adds automatic static type checking with [mypy](https://mypy.readthedocs.io/en/stable/).
+
+**dockerfile**
+
+`"y"` or `"n"`. Adds a simple [Dockerfile](https://docker.com).
 
 **open_source_license**
 

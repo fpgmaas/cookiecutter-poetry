@@ -20,3 +20,6 @@ if __name__ == "__main__":
 
     if "{{cookiecutter.mkdocs}}" != "y":
         remove_dir("docs")
+
+    if "{{cookiecutter.dockerfile}}" != "y":
+        remove_file("Dockerfile")
