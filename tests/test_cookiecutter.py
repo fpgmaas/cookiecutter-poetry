@@ -113,11 +113,11 @@ def test_not_tox(cookies, tmp_path):
 
 def test_dockerfile(cookies, tmp_path):
     with run_within_dir(tmp_path):
-        result = cookies.bake(extra_context={"Dockerfile": "y"})
+        result = cookies.bake(extra_context={"dockerfile": "y"})
         assert os.path.isfile(f"{result.project_path}/Dockerfile")
 
 
 def test_not_dockerfile(cookies, tmp_path):
     with run_within_dir(tmp_path):
-        result = cookies.bake(extra_context={"Dockerfile": "n"})
+        result = cookies.bake(extra_context={"dockerfile": "n"})
         assert not os.path.isfile(f"{result.project_path}/Dockerfile")
