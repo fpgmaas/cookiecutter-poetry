@@ -16,10 +16,10 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set up the environment
-        uses: ./.github/workflows/setup-poetry-env
+        uses: ./.github/actions/setup-poetry-env
 
       - name: Run checks
-        uses: ./.github/workflows/run-checks 
+        uses: ./.github/actions/run-checks 
 
       {%- if cookiecutter.mkdocs == "y" %}
 
@@ -42,7 +42,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set up the environment
-        uses: ./.github/workflows/setup-poetry-env
+        uses: ./.github/actions/setup-poetry-env
         with: 
           python-version: {% raw %}${{ matrix.python-version }}{% endraw %}
 
