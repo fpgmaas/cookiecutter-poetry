@@ -16,10 +16,10 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set up the environment
-        uses: ./.github/workflows/setup-poetry-env
+        uses: ./.github/actions/setup-poetry-env
 
       - name: Run checks
-        uses: ./.github/workflows/run-checks 
+        uses: ./.github/actions/run-checks 
 
       - name: Documentation Test
         run: |
@@ -38,7 +38,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set up the environment
-        uses: ./.github/workflows/setup-poetry-env
+        uses: ./.github/actions/setup-poetry-env
         with: 
           python-version: ${{ matrix.python-version }}
 
