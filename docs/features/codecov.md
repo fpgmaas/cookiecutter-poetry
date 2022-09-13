@@ -1,4 +1,4 @@
-# Unittesting with Pytest
+# Test coverage with codecov
 
 If `codecov` is set to `"y"`, `pytest-cov` is added as a development dependency,
 and `make test` will run the tests and output a coverage report as `coverage.xml`.
