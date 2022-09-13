@@ -65,6 +65,11 @@ compatibility with multiple versions of Python.
 
 `"y"` or `"n"`. Adds automatic static type checking with [mypy](https://mypy.readthedocs.io/en/stable/).
 
+**mypy**
+
+`"y"` or `"n"`. Adds test coverage with [codecov](https://about.codecov.io/).
+
+
 **dockerfile**
 
 `"y"` or `"n"`. Adds a simple [Dockerfile](https://docker.com).

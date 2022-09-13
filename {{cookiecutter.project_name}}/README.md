@@ -2,6 +2,7 @@
 
 [![Release](https://img.shields.io/github/v/release/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}})](https://img.shields.io/github/v/release/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}})
 [![Build status](https://img.shields.io/github/workflow/status/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}/merge-to-main)](https://img.shields.io/github/workflow/status/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}/merge-to-main)
+[![codecov](https://codecov.io/gh/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}/branch/main/graph/badge.svg)](https://codecov.io/gh/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}})
 [![Commit activity](https://img.shields.io/github/commit-activity/m/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}})](https://img.shields.io/github/commit-activity/m/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}})
 [![Docs](https://img.shields.io/badge/docs-gh--pages-blue)](https://{{cookiecutter.author_github_handle}}.github.io/{{cookiecutter.project_name}}/)
 [![Code style with black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
