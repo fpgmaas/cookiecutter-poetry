@@ -1,5 +1,16 @@
 
-# Cookiecutter Poetry
+
+<p align="center">
+  <img width="600" src="static/cookiecutter.svg">
+</p style = "margin-bottom: 2rem;">
+<style>
+  .md-typeset h1,
+  .md-content__button {
+    display: none;
+  }
+</style>
+
+---
 
 [![Release](https://img.shields.io/github/v/release/fpgmaas/cookiecutter-poetry)](https://pypi.org/project/cookiecutter-poetry/)
 [![Build status](https://img.shields.io/github/workflow/status/fpgmaas/cookiecutter-poetry/merge-to-main)](https://img.shields.io/github/workflow/status/fpgmaas/cookiecutter-poetry/merge-to-main)
