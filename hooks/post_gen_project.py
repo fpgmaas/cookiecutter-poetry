@@ -23,3 +23,6 @@ if __name__ == "__main__":
 
     if "{{cookiecutter.dockerfile}}" != "y":
         remove_file("Dockerfile")
+
+    if "{{cookiecutter.codecov}}" != "y":
+        remove_file("codecov.yaml")

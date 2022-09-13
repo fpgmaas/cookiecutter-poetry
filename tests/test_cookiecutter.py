@@ -121,3 +121,9 @@ def test_not_dockerfile(cookies, tmp_path):
     with run_within_dir(tmp_path):
         result = cookies.bake(extra_context={"dockerfile": "n"})
         assert not os.path.isfile(f"{result.project_path}/Dockerfile")
+
+
+def test_not_codecov(cookies, tmp_path):
+    with run_within_dir(tmp_path):
+        result = cookies.bake(extra_context={"codecov": "n"})
+        assert not os.path.isfile(f"{result.project_path}/codecov.yaml")

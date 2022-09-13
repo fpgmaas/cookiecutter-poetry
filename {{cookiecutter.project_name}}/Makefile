@@ -32,7 +32,11 @@ check: ## Check code formatting using isort, black and flake8.
 
 test: ## Test the code with pytest
 	@echo "🚀 Testing code: Running pytest"
+{%- if cookiecutter.codecov == "y"%}
+	@pytest --cov=./ --cov-report=xml
+{%- else %}
 	@pytest --doctest-modules
+{%- endif%}
 
 build: clean-build ## Build wheel file using poetry
 	@echo "🚀 Creating wheel file"
