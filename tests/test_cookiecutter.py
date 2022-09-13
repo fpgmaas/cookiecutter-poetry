@@ -41,7 +41,7 @@ def test_using_pytest(cookies, tmp_path):
 
         # Install the poetry environment and run the tests.
         with run_within_dir(str(result.project_path)):
-            subprocess.check_call(shlex.split("poetry install --no-interaction --no-root")) == 0
+            subprocess.check_call(shlex.split("poetry install --no-interaction")) == 0
             subprocess.check_call(shlex.split("poetry run make test")) == 0
 
 
