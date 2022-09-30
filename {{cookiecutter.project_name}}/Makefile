@@ -8,7 +8,7 @@ check: ## Lint and check code by running black, isort, flake8, mypy and deptry.
 	@echo "🚀 Linting code: Running pre-commit"
 	@pre-commit run -a
 	@echo "🚀 Checking code formatting: Running mypy"
-	@mypy .
+	@mypy
 {%- if cookiecutter.deptry == 'y' %}
 	@echo "🚀 Checking for obsolete dependencies: Running deptry"
 	@deptry .

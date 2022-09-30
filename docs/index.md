@@ -23,16 +23,17 @@ repository to generate the file structure for a Python project that uses
 
 A project generated with ``cookiecutter-poetry`` supports the following features:
 
-- [Poetry](https://python-poetry.org/), obviously.
+- [Poetry](https://python-poetry.org/) for dependency management
 - CI/CD with [GitHub Actions](https://github.com/features/actions)
 - Pre-commit hooks with [pre-commit](https://pre-commit.com/)
 - Formatting with [black](https://pypi.org/project/black/) and [isort](https://pycqa.github.io/isort/index.html)
 - Linting with [flake8](https://flake8.pycqa.org/en/latest/)
+- Static type checking with [mypy](https://mypy.readthedocs.io/en/stable/)
+- Dependency checking with [deptry](https://fpgmaas.github.io/deptry/)
 - Publishing to [Pypi](https://pypi.org) or [Artifactory](https://jfrog.com/artifactory) by creating a new release on GitHub
 - Testing with [pytest](https://docs.pytest.org/en/7.1.x/)
 - Test coverage with [codecov](https://about.codecov.io/)
 - Documentation with [MkDocs](https://www.mkdocs.org/)
-- Static type checking with [mypy](https://mypy.readthedocs.io/en/stable/)
 - Compatibility testing for multiple versions of Python with [Tox](https://tox.wiki/en/latest/)
 - Containerization with [Docker](https://www.docker.com/)
 
@@ -56,8 +57,7 @@ pip install cookiecutter
 cookiecutter https://github.com/fpgmaas/cookiecutter-poetry.git
 ```
 
-Then run the following commands, replacing `<project-name>`, with the
-name that you also gave the Github repository and
+Create a repository on GitHub, and then run the following commands, replacing `<project-name>`, with the name that you gave the Github repository and
 `<github_author_handle>` with your Github username.
 
 ``` bash
@@ -69,9 +69,15 @@ git remote add origin git@github.com:<github_author_handle>/<project_name>.git
 git push -u origin main
 ```
 
-Finally, install the environment with `make install`.
+Finally, install the environment and the pre-commit hooks with
 
-You are now ready to start development on your project! The CI/CD pipeline will be triggered when you open a pull request, merge to main, or when you create a new release. 
+ ```
+ make install
+ ```
+
+You are now ready to start development on your project! The CI/CD
+pipeline will be triggered when you open a pull request, merge to main,
+or when you create a new release.
 
 To finalize the set-up for publishing to PyPi or Artifactory, see [here](./features/publishing.md#set-up-for-pypi). For activating the automatic documentation with MkDocs, see [here](./features/mkdocs.md#enabling-the-documentation-on-github). 
 
