@@ -24,7 +24,7 @@ mkdocs-material = "^8.3.8"
 mkdocstrings = "^0.18.1"
 {% endif -%}
 {% if cookiecutter.deptry == 'y' -%}
-deptry = "^0.5.10"
+deptry = "^0.5.9"
 {% endif -%}
 mypy = "^0.961"
 pre-commit = "^2.20.0"
