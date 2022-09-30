@@ -31,15 +31,8 @@ target-version = ['py39']
 fast = true
 ```
 
-To exclude directories or files, add an `exclude` argument to `pre-commit-config.yaml`. For example:
-
-```yaml
-  - repo: https://github.com/psf/black
-    rev: "22.8.0"
-    hooks:
-      - id: black
-        exclude: ^(dir_to_ignore|other_dir_to_ignore)
-```
+To exclude directories or files, add an `exclude` argument to `pre-commit-config.yaml`. Note that adding an `exclude` argument to `pyproject.toml`
+will not work, see also [here](https://stackoverflow.com/a/61046953/8037249).
 
 ## flake8
 
@@ -55,18 +48,16 @@ per-file-ignores = __init__.py:F401
 # W503 line break before binary operator
 # W605 invalid escape sequence
 ignore = E731, E203, E501, W503, W605
+exclude =
+    .git,
+    __pycache__,
+    docs/source/conf.py,
+    old,
+    build,
+    dist,
+    .venv,
 max-complexity = 10
 max-line-length = 120
-```
-
-To exclude directories or files, add an `exclude` argument in `pre-commit-config.yaml`. For example:
-
-```yaml
-  - repo: https://github.com/PyCQA/flake8
-    rev: "5.0.4"
-    hooks:
-      - id: flake8
-        exclude: ^(dir_to_ignore|other_dir_to_ignore)
 ```
 
 # mypy
