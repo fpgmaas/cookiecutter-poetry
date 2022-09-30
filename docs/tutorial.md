@@ -98,7 +98,7 @@ pyenv local x.y.z
 Install and activate the `poetry` environment by running:
 
 ``` bash
-poetry install
+make install
 poetry shell
 ```
 

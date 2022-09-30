@@ -15,7 +15,7 @@ check: ## Lint code using pre-commit and run mypy and deptry.
 	@echo "🚀 Linting code: Running pre-commit"
 	@pre-commit run -a
 	@echo "🚀 Checking code formatting: Running mypy"
-	@mypy .
+	@mypy
 	@echo "🚀 Checking for obsolete dependencies: Running deptry"
 	@deptry .
 

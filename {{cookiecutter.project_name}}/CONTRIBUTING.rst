@@ -89,7 +89,13 @@ development. Please note this documentation assumes you already have
         poetry install
         poetry shell
 
-| 4. Create a branch for local development:
+| 4. Install pre-commit to run linters/formatters at commit time:
+
+   .. code-block:: bash
+
+        poetry run pre-commit install
+
+| 5. Create a branch for local development:
 
    .. code-block:: bash
 
@@ -98,21 +104,21 @@ development. Please note this documentation assumes you already have
    Now you can make your changes locally.
 
 
-| 5. Don't forget to add test cases for your added functionality to the ``tests`` directory.
+| 6. Don't forget to add test cases for your added functionality to the ``tests`` directory.
 
-| 6. When you're done making changes, check that your changes pass the formatting tests.
+| 7. When you're done making changes, check that your changes pass the formatting tests.
 
    .. code-block:: bash
 
         make lint
 
-| 7. Now, validate that all unit tests are passing:
+| 8. Now, validate that all unit tests are passing:
 
    .. code-block:: bash
 
         make test
 
-| 8. Before raising a pull request you should also run tox. This will run the
+| 9. Before raising a pull request you should also run tox. This will run the
    tests across different versions of Python:
 
    .. code-block:: bash
@@ -123,7 +129,7 @@ development. Please note this documentation assumes you already have
    This step is also triggered in the CI/CD pipeline, so you could also choose to skip this
    step locally.
 
-| 9. Commit your changes and push your branch to GitHub:
+| 10. Commit your changes and push your branch to GitHub:
 
    .. code-block:: bash
 
@@ -131,7 +137,7 @@ development. Please note this documentation assumes you already have
         git commit -m "Your detailed description of your changes."
         git push origin name-of-your-bugfix-or-feature
 
-| 10. Submit a pull request through the GitHub website.
+| 11. Submit a pull request through the GitHub website.
 
 Pull Request Guidelines
 ---------------------------

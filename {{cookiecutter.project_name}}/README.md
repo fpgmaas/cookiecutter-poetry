@@ -14,6 +14,14 @@
 - **Github repository**: <https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}/>
 - **Documentation** <https://{{cookiecutter.author_github_handle}}.github.io/{{cookiecutter.project_name}}/>
 
+## Getting started with your project
+
+To install the environment and the pre-commit hooks, run `make install`.
+
+You are now ready to start development on your project! The CI/CD
+pipeline will be triggered when you open a pull request, merge to main,
+or when you create a new release.
+
 ## Releasing a new version
 
 {% if cookiecutter.publish_to == "pypi" -%}

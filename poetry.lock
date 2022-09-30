@@ -107,9 +107,9 @@ requests = ">=2.23.0"
 
 [[package]]
 name = "deptry"
-version = "0.5.7"
+version = "0.5.8"
 description = "A command line utility to check for obsolete, missing and transitive dependencies in a Python project."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7,<4.0"
 
@@ -200,7 +200,7 @@ python-versions = "*"
 name = "isort"
 version = "5.10.1"
 description = "A Python utility / library to sort Python imports."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6.1,<4.0"
 
@@ -552,7 +552,7 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 name = "tomli"
 version = "2.0.1"
 description = "A lil' TOML parser"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 
@@ -634,7 +634,7 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.11"
-content-hash = "2bd9b7c3c26982187e8ac774c1b2cf38ff7cd3bda3f5ccdadacf029e9163e282"
+content-hash = "865b49edc6f20bccaaa855195688e9eeb84c404ea351717f6a1b77f8eaa71649"
 
 [metadata.files]
 arrow = [
@@ -678,8 +678,8 @@ cookiecutter = [
     {file = "cookiecutter-2.1.1.tar.gz", hash = "sha256:f3982be8d9c53dac1261864013fdec7f83afd2e42ede6f6dd069c5e149c540d5"},
 ]
 deptry = [
-    {file = "deptry-0.5.7-py3-none-any.whl", hash = "sha256:43a58262b2ef823025cea1520f9f305111d5b862a0978ad378ab5075e15f25c4"},
-    {file = "deptry-0.5.7.tar.gz", hash = "sha256:e38d247cb1229063b453a2109e54dd46f61ba3e35c273d0fab602a3b7d5e2d95"},
+    {file = "deptry-0.5.8-py3-none-any.whl", hash = "sha256:d87bc6afa31b88ab91e496df9ea042697cf304fd2d1c01829b92ec1fef46197c"},
+    {file = "deptry-0.5.8.tar.gz", hash = "sha256:ddc37edef61b86f2db57676a12d0c01966e86d12294923d5bd3128b28c5886ac"},
 ]
 distlib = [
     {file = "distlib-0.3.6-py2.py3-none-any.whl", hash = "sha256:f35c4b692542ca110de7ef0bea44d73981caeb34ca0b9b6b2e6d7790dda8f80e"},

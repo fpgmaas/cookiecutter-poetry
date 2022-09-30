@@ -1,6 +1,3 @@
-# Badge color changes from red to green between 70% and 100%
-# PR pipeline fails if codecov falls with 1%
-
 coverage:
   range: 70..100
   round: down
@@ -8,11 +5,8 @@ coverage:
   status:
     project:
       default:
-        target: auto
-        threshold: 1%
+        target: 90%
+        threshold: .5%
 
-# Ignoring Paths
-# --------------
-# which folders/files to ignore
 ignore:
-  - "foo/bar.py"
+  - "some_path"

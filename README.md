@@ -1,7 +1,7 @@
 
 
 <p align="center">
-  <img width="600" src="docs/static/cookiecutter.svg">
+  <img width="600" src="https://raw.githubusercontent.com/fpgmaas/cookiecutter-poetry/main/docs/static/cookiecutter.svg">
 </p style = "margin-bottom: 2rem;">
 
 ---
@@ -26,6 +26,7 @@ repository to generate the file structure for a Python project that uses
 
 - [Poetry](https://python-poetry.org/), obviously.
 - CI/CD with [GitHub Actions](https://github.com/features/actions)
+- Pre-commit hooks with [pre-commit](https://pre-commit.com/)
 - Formatting with [black](https://pypi.org/project/black/) and [isort](https://pycqa.github.io/isort/index.html)
 - Linting with [flake8](https://flake8.pycqa.org/en/latest/)
 - Publishing to [Pypi](https://pypi.org) or [Artifactory](https://jfrog.com/artifactory) by creating a new release on GitHub
@@ -33,6 +34,7 @@ repository to generate the file structure for a Python project that uses
 - Test coverage with [codecov](https://about.codecov.io/)
 - Documentation with [MkDocs](https://www.mkdocs.org/)
 - Static type checking with [mypy](https://mypy.readthedocs.io/en/stable/)
+- Dependency checking with [deptry](https://fpgmaas.github.io/deptry/)
 - Compatibility testing for multiple versions of Python with [Tox](https://tox.wiki/en/latest/)
 - Containerization with [Docker](https://www.docker.com/)
 
@@ -71,7 +73,7 @@ git remote add origin git@github.com:<github_author_handle>/<project_name>.git
 git push -u origin main
 ```
 
-Finally, install the environment with `make install`.
+Finally, install the environment and the pre-commit hooks with `make install`.
 
 You are now ready to start development on your project! The CI/CD
 pipeline will be triggered when you open a pull request, merge to main,
