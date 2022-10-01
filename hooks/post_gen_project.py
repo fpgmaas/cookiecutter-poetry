@@ -14,7 +14,6 @@ def remove_dir(filepath: str) -> None:
 
 
 if __name__ == "__main__":
-
     if "{{cookiecutter.include_github_actions}}" != "y":
         remove_dir(".github")
 
