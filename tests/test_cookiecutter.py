@@ -19,7 +19,6 @@ def file_contains_text(file: str, text: str) -> bool:
 
 
 def test_bake_project(cookies):
-
     result = cookies.bake(extra_context={"project_name": "my-project"})
 
     assert result.exit_code == 0
@@ -30,7 +29,6 @@ def test_bake_project(cookies):
 
 def test_using_pytest(cookies, tmp_path):
     with run_within_dir(tmp_path):
-
         result = cookies.bake()
 
         # Assert that project was created.
