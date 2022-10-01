@@ -88,7 +88,7 @@ def test_not_mkdocs(cookies, tmp_path):
 
 def test_tox(cookies, tmp_path):
     with run_within_dir(tmp_path):
-        result = cookies.bake(extra_context={"tox": "y"})
+        result = cookies.bake()
         assert file_contains_text(
             f"{result.project_path}/.github/workflows/on-release-main.yml", "poetry add tox-gh-actions"
         )
@@ -100,15 +100,6 @@ def test_tox(cookies, tmp_path):
         )
         assert os.path.isfile(f"{result.project_path}/tox.ini")
         assert file_contains_text(f"{result.project_path}/tox.ini", "[tox]")
-
-
-def test_not_tox(cookies, tmp_path):
-    with run_within_dir(tmp_path):
-        result = cookies.bake(extra_context={"tox": "n"})
-        assert not file_contains_text(
-            f"{result.project_path}/.github/workflows/on-release-main.yml", "poetry add tox-gh-actions"
-        )
-        assert not file_contains_text(f"{result.project_path}/tox.ini", "[tox]")
 
 
 def test_dockerfile(cookies, tmp_path):

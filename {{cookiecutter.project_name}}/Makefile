@@ -1,34 +1,19 @@
-install: ## Install the poetry environment
+install: ## Install the poetry environment and install the pre-commit hooks
 	@echo "🚀 Creating virtual environment using pyenv and poetry"
 	@poetry install	
+	@ poetry run pre-commit install
 	@poetry shell
 
-format: ## Format code using isort and black.
-	@echo "🚀 Formatting code: Running isort and black"
-	@isort .
-	@black .
-
-{%- if cookiecutter.mypy == "y"%}
-
-check: ## Check code formatting using isort, black, flake8 and mypy.
-	@echo "🚀 Checking code formatting: Running isort"
-	@isort --check-only --diff .
-	@echo "🚀 Checking code formatting: Running black"
-	@black --check .
-	@echo "🚀 Checking code formatting: Running flake8"
-	@flake8 .
+check: ## Lint and check code by running black, isort, flake8, mypy and deptry.
+	@echo "🚀 Linting code: Running pre-commit"
+	@pre-commit run -a
 	@echo "🚀 Checking code formatting: Running mypy"
-	@mypy .
-{%- else %}
+	@mypy
+{%- if cookiecutter.deptry == 'y' %}
+	@echo "🚀 Checking for obsolete dependencies: Running deptry"
+	@deptry .
+{%- endif %}
 
-check: ## Check code formatting using isort, black and flake8.
-	@echo "🚀 Checking code formatting: Running isort"
-	@isort --check-only --diff .
-	@echo "🚀 Checking code formatting: Running black"
-	@black --check .
-	@echo "🚀 Checking code formatting: Running flake8"
-	@flake8 .
-{%- endif%}
 
 test: ## Test the code with pytest
 	@echo "🚀 Testing code: Running pytest"

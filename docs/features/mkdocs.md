@@ -14,7 +14,7 @@ To view the documentation locally, simply run
 make docs
 ```
 
-This command will generate, and build your documentation, and start the server locally so you can access it at 
+This command will generate and build your documentation, and start the server locally so you can access it at 
 <http://localhost:8000>.
 
 ## Enabling the documentation on GitHub

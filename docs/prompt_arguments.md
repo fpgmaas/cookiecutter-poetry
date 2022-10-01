@@ -28,7 +28,7 @@ The project slug, will default to the `project_name` with all `-`'s
 replaced with `_`. This will be how you import your code later, e.g.
 
 ``` python
-from <project_slug import foo
+from <project_slug> import foo
 ```
 
 **project_description**
@@ -49,6 +49,11 @@ simple as creating a new release release on Github. For more info,
 see
 [Publishing to Pypi or Artifactory](./features/publishing.md).
 
+**deptry**
+
+`"y"` or `"n"`. Adds [deptry](https://fpgmaas.github.io/deptry/)
+to the development dependencies of the project, and adds it to the `make check` command. `deptry` is a command line tool to check for issues with dependencies in a Python project, such as obsolete or missing dependencies.
+
 **mkdocs**
 
 `"y"` or `"n"`. Adds [MkDocs](https://www.mkdocs.org/)
@@ -56,19 +61,9 @@ documentation to your project. This includes automatically parsing
 your docstrings and adding them to the documentation. Documentation
 will be deployed to the `gh-pages` branch.
 
-**tox**
+**codecov**
 
-`"y"` or `"n"`. Adds automatic [Tox](https://tox.wiki/) testing for
-compatibility with multiple versions of Python.
-
-**mypy**
-
-`"y"` or `"n"`. Adds automatic static type checking with [mypy](https://mypy.readthedocs.io/en/stable/).
-
-**mypy**
-
-`"y"` or `"n"`. Adds test coverage with [codecov](https://about.codecov.io/).
-
+`"y"` or `"n"`. Adds code coverage checks with [codecov](https://about.codecov.io/).
 
 **dockerfile**
 

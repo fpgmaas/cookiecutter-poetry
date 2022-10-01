@@ -8,8 +8,7 @@ nav:
   - Home: index.md
   - Features:
     - CI/CD with Github Actions: features/cicd.md
-    - Formatting with black and isort: features/formatting.md
-    - Linting with flake8: features/linting.md
+    - Linting & code quality: features/linting.md
     - Makefile: features/makefile.md
     - Dependency management with Poetry: features/poetry.md
     - Publishing to PyPi or Artifactory: features/publishing.md
@@ -17,7 +16,6 @@ nav:
     - Test coverage with codecov: features/codecov.md
     - Documentation with MkDocs: features/mkdocs.md
     - Compatibility testing with Tox: features/tox.md
-    - Static type checking with mypy: features/mypy.md
     - Containerization with Docker: features/docker.md
   - Tutorial: tutorial.md
   - Prompt Arguments: prompt_arguments.md

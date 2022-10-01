@@ -26,8 +26,6 @@ jobs:
           make docs-test
       {%- endif %} 
 
-  {%- if cookiecutter.tox== "y" %}
-
   tox:
     runs-on: ubuntu-latest
     needs: quality
@@ -48,4 +46,3 @@ jobs:
           source .venv/bin/activate
           poetry add tox-gh-actions
           tox
-  {%- endif %}
