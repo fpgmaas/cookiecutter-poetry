@@ -71,7 +71,7 @@ git push -u origin main
 
 Finally, install the environment and the pre-commit hooks with
 
- ```
+ ```bash
  make install
  ```
 
@@ -79,7 +79,7 @@ You are now ready to start development on your project! The CI/CD
 pipeline will be triggered when you open a pull request, merge to main,
 or when you create a new release.
 
-To finalize the set-up for publishing to PyPi or Artifactory, see [here](./features/publishing.md#set-up-for-pypi). For activating the automatic documentation with MkDocs, see [here](./features/mkdocs.md#enabling-the-documentation-on-github). 
+To finalize the set-up for publishing to PyPi or Artifactory, see [here](./features/publishing.md#set-up-for-pypi). For activating the automatic documentation with MkDocs, see [here](./features/mkdocs.md#enabling-the-documentation-on-github). To enable the code coverage reports, see [here](./features/codecov).
 
 ## Acknowledgements
 
