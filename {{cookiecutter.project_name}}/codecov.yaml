@@ -6,7 +6,4 @@ coverage:
     project:
       default:
         target: 90%
-        threshold: .5%
-
-ignore:
-  - "some_path"
+        threshold: 0.5%
