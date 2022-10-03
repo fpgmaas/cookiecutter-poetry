@@ -58,5 +58,5 @@ skip_empty = true
 
 [tool.coverage.run]
 branch = true
-source = ["cookiecutter_poetry"]
+source = ["{{cookiecutter.project_slug}}"]
 {% endif%}
