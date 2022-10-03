@@ -5,6 +5,8 @@ install: ## Install the poetry environment and install the pre-commit hooks
 	@poetry shell
 
 check: ## Lint and check code by running black, isort, flake8, mypy and deptry.
+	@echo "🚀 Checking Poetry lock file consistency with 'pyproject.toml': Running poetry lock --check"
+	@poetry lock --check
 	@echo "🚀 Linting code: Running pre-commit"
 	@pre-commit run -a
 	@echo "🚀 Checking code formatting: Running mypy"
@@ -18,7 +20,7 @@ check: ## Lint and check code by running black, isort, flake8, mypy and deptry.
 test: ## Test the code with pytest
 	@echo "🚀 Testing code: Running pytest"
 {%- if cookiecutter.codecov == "y"%}
-	@pytest --cov=./ --cov-report=xml
+	@pytest --cov --cov-config=pyproject.toml --cov-report=xml
 {%- else %}
 	@pytest --doctest-modules
 {%- endif%}
