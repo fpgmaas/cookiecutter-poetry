@@ -71,9 +71,9 @@ git push -u origin main
 
 Finally, install the environment and the pre-commit hooks with
 
- ```bash
- make install
- ```
+```bash
+make install
+```
 
 You are now ready to start development on your project! The CI/CD
 pipeline will be triggered when you open a pull request, merge to main,
