@@ -107,7 +107,7 @@ requests = ">=2.23.0"
 
 [[package]]
 name = "deptry"
-version = "0.5.10"
+version = "0.6.2"
 description = "A command line utility to check for obsolete, missing and transitive dependencies in a Python project."
 category = "dev"
 optional = false
@@ -116,7 +116,6 @@ python-versions = ">=3.7,<4.0"
 [package.dependencies]
 chardet = ">=5.0.0,<6.0.0"
 click = ">=8.0.0,<9.0.0"
-isort = ">=5.10.1,<6.0.0"
 tomli = {version = ">=2.0.1,<3.0.0", markers = "python_version < \"3.11\""}
 
 [[package]]
@@ -195,20 +194,6 @@ description = "iniconfig: brain-dead simple config-ini parsing"
 category = "dev"
 optional = false
 python-versions = "*"
-
-[[package]]
-name = "isort"
-version = "5.10.1"
-description = "A Python utility / library to sort Python imports."
-category = "dev"
-optional = false
-python-versions = ">=3.6.1,<4.0"
-
-[package.extras]
-colors = ["colorama (>=0.4.3,<0.5.0)"]
-pipfile_deprecated_finder = ["pipreqs", "requirementslib"]
-plugins = ["setuptools"]
-requirements_deprecated_finder = ["pip-api", "pipreqs"]
 
 [[package]]
 name = "Jinja2"
@@ -668,7 +653,7 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.11"
-content-hash = "a0ebdc0ab542881b72a4df1eff1e576950cb2b098392e513aac11e210fc36740"
+content-hash = "7160a91ec61c06c492230bc0d6fa93de079c4481537460c6be05a4a398c4552f"
 
 [metadata.files]
 arrow = [
@@ -712,8 +697,8 @@ cookiecutter = [
     {file = "cookiecutter-2.1.1.tar.gz", hash = "sha256:f3982be8d9c53dac1261864013fdec7f83afd2e42ede6f6dd069c5e149c540d5"},
 ]
 deptry = [
-    {file = "deptry-0.5.10-py3-none-any.whl", hash = "sha256:b87da51ae896c9de021beb24a22650c5fc65f6f3ffea306e2bc7175d6f94abe1"},
-    {file = "deptry-0.5.10.tar.gz", hash = "sha256:277c2f99f37844da675f44615422b88826696356e4ba21c1fbafc5572cf14203"},
+    {file = "deptry-0.6.2-py3-none-any.whl", hash = "sha256:846dc024a3bf8d2df66eb0aa21566710c9ff29b7479e61829bbca683ef632463"},
+    {file = "deptry-0.6.2.tar.gz", hash = "sha256:f55a24513df4129ecd7e2b23407cf3531aef4c7388a92d3fe753453936ef2006"},
 ]
 distlib = [
     {file = "distlib-0.3.6-py2.py3-none-any.whl", hash = "sha256:f35c4b692542ca110de7ef0bea44d73981caeb34ca0b9b6b2e6d7790dda8f80e"},
@@ -742,10 +727,6 @@ importlib-metadata = [
 iniconfig = [
     {file = "iniconfig-1.1.1-py2.py3-none-any.whl", hash = "sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3"},
     {file = "iniconfig-1.1.1.tar.gz", hash = "sha256:bc3af051d7d14b2ee5ef9969666def0cd1a000e121eaea580d4a313df4b37f32"},
-]
-isort = [
-    {file = "isort-5.10.1-py3-none-any.whl", hash = "sha256:6f62d78e2f89b4500b080fe3a81690850cd254227f27f75c3a0c491a1f351ba7"},
-    {file = "isort-5.10.1.tar.gz", hash = "sha256:e8443a5e7a020e9d7f97f1d7d9cd17c88bcb3bc7e218bf9cf5095fe550be2951"},
 ]
 Jinja2 = [
     {file = "Jinja2-3.1.2-py3-none-any.whl", hash = "sha256:6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61"},
