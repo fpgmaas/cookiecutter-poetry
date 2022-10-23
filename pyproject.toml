@@ -27,11 +27,8 @@ pytest-cookies = "^0.6.1"
 tox = "^3.25.1"
 mkdocs = "^1.3.0"
 mkdocs-material = "^8.3.8"
-deptry = "^0.5.9"
-mypy = "^0.981"
-
-[tool.poetry.group.dev.dependencies]
 deptry = "^0.6.2"
+mypy = "^0.981"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
