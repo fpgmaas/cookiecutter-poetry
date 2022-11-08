@@ -15,9 +15,9 @@ runs:
     #       check-out repo and set-up python
     #----------------------------------------------
     - name: Check out repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Set up python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: {% raw %}${{ inputs.python-version }}{% endraw %}
     #----------------------------------------------
@@ -38,7 +38,7 @@ runs:
       uses: actions/cache@v2
       with:
         path: .venv
-        key: {% raw %}venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}{% endraw %}
+        key: {% raw %}venv-${{ runner.os }}-${{ inputs.python-version }}-${{ hashFiles('poetry.lock') }}{% endraw %}
 
     #----------------------------------------------
     # install dependencies if cache does not exist
