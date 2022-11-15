@@ -14,8 +14,3 @@ repos:
     rev: "5.0.4"
     hooks:
       - id: flake8
-    
-  - repo: https://github.com/fpgmaas/deptry.git
-    rev: d29525669a80068a8a53ac1f2d5c94321111a87d
-    hooks:
-    - id: deptry
