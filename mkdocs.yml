@@ -3,6 +3,9 @@ repo_url: https://github.com/fpgmaas/cookiecutter-poetry
 site_url: https://fpgmaas.github.io/cookiecutter-poetry
 site_description: A cookiecutter template for Python projects that use Poetry for its dependency management
 site_author: Florian Maas
+edit_uri: edit/main/docs/
+repo_name: fpgmaas/deptry
+copyright: Maintained by <a href="https://fpgmaas.com">Florian</a>.
 
 nav:
   - Home: index.md
@@ -21,14 +24,34 @@ nav:
   - Prompt Arguments: prompt_arguments.md
 plugins:
   - search
-copyright: Maintained by <a href="https://fpgmaas.com">Florian</a>.
 theme:
   name: material
   feature:
     tabs: true
   palette:
-    primary: white
-    accent: blue
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/fpgmaas/deptry
+    - icon: fontawesome/brands/python
+      link: https://pypi.com/project/deptry
 markdown_extensions:
   - toc:
       permalink: true

@@ -13,22 +13,24 @@ packages = [
 [tool.poetry.dependencies]
 python = ">=3.8,<=3.11"
 
-[tool.poetry.dev-dependencies]
-pytest = "^7.1.2"
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.0"
 {% if cookiecutter.codecov == 'y' -%}
 pytest-cov = "^4.0.0"
 {% endif -%}
-{% if cookiecutter.mkdocs == 'y' -%}
-mkdocs = "^1.3.0"
-mkdocs-material = "^8.3.8"
-mkdocstrings = "^0.18.1"
-{% endif -%}
 {% if cookiecutter.deptry == 'y' -%}
-deptry = "^0.5.9"
+deptry = "^0.6.4"
 {% endif -%}
-mypy = "^0.961"
+mypy = "^0.981"
 pre-commit = "^2.20.0"
 tox = "^3.25.1"
+
+{% if cookiecutter.mkdocs == 'y' -%}
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.4.2"
+mkdocs-material = "^8.5.10"
+mkdocstrings = {extras = ["python"], version = "^0.19.0"}
+{%- endif %}
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
