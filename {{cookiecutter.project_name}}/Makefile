@@ -4,16 +4,16 @@ install: ## Install the poetry environment and install the pre-commit hooks
 	@ poetry run pre-commit install
 	@poetry shell
 
-check: ## Lint and check code by running black, isort, flake8, mypy and deptry.
+check: ## Run code quality tools.
 	@echo "🚀 Checking Poetry lock file consistency with 'pyproject.toml': Running poetry lock --check"
 	@poetry lock --check
 	@echo "🚀 Linting code: Running pre-commit"
-	@pre-commit run -a
-	@echo "🚀 Checking code formatting: Running mypy"
-	@mypy
+	@poetry run pre-commit run -a
+	@echo "🚀 Static type checking: Running mypy"
+	@poetry run mypy
 {%- if cookiecutter.deptry == 'y' %}
 	@echo "🚀 Checking for obsolete dependencies: Running deptry"
-	@deptry .
+	@poetry run deptry .
 {%- endif %}
 
 

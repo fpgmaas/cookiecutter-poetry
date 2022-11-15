@@ -48,6 +48,13 @@ skip = ["{{cookiecutter.project_name}}",".venv"]
 [tool.poetry.scripts]
 ccp = 'cookiecutter_poetry.cli:main'
 
+[tool.coverage.report]
+skip_empty = true
+
+[tool.coverage.run]
+branch = true
+source = ["cookiecutter_poetry"]
+
 [tool.mypy]
 files = ['cookiecutter_poetry']
 disallow_untyped_defs = "True"

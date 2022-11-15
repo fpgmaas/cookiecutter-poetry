@@ -1,87 +1,41 @@
+name: release-main
+
 on:
   release:
     types: [published]
     branches: [main]
 
-name: release-main
-
 jobs:
-  quality:
-    runs-on: ubuntu-latest
-    steps:
-    
-      - name: Check out
-        uses: actions/checkout@v3
-
-      - name: Set up the environment
-        uses: ./.github/actions/setup-poetry-env
-
-      - name: Run checks
-        uses: ./.github/actions/run-checks
-
-      - name: Documentation Test
-        run: |
-          source .venv/bin/activate
-          make docs-test
-
-  tox:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ['3.8', '3.9', '3.10', '3.11']
-    steps:
-      - name: Check out
-        uses: actions/checkout@v3
-
-      - name: Set up the environment
-        uses: ./.github/actions/setup-poetry-env
-        with: 
-          python-version: ${{ matrix.python-version }}
-
-      - name: Test with tox 
-        run: |
-          source .venv/bin/activate
-          poetry add tox-gh-actions
-          tox
-
   publish:
-      runs-on: ubuntu-latest
-      needs:
-        - quality
-        - tox
-      steps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
 
-        - name: Check out
-          uses: actions/checkout@v3
+      - name: Set up the environment
+        uses: ./.github/actions/setup-poetry-env
 
-        - name: Set up the environment
-          uses: ./.github/actions/setup-poetry-env
+      - name: Export tag
+        id: vars
+        run: echo tag=${GITHUB_REF#refs/*/} >> $GITHUB_OUTPUT
 
-        - name: Set output
-          id: vars
-          run: echo tag=${GITHUB_REF#refs/*/} >> $GITHUB_OUTPUT
+      - name: Build and publish
+        run: |
+          poetry version $RELEASE_VERSION
+          make build-and-publish
+        env:
+          PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
+          RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
 
-        - name: Build and publish
-          run: |
-            source .venv/bin/activate
-            poetry version $RELEASE_VERSION
-            make build-and-publish
-          env: 
-            PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
-            RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
-
-  documentation:
+  deploy-docs:
     runs-on: ubuntu-latest
     needs: publish
     steps:
-
       - name: Check out
         uses: actions/checkout@v3
 
       - name: Set up the environment
         uses: ./.github/actions/setup-poetry-env
-        
-      - name: Generate documentation
-        run: |
-            source .venv/bin/activate
-            mkdocs gh-deploy --force
+
+      - name: Deploy documentation
+        run: poetry run mkdocs gh-deploy --force

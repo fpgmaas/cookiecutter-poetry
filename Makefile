@@ -11,19 +11,19 @@ install: ## Install the poetry environment
 	@poetry install	
 	@poetry shell
 
-check: ## Lint code using pre-commit and run mypy and deptry.
+check: ## Run code quality tools.
 	@echo "🚀 Checking Poetry lock file consistency with 'pyproject.toml': Running poetry lock --check"
 	@poetry lock --check
 	@echo "🚀 Linting code: Running pre-commit"
-	@pre-commit run -a
-	@echo "🚀 Checking code formatting: Running mypy"
-	@mypy
+	@poetry run pre-commit run -a
+	@echo "🚀 Static type checking: Running mypy"
+	@poetry run mypy
 	@echo "🚀 Checking for obsolete dependencies: Running deptry"
-	@deptry .
+	@poetry run deptry .
 
-test: ## Test the code with pytest
+test: ## Test the code with pytest.
 	@echo "🚀 Testing code: Running pytest"
-	@pytest --doctest-modules tests
+	@poetry run pytest --cov --cov-config=pyproject.toml --cov-report=xml tests
 
 build: clean-build ## Build wheel file using poetry
 	@echo "🚀 Creating wheel file"
