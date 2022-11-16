@@ -26,3 +26,4 @@ if __name__ == "__main__":
 
     if "{{cookiecutter.codecov}}" != "y":
         remove_file("codecov.yaml")
+        remove_file(".github/workflows/validate-codecov-config.yml")
