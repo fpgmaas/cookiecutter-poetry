@@ -27,6 +27,7 @@ pytest-cookies = "^0.6.1"
 tox = "^3.25.1"
 deptry = "^0.6.4"
 mypy = "^0.991"
+pytest-cov = "^4.0.0"
 
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.4.2"
@@ -47,6 +48,13 @@ skip = ["{{cookiecutter.project_name}}",".venv"]
 
 [tool.poetry.scripts]
 ccp = 'cookiecutter_poetry.cli:main'
+
+[tool.coverage.report]
+skip_empty = true
+
+[tool.coverage.run]
+branch = true
+source = ["cookiecutter_poetry"]
 
 [tool.mypy]
 files = ['cookiecutter_poetry']
