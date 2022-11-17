@@ -38,10 +38,6 @@ repository to generate the file structure for a Python project that uses
 - Compatibility testing for multiple versions of Python with [Tox](https://tox.wiki/en/latest/)
 - Containerization with [Docker](https://www.docker.com/)
 
-## Example CI/CD Pipeline
-
-[![Example pipeline](https://raw.githubusercontent.com/fpgmaas/cookiecutter-poetry/main/static/images/pipeline.png)](https://raw.githubusercontent.com/fpgmaas/cookiecutter-poetry/main/static/images/pipeline.png)
-
 ## Quickstart
 
 On your local machine, navigate to the directory in which you want to

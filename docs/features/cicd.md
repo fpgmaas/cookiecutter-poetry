@@ -41,7 +41,3 @@ a new release`. If you fail to find the button, you could also directly visit
 
 Give your release a title, and add a new tag in the form `*.*.*` where the
 `*`'s are alphanumeric. To finish, press `Publish release`.
-
-## Example CI/CD Pipeline
-
-[![Example pipeline](https://raw.githubusercontent.com/fpgmaas/cookiecutter-poetry/main/static/images/pipeline.png)](https://raw.githubusercontent.com/fpgmaas/cookiecutter-poetry/main/static/images/pipeline.png)
