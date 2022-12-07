@@ -34,10 +34,10 @@ pipeline will be triggered when you open a pull request, merge to main,
 or when you create a new release.
 
 To finalize the set-up for publishing to PyPi or Artifactory, see
-[here](https://fpgmaas.github.io/{{cookiecutter.project_name}}/features/publishing/#set-up-for-pypi).
+[here](https://fpgmaas.github.io/cookiecutter-poetry/features/publishing/#set-up-for-pypi).
 For activating the automatic documentation with MkDocs, see
-[here](https://fpgmaas.github.io/{{cookiecutter.project_name}}/features/mkdocs/#enabling-the-documentation-on-github).
-To enable the code coverage reports, see [here](https://fpgmaas.github.io/{{cookiecutter.project_name}}/features/codecov/).
+[here](https://fpgmaas.github.io/cookiecutter-poetry/features/mkdocs/#enabling-the-documentation-on-github).
+To enable the code coverage reports, see [here](https://fpgmaas.github.io/cookiecutter-poetry/features/codecov/).
 
 ## Releasing a new version
 
@@ -48,14 +48,14 @@ To enable the code coverage reports, see [here](https://fpgmaas.github.io/{{cook
 - Create a [new release](https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}/releases/new) on Github. 
 Create a new tag in the form ``*.*.*``.
 
-For more details, see [here](https://fpgmaas.github.io/{{cookiecutter.project_name}}/releasing.html).
+For more details, see [here](https://fpgmaas.github.io/cookiecutter-poetry/features/cicd/#how-to-trigger-a-release).
 {%- elif cookiecutter.publish_to == "artifactory" -%}
 - Add the `ARTIFACTORY_URL`, `ARTIFACTORY_USERNAME`, and `ARTIFACTORY_PASSWORD` to your projects secrets by visiting [this page](https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}/settings/secrets/actions/new).
 - Create a [new release](https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}/releases/new) on Github. Create a new tag in the form ``*.*.*``.
 
-For more details, see [here](https://fpgmaas.github.io/{{cookiecutter.project_name}}/releasing.html).
+For more details, see [here](https://fpgmaas.github.io/cookiecutter-poetry/features/cicd/#how-to-trigger-a-release).
 {%- endif %}
 
 ---
 
-Repository initiated with [fpgmaas/{{cookiecutter.project_name}}](https://github.com/fpgmaas/{{cookiecutter.project_name}}).
+Repository initiated with [fpgmaas/cookiecutter-poetry](https://github.com/fpgmaas/cookiecutter-poetry).
