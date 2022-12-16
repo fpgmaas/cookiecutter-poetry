@@ -7,7 +7,7 @@
 ---
 
 [![Release](https://img.shields.io/github/v/release/fpgmaas/cookiecutter-poetry)](https://pypi.org/project/cookiecutter-poetry/)
-[![Build status](https://img.shields.io/github/workflow/status/fpgmaas/cookiecutter-poetry/Main/main)](https://github.com/fpgmaas/cookiecutter-poetry/actions/workflows/main.yml?query=branch%3Amain)
+[![Build status](https://img.shields.io/github/actions/workflow/status/fpgmaas/cookiecutter-poetry/main.yml?branch=main)](https://github.com/fpgmaas/cookiecutter-poetry/actions/workflows/main.yml?query=branch%3Amain)
 [![Supported Python versions](https://img.shields.io/pypi/pyversions/cookiecutter-poetry)](https://pypi.org/project/cookiecutter-poetry/)
 [![Docs](https://img.shields.io/badge/docs-gh--pages-blue)](https://fpgmaas.github.io/cookiecutter-poetry/)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/cookiecutter-poetry)](https://img.shields.io/pypi/dm/cookiecutter-poetry?style=flat-square)
@@ -30,7 +30,7 @@ repository to generate the file structure for a Python project that uses
 - Formatting with [black](https://pypi.org/project/black/) and [isort](https://pycqa.github.io/isort/index.html)
 - Linting with [flake8](https://flake8.pycqa.org/en/latest/)
 - Static type checking with [mypy](https://mypy.readthedocs.io/en/stable/)
-- Dependency checking with [deptry](https://fpgmaas.github.io/deptry/)
+- Dependency checking with [cookiecutter-poetry](https://fpgmaas.github.io/cookiecutter-poetry/)
 - Publishing to [Pypi](https://pypi.org) or [Artifactory](https://jfrog.com/artifactory) by creating a new release on GitHub
 - Testing with [pytest](https://docs.pytest.org/en/7.1.x/)
 - Test coverage with [codecov](https://about.codecov.io/)
