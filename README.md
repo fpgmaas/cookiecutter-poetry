@@ -10,7 +10,6 @@
 [![Build status](https://img.shields.io/github/actions/workflow/status/fpgmaas/cookiecutter-poetry/main.yml?branch=main)](https://github.com/fpgmaas/cookiecutter-poetry/actions/workflows/main.yml?query=branch%3Amain)
 [![Supported Python versions](https://img.shields.io/pypi/pyversions/cookiecutter-poetry)](https://pypi.org/project/cookiecutter-poetry/)
 [![Docs](https://img.shields.io/badge/docs-gh--pages-blue)](https://fpgmaas.github.io/cookiecutter-poetry/)
-[![PyPI - Downloads](https://img.shields.io/pypi/dm/cookiecutter-poetry)](https://img.shields.io/pypi/dm/cookiecutter-poetry?style=flat-square)
 [![License](https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry)](https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry)
 
 
@@ -27,7 +26,7 @@ repository to generate the file structure for a Python project that uses
 - [Poetry](https://python-poetry.org/) for dependency management
 - CI/CD with [GitHub Actions](https://github.com/features/actions)
 - Pre-commit hooks with [pre-commit](https://pre-commit.com/)
-- Formatting with [black](https://pypi.org/project/black/).
+- Formatting with [black](https://pypi.org/project/black/)
 - Linting with [ruff](https://github.com/charliermarsh/ruff)
 - Static type checking with [mypy](https://mypy.readthedocs.io/en/stable/)
 - Dependency checking with [cookiecutter-poetry](https://fpgmaas.github.io/cookiecutter-poetry/)
