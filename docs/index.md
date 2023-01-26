@@ -26,7 +26,7 @@ A project generated with ``cookiecutter-poetry`` supports the following features
 - [Poetry](https://python-poetry.org/) for dependency management
 - CI/CD with [GitHub Actions](https://github.com/features/actions)
 - Pre-commit hooks with [pre-commit](https://pre-commit.com/)
-- Formatting with [black](https://pypi.org/project/black/) and [isort](https://pycqa.github.io/isort/index.html)
+- Formatting with [black](https://pypi.org/project/black/).
 - Linting with [ruff](https://github.com/charliermarsh/ruff)
 - Static type checking with [mypy](https://mypy.readthedocs.io/en/stable/)
 - Dependency checking with [cookiecutter-poetry](https://fpgmaas.github.io/cookiecutter-poetry/)

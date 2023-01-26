@@ -43,10 +43,6 @@ line-length = 120
 target-version = ['py37']
 preview = true
 
-[tool.isort]
-profile = "black"
-skip = ["{{cookiecutter.project_name}}",".venv"]
-
 [tool.poetry.scripts]
 ccp = 'cookiecutter_poetry.cli:main'
 

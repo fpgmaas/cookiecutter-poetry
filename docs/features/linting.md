@@ -10,15 +10,6 @@ Note that this requires the pre-commit hooks to be installed.
 
 This command will run the following tools:
 
-## isort
-
-[isort](https://pycqa.github.io/isort/index.html) is run to sort the imports and it is configured through `pyproject.toml`:
-
-```toml
-[tool.isort]
-profile = "black"
-```
-
 ## black 
 
 [black](https://pypi.org/project/black/) is used to format the code, and it is configured through `pyproject.toml`:

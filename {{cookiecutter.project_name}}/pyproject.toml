@@ -41,9 +41,6 @@ line-length = 120
 target-version = ['py37']
 preview = true
 
-[tool.isort]
-profile = "black"
-
 [tool.mypy]
 files = ["{{cookiecutter.project_slug}}"]
 disallow_untyped_defs = "True"
@@ -57,7 +54,7 @@ show_error_codes = "True"
 [tool.ruff]
 target-version = "py37"
 line-length = 120
-fix = false
+fix = true
 select = [
     # flake8-2020
     "YTT",

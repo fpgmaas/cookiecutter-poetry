@@ -4,8 +4,3 @@ repos:
     hooks:
       - id: black
         exclude: ^{{cookiecutter.project_name}}
-
-  - repo: https://github.com/PyCQA/isort
-    rev: "5.10.1"
-    hooks:
-      - id: isort
