@@ -34,30 +34,58 @@ fast = true
 To exclude directories or files, add an `exclude` argument to `pre-commit-config.yaml`. Note that adding an `exclude` argument to `pyproject.toml`
 will not work, see also [here](https://stackoverflow.com/a/61046953/8037249).
 
-## flake8
+## ruff
 
-[flake8](https://flake8.pycqa.org/en/latest/) is used to check the code style, and it is configured through `tox.ini`:
+[ruff](https://github.com/charliermarsh/ruff) is used to check the code style, and it is configured through `pyproject.toml`:
 
 ```
-[flake8]
-per-file-ignores = __init__.py:F401
-# PEP-8 The following are ignored:
-# E731 do not assign a lambda expression, use a def
-# E203 whitespace before ':'
-# E501 line too long
-# W503 line break before binary operator
-# W605 invalid escape sequence
-ignore = E731, E203, E501, W503, W605
-exclude =
-    .git,
-    __pycache__,
-    docs/source/conf.py,
-    old,
-    build,
-    dist,
-    .venv,
-max-complexity = 10
-max-line-length = 120
+[tool.ruff]
+target-version = "py37"
+line-length = 120
+fix = false
+select = [
+    # flake8-2020
+    "YTT",
+    # flake8-bandit
+    "S",
+    # flake8-bugbear
+    "B",
+    # flake8-builtins
+    "A",
+    # flake8-comprehensions
+    "C4",
+    # flake8-debugger
+    "T10",
+    # flake8-print
+    "T20",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+    # mccabe
+    "C90",
+    # pycodestyle
+    "E", "W",
+    # pyflakes
+    "F",
+    # pygrep-hooks
+    "PGH",
+    # pyupgrade
+    "UP",
+    # ruff
+    "RUF",
+    # tryceratops
+    "TRY",
+]
+ignore = [
+    # LineTooLong
+    "E501",
+    # DoNotAssignLambda
+    "E731",
+]
+
+[tool.ruff.per-file-ignores]
+"tests/*" = ["S101"]
 ```
 
 # mypy

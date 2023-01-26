@@ -28,7 +28,7 @@ repository to generate the file structure for a Python project that uses
 - CI/CD with [GitHub Actions](https://github.com/features/actions)
 - Pre-commit hooks with [pre-commit](https://pre-commit.com/)
 - Formatting with [black](https://pypi.org/project/black/) and [isort](https://pycqa.github.io/isort/index.html)
-- Linting with [flake8](https://flake8.pycqa.org/en/latest/)
+- Linting with [ruff](https://github.com/charliermarsh/ruff)
 - Static type checking with [mypy](https://mypy.readthedocs.io/en/stable/)
 - Dependency checking with [cookiecutter-poetry](https://fpgmaas.github.io/cookiecutter-poetry/)
 - Publishing to [Pypi](https://pypi.org) or [Artifactory](https://jfrog.com/artifactory) by creating a new release on GitHub
