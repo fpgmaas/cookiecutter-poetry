@@ -15,7 +15,8 @@ def run_within_dir(path: str):
 
 
 def file_contains_text(file: str, text: str) -> bool:
-    return open(file, "r").read().find(text) != -1
+    with open(file) as f:
+        return f.read().find(text) != -1
 
 
 def test_bake_project(cookies):
@@ -39,8 +40,8 @@ def test_using_pytest(cookies, tmp_path):
 
         # Install the poetry environment and run the tests.
         with run_within_dir(str(result.project_path)):
-            subprocess.check_call(shlex.split("poetry install --no-interaction")) == 0
-            subprocess.check_call(shlex.split("poetry run make test")) == 0
+            assert subprocess.check_call(shlex.split("poetry install --no-interaction")) == 0
+            assert subprocess.check_call(shlex.split("poetry run make test")) == 0
 
 
 def test_cicd_contains_artifactory_secrets(cookies, tmp_path):

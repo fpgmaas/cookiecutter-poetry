@@ -35,6 +35,8 @@ check: ## Run code quality tools.
 	@poetry lock --check
 	@echo "🚀 Linting code: Running pre-commit"
 	@poetry run pre-commit run -a
+	@echo "🚀 Linting with ruff"
+	@poetry run ruff hooks tests cookiecutter_poetry --config pyproject.toml
 	@echo "🚀 Static type checking: Running mypy"
 	@poetry run mypy
 	@echo "🚀 Checking for obsolete dependencies: Running deptry"
