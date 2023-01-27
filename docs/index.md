@@ -17,22 +17,14 @@
 [![Supported Python versions](https://img.shields.io/pypi/pyversions/cookiecutter-poetry)](https://pypi.org/project/cookiecutter-poetry/)
 [![License](https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry)](https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry)
 
-This is a [cookiecutter](https://github.com/cookiecutter/cookiecutter)
-repository to generate the file structure for a Python project that uses
-[Poetry](https://python-poetry.org/) for its dependency management. 
-
-A project generated with ``cookiecutter-poetry`` supports the following features:
+This is a modern Cookiecutter template that can be used to initiate a Python project with all the necessary tools for development, testing, and deployment. It supports the following features:
 
 - [Poetry](https://python-poetry.org/) for dependency management
 - CI/CD with [GitHub Actions](https://github.com/features/actions)
 - Pre-commit hooks with [pre-commit](https://pre-commit.com/)
-- Formatting with [black](https://pypi.org/project/black/)
-- Linting with [ruff](https://github.com/charliermarsh/ruff)
-- Static type checking with [mypy](https://mypy.readthedocs.io/en/stable/)
-- Dependency checking with [deptry](https://fpgmaas.github.io/deptry/)
+- Code quality with [black](https://pypi.org/project/black/), [ruff](https://github.com/charliermarsh/ruff), [mypy](https://mypy.readthedocs.io/en/stable/), and [deptry](https://github.com/fpgmaas/deptry/)
 - Publishing to [Pypi](https://pypi.org) or [Artifactory](https://jfrog.com/artifactory) by creating a new release on GitHub
-- Testing with [pytest](https://docs.pytest.org/en/7.1.x/)
-- Test coverage with [codecov](https://about.codecov.io/)
+- Testing and coverage with [pytest](https://docs.pytest.org/en/7.1.x/) and [codecov](https://about.codecov.io/)
 - Documentation with [MkDocs](https://www.mkdocs.org/)
 - Compatibility testing for multiple versions of Python with [Tox](https://tox.wiki/en/latest/)
 - Containerization with [Docker](https://www.docker.com/)
