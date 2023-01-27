@@ -13,26 +13,28 @@
 [![License](https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry)](https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry)
 
 
-This is a [cookiecutter](https://github.com/cookiecutter/cookiecutter)
-repository to generate the file structure for a Python project that uses
-[Poetry](https://python-poetry.org/) for its dependency management.
-
-- **Documentation**: [Link](https://fpgmaas.github.io/cookiecutter-poetry/)
-- **Example repository**: [Link](https://github.com/fpgmaas/cookiecutter-poetry-example)
-- **PyPi**: [Link](https://pypi.org/project/cookiecutter-poetry/)
-
-## Features
+This is a modern Cookiecutter template that can be used to initiate a Python project with all the necessary tools for development, testing, and deployment. It supports the following features:
 
 - [Poetry](https://python-poetry.org/) for dependency management
 - CI/CD with [GitHub Actions](https://github.com/features/actions)
 - Pre-commit hooks with [pre-commit](https://pre-commit.com/)
 - Code quality with [black](https://pypi.org/project/black/), [ruff](https://github.com/charliermarsh/ruff), [mypy](https://mypy.readthedocs.io/en/stable/), and [deptry](https://github.com/fpgmaas/deptry/)
-- Dependency checking with [cookiecutter-poetry](https://fpgmaas.github.io/cookiecutter-poetry/)
 - Publishing to [Pypi](https://pypi.org) or [Artifactory](https://jfrog.com/artifactory) by creating a new release on GitHub
 - Testing and coverage with [pytest](https://docs.pytest.org/en/7.1.x/) and [codecov](https://about.codecov.io/)
 - Documentation with [MkDocs](https://www.mkdocs.org/)
 - Compatibility testing for multiple versions of Python with [Tox](https://tox.wiki/en/latest/)
 - Containerization with [Docker](https://www.docker.com/)
+
+---
+<p align="center">
+  <a href="https://fpgmaas.github.io/cookiecutter-poetry/">Documentation</a> - <a href="https://github.com/fpgmaas/cookiecutter-poetry-example">Example</a> -
+  <a href="https://pypi.org/project/cookiecutter-poetry/">PyPi</a>
+</p>
+
+---
+
+
+
 
 ## Quickstart
 
