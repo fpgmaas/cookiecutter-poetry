@@ -29,7 +29,7 @@ repository to generate the file structure for a Python project that uses
 - Formatting with [black](https://pypi.org/project/black/)
 - Linting with [ruff](https://github.com/charliermarsh/ruff)
 - Static type checking with [mypy](https://mypy.readthedocs.io/en/stable/)
-- Dependency checking with [cookiecutter-poetry](https://fpgmaas.github.io/cookiecutter-poetry/)
+- Dependency checking with [deptry](https://fpgmaas.github.io/deptry/)
 - Publishing to [Pypi](https://pypi.org) or [Artifactory](https://jfrog.com/artifactory) by creating a new release on GitHub
 - Testing with [pytest](https://docs.pytest.org/en/7.1.x/)
 - Test coverage with [codecov](https://about.codecov.io/)
