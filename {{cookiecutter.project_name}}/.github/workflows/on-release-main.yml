@@ -25,7 +25,7 @@ jobs:
           source .venv/bin/activate
           poetry version $RELEASE_VERSION
           make build-and-publish
-        env: 
+        env:
           {% if cookiecutter.publish_to == "pypi" -%}
           {%- raw -%}
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}

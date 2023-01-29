@@ -7,14 +7,14 @@ bake-with-inputs: ## bake with inputs and overwrite if exists.
 	@cookiecutter . --overwrite-if-exists
 
 .PHONY: bake-and-test-deploy
-bake-and-test-deploy: 
+bake-and-test-deploy:
 	@rm -rf cookiecutter-poetry-example || true
 	@cookiecutter --no-input . --overwrite-if-exists \
 		author="Florian Maas" \
 		email="fpgmaas@gmail.com" \
 		github_author_handle=fpgmaas \
 		project_name=cookiecutter-poetry-example \
-		project_slug=cookiecutter_poetry_example 
+		project_slug=cookiecutter_poetry_example
 	@cd cookiecutter-poetry-example; poetry lock && \
 		git init -b main && \
 		git add . && \
@@ -26,7 +26,7 @@ bake-and-test-deploy:
 .PHONY: install
 install: ## Install the poetry environment
 	@echo "🚀 Creating virtual environment using pyenv and poetry"
-	@poetry install	
+	@poetry install
 	@poetry shell
 
 .PHONY: check

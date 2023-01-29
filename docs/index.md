@@ -19,7 +19,7 @@
 
 This is a [cookiecutter](https://github.com/cookiecutter/cookiecutter)
 repository to generate the file structure for a Python project that uses
-[Poetry](https://python-poetry.org/) for its dependency management. 
+[Poetry](https://python-poetry.org/) for its dependency management.
 
 A project generated with ``cookiecutter-poetry`` supports the following features:
 
@@ -45,7 +45,7 @@ On your local machine, navigate to the directory in which you want to
 create a project directory, and run the following two commands:
 
 ``` bash
-pip install cookiecutter-poetry 
+pip install cookiecutter-poetry
 ccp
 ```
 
@@ -86,4 +86,3 @@ To finalize the set-up for publishing to PyPi or Artifactory, see [here](./featu
 This project is partially based on [Audrey
 Feldroy's](https://github.com/audreyfeldroy) great
 [cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage).
-
