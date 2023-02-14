@@ -127,3 +127,14 @@ def test_not_codecov(cookies, tmp_path):
         assert result.exit_code == 0
         assert not os.path.isfile(f"{result.project_path}/codecov.yaml")
         assert not os.path.isfile(f"{result.project_path}/.github/workflows/validate-codecov-config.yml")
+
+
+def test_remove_release_workflow(cookies, tmp_path):
+    with run_within_dir(tmp_path):
+        result = cookies.bake(extra_context={"publish_to": "none", "mkdocs": "y"})
+        assert result.exit_code == 0
+        assert os.path.isfile(f"{result.project_path}/.github/workflows/on-release-main.yml")
+
+        result = cookies.bake(extra_context={"publish_to": "none", "mkdocs": "n"})
+        assert result.exit_code == 0
+        assert not os.path.isfile(f"{result.project_path}/.github/workflows/on-release-main.yml")
