@@ -2,7 +2,7 @@
 
 FROM python:3.9-slim-buster
 
-ENV POETRY_VERSION=1.1.13 \
+ENV POETRY_VERSION=1.4 \
     POETRY_VIRTUALENVS_CREATE=false
 
 # Install poetry
