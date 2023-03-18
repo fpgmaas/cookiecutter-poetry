@@ -22,15 +22,8 @@ jobs:
       - name: Set up the environment
         uses: ./.github/actions/setup-poetry-env
 
-      - name: Run pre-commit
-        run: poetry run pre-commit run -a --show-diff-on-failure
-{% if cookiecutter.deptry == "y" %}
-      - name: Inspect dependencies
-        run: poetry run deptry .
-{%- endif %}
-
-      - name: Check Poetry lock file consistency
-        run: poetry lock --check
+      - name: Run checks
+        run: make check
 
   tox:
     runs-on: ubuntu-latest
