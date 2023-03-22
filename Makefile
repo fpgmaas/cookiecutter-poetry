@@ -39,8 +39,6 @@ check: ## Run code quality tools.
 	@poetry run ruff hooks tests cookiecutter_poetry --config pyproject.toml
 	@echo "🚀 Static type checking: Running mypy"
 	@poetry run mypy
-	@echo "🚀 Checking for obsolete dependencies: Running deptry"
-	@poetry run deptry .
 
 .PHONY: test
 test: ## Test the code with pytest.

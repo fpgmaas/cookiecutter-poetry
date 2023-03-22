@@ -119,14 +119,6 @@ tomli = {version = "*", optional = true, markers = "python_full_version <= \"3.1
 [package.extras]
 toml = ["tomli"]
 
-[[package]]
-name = "deptry"
-version = "0.6.6"
-description = "A command line utility to check for obsolete, missing and transitive dependencies in a Python project."
-category = "dev"
-optional = false
-python-versions = ">=3.7,<4.0"
-
 [package.dependencies]
 chardet = ">=4.0.0"
 click = ">=8.0.0,<9.0.0"
@@ -784,10 +776,6 @@ coverage = [
     {file = "coverage-6.5.0-cp39-cp39-win_amd64.whl", hash = "sha256:fc2af30ed0d5ae0b1abdb4ebdce598eafd5b35397d4d75deb341a614d333d987"},
     {file = "coverage-6.5.0-pp36.pp37.pp38-none-any.whl", hash = "sha256:1431986dac3923c5945271f169f59c45b8802a114c8f548d611f2015133df77a"},
     {file = "coverage-6.5.0.tar.gz", hash = "sha256:f642e90754ee3e06b0e7e51bce3379590e76b7f76b708e1a71ff043f87025c84"},
-]
-deptry = [
-    {file = "deptry-0.6.6-py3-none-any.whl", hash = "sha256:38c03085899339a43374ba51c845d6d1e3d3d2d003d8270d85f0c67f19775e36"},
-    {file = "deptry-0.6.6.tar.gz", hash = "sha256:b968b459929ede5428d695c801f39d03c058de7fa7f855585ca8620a1ec3ae62"},
 ]
 distlib = [
     {file = "distlib-0.3.6-py2.py3-none-any.whl", hash = "sha256:f35c4b692542ca110de7ef0bea44d73981caeb34ca0b9b6b2e6d7790dda8f80e"},

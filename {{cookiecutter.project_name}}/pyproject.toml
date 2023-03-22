@@ -18,9 +18,6 @@ pytest = "^7.2.0"
 {% if cookiecutter.codecov == 'y' -%}
 pytest-cov = "^4.0.0"
 {% endif -%}
-{% if cookiecutter.deptry == 'y' -%}
-deptry = "^0.6.4"
-{% endif -%}
 mypy = "^0.981"
 pre-commit = "^2.20.0"
 tox = "^3.25.1"

@@ -25,7 +25,6 @@ pytest = "^7.2.0"
 pre-commit = "^2.20.0"
 pytest-cookies = "^0.6.1"
 tox = "^3.25.1"
-deptry = "^0.6.4"
 mypy = "^0.991"
 pytest-cov = "^4.0.0"
 ruff = "^0.0.235"
@@ -62,12 +61,6 @@ check_untyped_defs = "True"
 warn_return_any = "True"
 warn_unused_ignores = "True"
 show_error_codes = "True"
-
-[tool.deptry]
-extend_exclude = [
-  "{{cookiecutter.project_name}}"
-]
-ignore_obsolete = ["cookiecutter"]
 
 [tool.ruff]
 target-version = "py37"
