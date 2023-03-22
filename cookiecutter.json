@@ -5,7 +5,6 @@
     "project_name": "example-project",
     "project_slug": "{{cookiecutter.project_name|lower|replace('-', '_')}}",
     "project_description": "This is a template repository for Python projects that use Poetry for their dependency management.",
-    "mkdocs": ["y", "n"],
     "codecov" : ["y","n"],
     "dockerfile" : ["y","n"],
     "open_source_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"]

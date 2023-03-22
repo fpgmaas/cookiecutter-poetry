@@ -22,13 +22,6 @@ mypy = "^0.981"
 pre-commit = "^2.20.0"
 tox = "^3.25.1"
 
-{% if cookiecutter.mkdocs == 'y' -%}
-[tool.poetry.group.docs.dependencies]
-mkdocs = "^1.4.2"
-mkdocs-material = "^8.5.10"
-mkdocstrings = {extras = ["python"], version = "^0.19.0"}
-{%- endif %}
-
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"

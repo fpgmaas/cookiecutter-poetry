@@ -32,18 +32,6 @@ build: clean-build ## Build wheel file using poetry
 clean-build: ## clean build artifacts
 	@rm -rf dist
 
-{%- if cookiecutter.mkdocs == "y" %}
-
-.PHONY: docs-test
-docs-test: ## Test if documentation can be built without warnings or errors
-	@poetry run mkdocs build -s
-
-.PHONY: docs
-docs: ## Build and serve the documentation
-	@poetry run mkdocs serve
-
-{%- endif %}
-
 .PHONY: help
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'

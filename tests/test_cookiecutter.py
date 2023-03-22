@@ -44,26 +44,6 @@ def test_using_pytest(cookies, tmp_path):
             assert subprocess.check_call(shlex.split("poetry run make test")) == 0
 
 
-def test_mkdocs(cookies, tmp_path):
-    with run_within_dir(tmp_path):
-        result = cookies.bake(extra_context={"mkdocs": "y"})
-        assert result.exit_code == 0
-        assert file_contains_text(f"{result.project_path}/.github/workflows/on-release-main.yml", "mkdocs gh-deploy")
-        assert file_contains_text(f"{result.project_path}/Makefile", "docs:")
-        assert os.path.isdir(f"{result.project_path}/docs")
-
-
-def test_not_mkdocs(cookies, tmp_path):
-    with run_within_dir(tmp_path):
-        result = cookies.bake(extra_context={"mkdocs": "n"})
-        assert result.exit_code == 0
-        assert not file_contains_text(
-            f"{result.project_path}/.github/workflows/on-release-main.yml", "mkdocs gh-deploy"
-        )
-        assert not file_contains_text(f"{result.project_path}/Makefile", "docs:")
-        assert not os.path.isdir(f"{result.project_path}/docs")
-
-
 def test_tox(cookies, tmp_path):
     with run_within_dir(tmp_path):
         result = cookies.bake()
