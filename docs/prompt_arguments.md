@@ -35,12 +35,6 @@ from <project_slug> import foo
 
 A short description of your project.
 
-**include_github_actions**
-
-`"y"` or `"n"`. Adds a `.github` directory with various actions and
-workflows to setup the environment and run code formatting checks
-and unittests.
-
 **publish_to**
 
 `"pypi"`, `"artifactory"`, or `"none"`. Adds functionality to the

@@ -119,7 +119,3 @@ exclude = [
 ]
 ```
 
-## Github Actions
-
-If `include_github_actions` is set to `"y"`, code formatting is checked
-for every merge request, every merge to main, and every release.

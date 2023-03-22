@@ -1,7 +1,7 @@
 {
-    "author": "Florian Maas",
-    "email": "fpgmaas@gmail.com",
-    "author_github_handle" : "fpgmaas",
+    "author": "John Doe",
+    "email": "john@pacerevenue.com",
+    "author_github_handle" : "pace-johndoe",
     "project_name": "example-project",
     "project_slug": "{{cookiecutter.project_name|lower|replace('-', '_')}}",
     "project_description": "This is a template repository for Python projects that use Poetry for their dependency management.",
