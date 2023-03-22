@@ -35,14 +35,6 @@ from <project_slug> import foo
 
 A short description of your project.
 
-**publish_to**
-
-`"pypi"`, `"artifactory"`, or `"none"`. Adds functionality to the
-`Makefile` and Github workflows to make publishing your code as
-simple as creating a new release release on Github. For more info,
-see
-[Publishing to Pypi or Artifactory](./features/publishing.md).
-
 **deptry**
 
 `"y"` or `"n"`. Adds [deptry](https://fpgmaas.github.io/deptry/)

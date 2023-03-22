@@ -36,32 +36,6 @@ build: clean-build ## Build wheel file using poetry
 clean-build: ## clean build artifacts
 	@rm -rf dist
 
-{%- if cookiecutter.publish_to == "pypi"%}
-
-.PHONY: publish
-publish: ## publish a release to pypi.
-	@echo "🚀 Publishing: Dry run."
-	@poetry config pypi-token.pypi $(PYPI_TOKEN)
-	@poetry publish --dry-run
-	@echo "🚀 Publishing."
-	@poetry publish
-
-.PHONY: build-and-publish
-build-and-publish: build publish ## Build and publish.
-{%- elif cookiecutter.publish_to == "artifactory" %}
-
-.PHONY: publish
-publish: ## Publish to the Artifactory repository using poetry. Requires ARTIFACTORY_TOKEN for DPS-FF-ILO to be set.
-	@echo "🚀 Publishing: Dry run."
-	@poetry config repositories.artifactory $(ARTIFACTORY_URL)
-	@poetry publish --repository artifactory --username $(ARTIFACTORY_USERNAME) --password $(ARTIFACTORY_PASSWORD) --dry-run
-	@echo "🚀 Publishing."
-	@poetry publish --repository artifactory --username $(ARTIFACTORY_USERNAME) --password $(ARTIFACTORY_PASSWORD)
-
-.PHONY: build-and-publish
-build-and-publish: build publish ## Build and publish.
-{%- endif%}
-
 {%- if cookiecutter.mkdocs == "y" %}
 
 .PHONY: docs-test
