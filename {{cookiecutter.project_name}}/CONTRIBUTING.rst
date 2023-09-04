@@ -110,7 +110,7 @@ development. Please note this documentation assumes you already have
 
    .. code-block:: bash
 
-        make lint
+        make check
 
 | 8. Now, validate that all unit tests are passing:
 

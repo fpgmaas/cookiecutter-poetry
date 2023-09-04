@@ -7,7 +7,7 @@ bake-with-inputs: ## bake with inputs and overwrite if exists.
 	@cookiecutter . --overwrite-if-exists
 
 .PHONY: bake-and-test-deploy
-bake-and-test-deploy:
+bake-and-test-deploy: ## For quick publishing to cookiecutter-poetry-example to test GH Actions
 	@rm -rf cookiecutter-poetry-example || true
 	@cookiecutter --no-input . --overwrite-if-exists \
 		author="Florian Maas" \
