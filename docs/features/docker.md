@@ -1,6 +1,6 @@
 # Containerization with Docker
 
-If `dockerfile` is set to `"y"`, a simple `Dockerfile` is added to the 
+If `dockerfile` is set to `"y"`, a simple `Dockerfile` is added to the
 repository. The Dockerfile installs poetry, sets up the environment and runs
 `foo.py` when run.
 
@@ -13,7 +13,7 @@ docker build . -t my-docker-image
 It can then be run in the background with
 
 ```bash
-docker run -d my-docker-image 
+docker run -d my-docker-image
 ```
 
 Or, run it interactive mode with

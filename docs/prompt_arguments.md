@@ -6,19 +6,19 @@ prompt values and their explanation are as follows:
 ---
 
 **author**
-    
+
  Your full name.
 
 **email**
-    
+
 Your email address.
 
 **author_github_handle**
-    
+
 Your github handle, i.e. `<handle>` in `https://github.com/<handle>`
 
 **project_name**
-    
+
 Your project name. Should be equal to the name of your repository
 and it should only contain alphanumeric characters and `-`'s.
 

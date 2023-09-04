@@ -14,7 +14,7 @@ bake-and-test-deploy: ## For quick publishing to cookiecutter-poetry-example to 
 		email="fpgmaas@gmail.com" \
 		github_author_handle=fpgmaas \
 		project_name=cookiecutter-poetry-example \
-		project_slug=cookiecutter_poetry_example 
+		project_slug=cookiecutter_poetry_example
 	@cd cookiecutter-poetry-example; poetry lock && \
 		git init -b main && \
 		git add . && \
@@ -26,7 +26,7 @@ bake-and-test-deploy: ## For quick publishing to cookiecutter-poetry-example to 
 .PHONY: install
 install: ## Install the poetry environment
 	@echo "🚀 Creating virtual environment using pyenv and poetry"
-	@poetry install	
+	@poetry install
 	@poetry shell
 
 .PHONY: check

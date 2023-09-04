@@ -17,7 +17,7 @@ whenever you create them with `poetry init`.
 ## Step 2: Install pyenv (Optional)
 
 I would recommend to use `pyenv` for managing your different Python versions. However, if you prefer another method of
-managing your Python versions, feel free to skip this step and continue to [step 3](#step-3-generate-your-project).  
+managing your Python versions, feel free to skip this step and continue to [step 3](#step-3-generate-your-project).
 
 The instructions to install pyenv can be found [here](https://github.com/pyenv/pyenv). The instructions to install
 poetry can be found [here](https://python-poetry.org/docs/).
@@ -110,7 +110,7 @@ If you enabled code coverage with codecov for your project, you should sign up w
 
 If you want to deploy your project to Pypi or Artifactory using the
 Github Actions, you will have to set some repository secrets. For
-instructions on how to do that, see [here](./features/publishing.md#set-up-for-pypi) for PyPi, or 
+instructions on how to do that, see [here](./features/publishing.md#set-up-for-pypi) for PyPi, or
 [here](./features/publishing.md#set-up-for-artifactory) for Artifactory.
 
 ## Step 9: Create a new release
@@ -127,7 +127,7 @@ Give your release a title, and add a new tag in the form `*.*.*` where the
 In your repository, navigate to ``Settings > Code and Automation > Pages``. If you succesfully created a new release,
 you should see a notification saying `` Your site is ready to be published at https://<author_github_handle>.github.io/<project_name>/``.
 
-To finalize deploying your documentation, under ``Source``, select the branch ``gh-pages``. 
+To finalize deploying your documentation, under ``Source``, select the branch ``gh-pages``.
 
 ## Step 11: You're all set!
 

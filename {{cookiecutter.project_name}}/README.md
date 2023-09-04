@@ -23,7 +23,7 @@ git remote add origin git@github.com:{{cookiecutter.author_github_handle}}/{{coo
 git push -u origin main
 ```
 
-Finally, install the environment and the pre-commit hooks with 
+Finally, install the environment and the pre-commit hooks with
 
 ```bash
 make install
@@ -43,9 +43,9 @@ To enable the code coverage reports, see [here](https://fpgmaas.github.io/cookie
 
 {% if cookiecutter.publish_to == "pypi" -%}
 - Create an API Token on [Pypi](https://pypi.org/).
-- Add the API Token to your projects secrets with the name `PYPI_TOKEN` by visiting 
+- Add the API Token to your projects secrets with the name `PYPI_TOKEN` by visiting
 [this page](https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}/settings/secrets/actions/new).
-- Create a [new release](https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}/releases/new) on Github. 
+- Create a [new release](https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}/releases/new) on Github.
 Create a new tag in the form ``*.*.*``.
 
 For more details, see [here](https://fpgmaas.github.io/cookiecutter-poetry/features/cicd/#how-to-trigger-a-release).
