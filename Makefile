@@ -15,8 +15,13 @@ bake-and-test-deploy: ## For quick publishing to cookiecutter-poetry-example to 
 		github_author_handle=fpgmaas \
 		project_name=cookiecutter-poetry-example \
 		project_slug=cookiecutter_poetry_example
-	@cd cookiecutter-poetry-example; poetry lock && \
+	@cd cookiecutter-poetry-example; poetry install && \
 		git init -b main && \
+		git add . && \
+		poetry run pre-commit install && \
+		poetry run pre-commit run -a || true && \
+		git add . && \
+		poetry run pre-commit run -a || true && \
 		git add . && \
 		git commit -m "init commit" && \
 		git remote add origin git@github.com:fpgmaas/cookiecutter-poetry-example.git && \
