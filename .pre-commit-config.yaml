@@ -11,4 +11,4 @@ repos:
     rev: "22.8.0"
     hooks:
       - id: black
-        exclude: ^{{cookiecutter.project_name}}
+        exclude: ^templates/cookiecutter-poetry/{{cookiecutter.project_name}}

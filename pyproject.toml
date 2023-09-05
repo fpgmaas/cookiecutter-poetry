@@ -11,9 +11,9 @@ packages = [
   {include = "cookiecutter_poetry"}
 ]
 include = [
-  '{{cookiecutter.project_name}}/**/*',
-  'cookiecutter.json',
-  'hooks/*'
+  'templates/cookiecutter-poetry/**/*',
+  'templates/cookiecutter-poetry/cookiecutter.json',
+  'templates/cookiecutter-poetry/hooks/*'
 ]
 
 [tool.poetry.dependencies]
@@ -65,7 +65,7 @@ show_error_codes = "True"
 
 [tool.deptry]
 extend_exclude = [
-  "{{cookiecutter.project_name}}"
+  "templates/cookiecutter-poetry/{{cookiecutter.project_name}}"
 ]
 
 [tool.deptry.per_rule_ignores]
