@@ -6,11 +6,11 @@ Code can be linted and quality-checked with the command
 make check
 ```
 
-Note that this requires the pre-commit hooks to be installed. 
+Note that this requires the pre-commit hooks to be installed.
 
 This command will run the following tools:
 
-## black 
+## black
 
 [black](https://pypi.org/project/black/) is used to format the code, and it is configured through `pyproject.toml`:
 

@@ -19,17 +19,17 @@ pytest = "^7.2.0"
 pytest-cov = "^4.0.0"
 {% endif -%}
 {% if cookiecutter.deptry == 'y' -%}
-deptry = "^0.6.4"
+deptry = "^0.12.0"
 {% endif -%}
-mypy = "^0.981"
-pre-commit = "^2.20.0"
-tox = "^3.25.1"
+mypy = "^1.5.1"
+pre-commit = "^3.4.0"
+tox = "^4.11.1"
 
 {% if cookiecutter.mkdocs == 'y' -%}
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.4.2"
-mkdocs-material = "^8.5.10"
-mkdocstrings = {extras = ["python"], version = "^0.19.0"}
+mkdocs-material = "^9.2.7"
+mkdocstrings = {extras = ["python"], version = "^0.23.0"}
 {%- endif %}
 
 [build-system]
@@ -94,9 +94,6 @@ ignore = [
     "E731",
 ]
 
-[tool.ruff.per-file-ignores]
-"tests/*" = ["S101"]
-
 {% if cookiecutter.codecov == "y"-%}
 [tool.coverage.report]
 skip_empty = true
@@ -106,3 +103,5 @@ branch = true
 source = ["{{cookiecutter.project_slug}}"]
 {% endif%}
 
+[tool.ruff.per-file-ignores]
+"tests/*" = ["S101"]
