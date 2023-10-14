@@ -69,6 +69,10 @@ will be deployed to the `gh-pages` branch.
 
 `"y"` or `"n"`. Adds a simple [Dockerfile](https://docker.com).
 
+**devcontainer**
+
+`"y"` or `"n"`. Adds a [devcontainer](https://code.visualstudio.com/docs/devcontainers/containers) specification to the project along with pre-installed pre-commit hooks and VSCode python extension configuration.
+
 **open_source_license**
 
 Choose a [license](https://choosealicense.com/). Options:
