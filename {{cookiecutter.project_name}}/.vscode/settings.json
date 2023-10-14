@@ -4,6 +4,6 @@
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
-    "python.defaultInterpreterPath": "/workspaces/{{cookiecutter.project_name}/.venv/bin/python",
-    "python.testing.pytestPath": "/workspaces/{{cookiecutter.project_name}/.venv/bin/pytest"
+    "python.defaultInterpreterPath": "/workspaces/{{cookiecutter.project_name}}/.venv/bin/python",
+    "python.testing.pytestPath": "/workspaces/{{cookiecutter.project_name}}/.venv/bin/pytest"
 }

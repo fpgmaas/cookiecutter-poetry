@@ -44,6 +44,16 @@ def test_using_pytest(cookies, tmp_path):
             assert subprocess.check_call(shlex.split("poetry run make test")) == 0
 
 
+def test_devcontainer(cookies, tmp_path):
+    """Test that the devcontainer files are created when devcontainer=y"""
+    with run_within_dir(tmp_path):
+        result = cookies.bake(extra_context={"devcontainer": "y"})
+        assert result.exit_code == 0
+        assert os.path.isfile(f"{result.project_path}/.devcontainer/devcontainer.json")
+        assert os.path.isfile(f"{result.project_path}/.devcontainer/postCreateCommand.sh")
+        assert os.path.isfile(f"{result.project_path}/.vscode/settings.json")
+
+
 def test_cicd_contains_artifactory_secrets(cookies, tmp_path):
     with run_within_dir(tmp_path):
         result = cookies.bake(extra_context={"publish_to": "artifactory"})
