@@ -7,7 +7,7 @@ This page contains a complete tutorial on how to create your project.
 To start, we will need to install `poetry`. The instructions to install poetry can be found
 [here](https://python-poetry.org/docs/). After installing, it is recommended to run
 
-``` bash
+```bash
 poetry config virtualenvs.in-project true
 ```
 
@@ -25,13 +25,13 @@ poetry can be found [here](https://python-poetry.org/docs/).
 Install a version of Python with pyenv. To see a list of available
 versions, run:
 
-``` bash
+```bash
 pyenv install --list
 ```
 
 Select a version and install it with
 
-``` bash
+```bash
 pyenv install -v 3.9.7
 ```
 
@@ -43,13 +43,13 @@ First, navigate to the directory in which you want the project to be
 created. Then, we need to install `cookiecutter-poetry` with the
 following command:
 
-``` bash
+```bash
 pip install cookiecutter-poetry
 ```
 
 Within the directory in which you want to create your project, run:
 
-``` bash
+```bash
 ccp
 ```
 
@@ -60,7 +60,7 @@ An alternative to the steps above would be to install `cookiecutter` and
 directly pass the URL to Github repository to the `cookiecutter`
 command:
 
-``` bash
+```bash
 pip install cookiecutter-poetry
 cookiecutter https://github.com/fpgmaas/cookiecutter-poetry.git
 ```
@@ -78,7 +78,7 @@ Run the following commands, replacing `<project-name>` with the name
 that you also gave the Github repository and `<github_author_handle>`
 with your Github username.
 
-``` bash
+```bash
 cd <project_name>
 git init -b main
 git add .
@@ -97,7 +97,7 @@ pyenv local x.y.z
 
 Install and activate the `poetry` environment by running:
 
-``` bash
+```bash
 make install
 poetry shell
 ```
@@ -115,7 +115,7 @@ instructions on how to do that, see [here](./features/publishing.md#set-up-for-p
 
 ## Step 9: Create a new release
 
-To trigger a new release, navigate to your repository on GitHub, click ``Releases`` on the right, and then select `Draft
+To trigger a new release, navigate to your repository on GitHub, click `Releases` on the right, and then select `Draft
 a new release`. If you fail to find the button, you could also directly visit
 `https://github.com/<username>/<repository-name>/releases/new`.
 
@@ -124,10 +124,10 @@ Give your release a title, and add a new tag in the form `*.*.*` where the
 
 ## Step 10: Enable your documentation
 
-In your repository, navigate to ``Settings > Code and Automation > Pages``. If you succesfully created a new release,
-you should see a notification saying `` Your site is ready to be published at https://<author_github_handle>.github.io/<project_name>/``.
+In your repository, navigate to `Settings > Code and Automation > Pages`. If you succesfully created a new release,
+you should see a notification saying ` Your site is ready to be published at https://<author_github_handle>.github.io/<project_name>/`.
 
-To finalize deploying your documentation, under ``Source``, select the branch ``gh-pages``.
+To finalize deploying your documentation, under `Source`, select the branch `gh-pages`.
 
 ## Step 11: You're all set!
 

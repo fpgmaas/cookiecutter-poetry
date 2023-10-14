@@ -39,6 +39,6 @@ It is also possible to release locally, although it is not recommended.
 To do so, set the repository secrets listed in the sections above as
 environment variables on your local machine instead, and run
 
-``` bash
+```bash
 make build-and-publish
 ```

@@ -2,7 +2,7 @@
 
 Code can be linted and quality-checked with the command
 
-``` bash
+```bash
 make check
 ```
 
@@ -117,6 +117,20 @@ exclude = [
     '{{cookiecutter.project_name}}',
     'tests'
 ]
+```
+
+# Prettier
+
+[Prettier](https://prettier.io/) is used to format the markdown documentation, along with any json and yaml files.
+Its options can be configured in the included `.editorconfig` file or in greater detail by adding a `.prettierrc` file ([See Docs](https://prettier.io/docs/en/configuration)).
+
+```yaml
+[*]
+max_line_length = 120
+
+[*.json]
+indent_style = space
+indent_size = 4
 ```
 
 ## Github Actions

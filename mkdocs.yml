@@ -10,17 +10,17 @@ copyright: Maintained by <a href="https://fpgmaas.com">Florian</a>.
 nav:
   - Home: index.md
   - Features:
-    - CI/CD with Github Actions: features/cicd.md
-    - Linting & code quality: features/linting.md
-    - Makefile: features/makefile.md
-    - Dependency management with Poetry: features/poetry.md
-    - Publishing to PyPi or Artifactory: features/publishing.md
-    - Testing with Pytest: features/pytest.md
-    - Test coverage with codecov: features/codecov.md
-    - Documentation with MkDocs: features/mkdocs.md
-    - Compatibility testing with Tox: features/tox.md
-    - Containerization with Docker: features/docker.md
-    - Devcontainer with VSCode: features/devcontainer.md
+      - CI/CD with Github Actions: features/cicd.md
+      - Linting & code quality: features/linting.md
+      - Makefile: features/makefile.md
+      - Dependency management with Poetry: features/poetry.md
+      - Publishing to PyPi or Artifactory: features/publishing.md
+      - Testing with Pytest: features/pytest.md
+      - Test coverage with codecov: features/codecov.md
+      - Documentation with MkDocs: features/mkdocs.md
+      - Compatibility testing with Tox: features/tox.md
+      - Containerization with Docker: features/docker.md
+      - Devcontainer with VSCode: features/devcontainer.md
   - Tutorial: tutorial.md
   - Prompt Arguments: prompt_arguments.md
 plugins:

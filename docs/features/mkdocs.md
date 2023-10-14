@@ -1,6 +1,5 @@
 # Documentation with MkDocs
 
-
 If `mkdocs` is set to `"y"`, documentation of your project is
 automatically added using
 [MkDocs](https://www.mkdocs.org/). Next to that, if
@@ -10,7 +9,7 @@ automatically deployed to your `gh-pages` branch, and made available at
 
 To view the documentation locally, simply run
 
-``` bash
+```bash
 make docs
 ```
 
@@ -21,10 +20,10 @@ This command will generate and build your documentation, and start the server lo
 
 To enable your documentation on GitHub, first create a [new release](./cicd.md#how-to-trigger-a-release).
 
-Then, in your repository, navigate to ``Settings > Code and Automation > Pages``. If you succesfully created a new release,
-you should see a notification saying `` Your site is ready to be published at https://<author_github_handle>.github.io/<project_name>/``.
+Then, in your repository, navigate to `Settings > Code and Automation > Pages`. If you succesfully created a new release,
+you should see a notification saying ` Your site is ready to be published at https://<author_github_handle>.github.io/<project_name>/`.
 
-To finalize deploying your documentation, under ``Source``, select the branch ``gh-pages``. Your documentation should then be live within a few minutes.
+To finalize deploying your documentation, under `Source`, select the branch `gh-pages`. Your documentation should then be live within a few minutes.
 
 ## Documenting docstrings
 
@@ -36,7 +35,7 @@ docstrings.
 
 An example of a Google style docstring:
 
-``` python
+```python
 def function_with_pep484_type_annotations(param1: int, param2: str) -> bool:
 """Example function with PEP 484 type annotations.
 
