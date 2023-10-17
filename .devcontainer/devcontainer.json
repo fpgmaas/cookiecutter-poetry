@@ -17,7 +17,16 @@
 		"vscode": {
 			"extensions": [
 				"ms-python.python"
-			]
+			],
+			"settings": {
+				"python.testing.pytestArgs": [
+					"tests"
+				],
+				"python.testing.unittestEnabled": false,
+				"python.testing.pytestEnabled": true,
+				"python.defaultInterpreterPath": "/workspaces/cookiecutter-poetry/.venv/bin/python",
+				"python.testing.pytestPath": "/workspaces/cookiecutter-poetry/.venv/bin/pytest"
+			}
 		}
 	}
 }

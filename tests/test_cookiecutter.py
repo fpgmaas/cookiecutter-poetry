@@ -51,7 +51,15 @@ def test_devcontainer(cookies, tmp_path):
         assert result.exit_code == 0
         assert os.path.isfile(f"{result.project_path}/.devcontainer/devcontainer.json")
         assert os.path.isfile(f"{result.project_path}/.devcontainer/postCreateCommand.sh")
-        assert os.path.isfile(f"{result.project_path}/.vscode/settings.json")
+
+
+def test_not_devcontainer(cookies, tmp_path):
+    """Test that the devcontainer files are not created when devcontainer=n"""
+    with run_within_dir(tmp_path):
+        result = cookies.bake(extra_context={"devcontainer": "n"})
+        assert result.exit_code == 0
+        assert not os.path.isfile(f"{result.project_path}/.devcontainer/devcontainer.json")
+        assert not os.path.isfile(f"{result.project_path}/.devcontainer/postCreateCommand.sh")
 
 
 def test_cicd_contains_artifactory_secrets(cookies, tmp_path):

@@ -34,4 +34,3 @@ if __name__ == "__main__":
 
     if "{{cookiecutter.devcontainer}}" != "y":
         remove_dir(".devcontainer")
-        remove_dir(".vscode")

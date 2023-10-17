@@ -164,5 +164,8 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+# Exclude vscode config files
+.vscode/
+
 # Exclude .DS_Store files from being added
 .DS_Store
