@@ -3,7 +3,7 @@ cookiecutter-poetry-example
 
 # From https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore
 
- Byte-compiled / optimized / DLL files
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
@@ -165,7 +165,7 @@ cython_debug/
 #.idea/
 
 # Exclude vscode config files
-.vscode
+.vscode/
 
 # Exclude .DS_Store files from being added
 .DS_Store

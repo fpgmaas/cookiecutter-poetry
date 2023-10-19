@@ -11,5 +11,6 @@
     "mkdocs": ["y", "n"],
     "codecov" : ["y","n"],
     "dockerfile" : ["y","n"],
+    "devcontainer" : ["y","n"],
     "open_source_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"]
 }

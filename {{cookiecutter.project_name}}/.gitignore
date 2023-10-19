@@ -2,7 +2,7 @@ docs/source
 
 # From https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore
 
- Byte-compiled / optimized / DLL files
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
@@ -155,6 +155,9 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# Vscode config files
+.vscode/
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can

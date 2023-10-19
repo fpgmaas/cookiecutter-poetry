@@ -46,6 +46,9 @@ preview = true
 [tool.poetry.scripts]
 ccp = 'cookiecutter_poetry.cli:main'
 
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
 [tool.coverage.report]
 skip_empty = true
 

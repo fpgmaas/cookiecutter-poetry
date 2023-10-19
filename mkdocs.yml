@@ -20,6 +20,7 @@ nav:
     - Documentation with MkDocs: features/mkdocs.md
     - Compatibility testing with Tox: features/tox.md
     - Containerization with Docker: features/docker.md
+    - Devcontainer with VSCode: features/devcontainer.md
   - Tutorial: tutorial.md
   - Prompt Arguments: prompt_arguments.md
 plugins:
