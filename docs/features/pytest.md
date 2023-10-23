@@ -4,7 +4,7 @@
 the environment. There will be a template unittest in the `tests`
 directory upon creation of the project, which can be run with
 
-``` bash
+```bash
 make test
 ```
 

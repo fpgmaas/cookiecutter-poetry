@@ -24,9 +24,9 @@ Steps to reproduce the behavior:
 
 **System [please complete the following information]:**
 
--   OS: e.g. [Ubuntu 18.04]
--   Language Version: [e.g. Python 3.8]
--   Virtual environment: [e.g. Poetry 1.1.13]
+- OS: e.g. [Ubuntu 18.04]
+- Language Version: [e.g. Python 3.8]
+- Virtual environment: [e.g. Poetry 1.1.13]
 
 **Additional context**
 
