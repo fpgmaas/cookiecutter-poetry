@@ -20,13 +20,16 @@ This is a modern Cookiecutter template that can be used to initiate a Python pro
 - [Poetry](https://python-poetry.org/) for dependency management
 - CI/CD with [GitHub Actions](https://github.com/features/actions)
 - Pre-commit hooks with [pre-commit](https://pre-commit.com/)
-- Code quality with [black](https://pypi.org/project/black/), [ruff](https://github.com/charliermarsh/ruff), [mypy](https://mypy.readthedocs.io/en/stable/), and [deptry](https://github.com/fpgmaas/deptry/)
+- Code quality with:
+  - [ruff](https://github.com/charliermarsh/ruff)
+  - [mypy](https://mypy.readthedocs.io/en/stable/)
+  - [deptry](https://github.com/fpgmaas/deptry/)
+  - [prettier](https://prettier.io/)
 - Publishing to [Pypi](https://pypi.org) or [Artifactory](https://jfrog.com/artifactory) by creating a new release on GitHub
 - Testing and coverage with [pytest](https://docs.pytest.org/en/7.1.x/) and [codecov](https://about.codecov.io/)
 - Documentation with [MkDocs](https://www.mkdocs.org/)
 - Compatibility testing for multiple versions of Python with [Tox](https://tox.wiki/en/latest/)
 - Containerization with [Docker](https://www.docker.com/)
-- Development environment with [VSCode devcontainers](https://code.visualstudio.com/docs/remote/containers)
 
 An example of a repository generated with this package can be found [here](https://github.com/fpgmaas/cookiecutter-poetry-example).
 
