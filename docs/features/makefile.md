@@ -7,7 +7,7 @@ available:
 
 ```
 install              Install the poetry environment and install the pre-commit hooks
-check                Lint and check code by running black, ruff, mypy and deptry.
+check                Lint and check code by running ruff, mypy and deptry.
 test                 Test the code with pytest
 build                Build wheel file using poetry
 clean-build          clean build artifacts

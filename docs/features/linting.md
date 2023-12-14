@@ -10,24 +10,9 @@ Note that this requires the pre-commit hooks to be installed.
 
 This command will run the following tools:
 
-## black
-
-[black](https://pypi.org/project/black/) is used to format the code, and it is configured through `pyproject.toml`:
-
-```toml
-[tool.black]
-line-length = 120
-include = '\.pyi?$'
-target-version = ['py39']
-fast = true
-```
-
-To exclude directories or files, add an `exclude` argument to `pre-commit-config.yaml`. Note that adding an `exclude` argument to `pyproject.toml`
-will not work, see also [here](https://stackoverflow.com/a/61046953/8037249).
-
 ## ruff
 
-[ruff](https://github.com/charliermarsh/ruff) is used to check the code style, and it is configured through `pyproject.toml`:
+[ruff](https://github.com/charliermarsh/ruff) is used to lint and format the code, and it is configured through `pyproject.toml`:
 
 ```
 [tool.ruff]

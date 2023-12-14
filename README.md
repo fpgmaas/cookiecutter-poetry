@@ -16,7 +16,6 @@ This is a modern Cookiecutter template that can be used to initiate a Python pro
 - CI/CD with [GitHub Actions](https://github.com/features/actions)
 - Pre-commit hooks with [pre-commit](https://pre-commit.com/)
 - Code quality with:
-  - [black](https://pypi.org/project/black/)
   - [ruff](https://github.com/charliermarsh/ruff)
   - [mypy](https://mypy.readthedocs.io/en/stable/)
   - [deptry](https://github.com/fpgmaas/deptry/)
