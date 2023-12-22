@@ -37,32 +37,26 @@ pyenv install -v 3.9.7
 
 Replacing `3.9.7` with a version of your choosing.
 
+Configure pyenv to use the python version you want, either specifically for this project with:
+
+```bash
+pyenv local x.y.z
+```
+
+...or globally as your primary python version with:
+
+```bash
+pyenv global x.y.z
+```
+
 ## Step 3: Generate your project
 
 First, navigate to the directory in which you want the project to be
-created. Then, we need to install `cookiecutter-poetry` with the
-following command:
+created. Then, create your project with the following commands:
 
 ```bash
-pip install cookiecutter-poetry
-```
-
-Within the directory in which you want to create your project, run:
-
-```bash
-ccp
-```
-
-For an explanation of the prompt arguments, see
-[Prompt Arguments](../prompt_arguments).
-
-An alternative to the steps above would be to install `cookiecutter` and
-directly pass the URL to Github repository to the `cookiecutter`
-command:
-
-```bash
-pip install cookiecutter-poetry
-cookiecutter https://github.com/fpgmaas/cookiecutter-poetry.git
+pip install cookiecutter
+cookiecutter gh:dvatvani/cookiecutter-poetry
 ```
 
 ## Step 4: Set up your Github repository
@@ -74,31 +68,18 @@ with`.
 
 ## Step 5: Upload your project to Github
 
-Run the following commands, replacing `<project-name>` with the name
-that you also gave the Github repository and `<github_author_handle>`
-with your Github username.
+Setup the project with the justfile recipe. This initialises the Git repository, installs the poetry environment and pushes the initial state of the project to GitHub.
 
 ```bash
-cd <project_name>
-git init -b main
-git add .
-git commit -m "Init commit"
-git remote add origin git@github.com:<github_author_handle>/<project_name>.git
-git push -u origin main
+just setup-project
 ```
 
 ## Step 6: Activate your environment
 
-If you are using `pyenv`, you might want to set the local `python` version to be used:
+
+Activate the `poetry` environment by running:
 
 ```bash
-pyenv local x.y.z
-```
-
-Install and activate the `poetry` environment by running:
-
-```bash
-make install
 poetry shell
 ```
 

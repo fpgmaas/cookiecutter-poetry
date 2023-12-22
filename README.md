@@ -23,6 +23,10 @@ This is a modern Cookiecutter template that can be used to initiate a Python pro
 - Containerization with [Docker](https://www.docker.com/)
 - Development environment with [VSCode devcontainers](https://code.visualstudio.com/docs/devcontainers/containers)
 
+This is a fork of [fpgmaas' project](https://github.com/fpgmaas/cookiecutter-poetry) with the same name. The key changes implemented in this project compared to the original are:
+
+- Use of justfile instead of Makefile to streamline common dev tasks
+
 ---
 
 <p align="center">
@@ -38,34 +42,15 @@ On your local machine, navigate to the directory in which you want to
 create a project directory, and run the following two commands:
 
 ```bash
-pip install cookiecutter-poetry
-ccp
-```
-
-Alternatively, install `cookiecutter` and directly pass the URL to this
-Github repository to the `cookiecutter` command:
-
-```bash
 pip install cookiecutter
-cookiecutter https://github.com/fpgmaas/cookiecutter-poetry.git
+cookiecutter gh:dvatvani/cookiecutter-poetry
 ```
 
-Create a repository on GitHub, and then run the following commands, replacing `<project-name>`, with the name that you gave the Github repository and
-`<github_author_handle>` with your Github username.
+To set the project up (Initialise the Git repository and install the poetry environment), navigate into the project directory and run the `setup-project` justfile recipe as follows:
 
 ```bash
 cd <project_name>
-git init -b main
-git add .
-git commit -m "Init commit"
-git remote add origin git@github.com:<github_author_handle>/<project_name>.git
-git push -u origin main
-```
-
-Finally, install the environment and the pre-commit hooks with
-
-```bash
-make install
+just setup-project
 ```
 
 You are now ready to start development on your project! The CI/CD

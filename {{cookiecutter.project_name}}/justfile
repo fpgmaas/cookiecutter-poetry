@@ -8,7 +8,7 @@ setup-project-no-github:
     @git commit -m "Initial commit"
     @just install
 
-# Initial setup of project, including an initial commit to GitHub
+# Initial setup of project, including an initial push to GitHub
 setup-project: setup-project-no-github
     @git remote add origin git@github.com:{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}.git
     @git push -u origin main
