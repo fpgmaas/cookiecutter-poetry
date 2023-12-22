@@ -12,7 +12,7 @@ nav:
   - Features:
       - CI/CD with Github Actions: features/cicd.md
       - Linting & code quality: features/linting.md
-      - Makefile: features/makefile.md
+      - Justfile: features/justfile.md
       - Dependency management with Poetry: features/poetry.md
       - Publishing to PyPi or Artifactory: features/publishing.md
       - Testing with Pytest: features/pytest.md

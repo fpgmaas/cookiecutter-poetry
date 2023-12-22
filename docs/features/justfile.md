@@ -1,4 +1,4 @@
-# Makefile
+# Justfile
 
 The generated repository will have a `justfile` available. A list of all
 available commands that are available can be obtained by running
