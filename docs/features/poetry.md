@@ -13,7 +13,7 @@ poetry add <package>
 and then install the environment with
 
 ```bash
-make install
+just install
 ```
 
 By default, the environment is created in a `.venv` folder, so you can

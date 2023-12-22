@@ -22,7 +22,7 @@ jobs:
       - name: Build and publish
         run: |
           poetry version $RELEASE_VERSION
-          make build-and-publish
+          just build-and-publish
         env:
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
           RELEASE_VERSION: ${{ steps.vars.outputs.tag }}

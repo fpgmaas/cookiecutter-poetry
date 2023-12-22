@@ -93,13 +93,13 @@ Now you can make your changes locally.
 7. When you\'re done making changes, check that your changes pass the formatting tests.
 
 ```bash
-make check
+just check
 ```
 
 8. Now, validate that all unit tests are passing:
 
 ```bash
-make test
+just test
 ```
 
 9. Before raising a pull request you should also run tox. This will run the tests across different versions of Python:
@@ -115,7 +115,7 @@ This step is also triggered in the CI/CD pipeline, so you could also choose to s
     You can check the updated documentation with:
 
 ```bash
-make docs
+just docs
 ```
 
 11. Commit your changes and push your branch to GitHub:

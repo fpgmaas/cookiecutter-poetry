@@ -5,7 +5,7 @@ the environment. There will be a template unittest in the `tests`
 directory upon creation of the project, which can be run with
 
 ```bash
-make test
+just test
 ```
 
 If `include_github_actions` is set to `"y"`, the tests are automatically

@@ -24,7 +24,7 @@ jobs:
         run: |
           source .venv/bin/activate
           poetry version $RELEASE_VERSION
-          make build-and-publish
+          just build-and-publish
         env:
           {% if cookiecutter.publish_to == "pypi" -%}
           {%- raw -%}

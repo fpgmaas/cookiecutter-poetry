@@ -3,7 +3,7 @@
 Code can be linted and quality-checked with the command
 
 ```bash
-make check
+just check
 ```
 
 Note that this requires the pre-commit hooks to be installed.

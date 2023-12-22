@@ -84,7 +84,7 @@ def test_dont_publish(cookies, tmp_path):
         result = cookies.bake(extra_context={"publish_to": "none"})
         assert result.exit_code == 0
         assert not file_contains_text(
-            f"{result.project_path}/.github/workflows/on-release-main.yml", "make build-and-publish"
+            f"{result.project_path}/.github/workflows/on-release-main.yml", "just build-and-publish"
         )
 
 

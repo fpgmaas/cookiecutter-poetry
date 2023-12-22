@@ -40,5 +40,5 @@ To do so, set the repository secrets listed in the sections above as
 environment variables on your local machine instead, and run
 
 ```bash
-make build-and-publish
+just build-and-publish
 ```

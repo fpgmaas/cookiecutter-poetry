@@ -10,7 +10,7 @@ automatically deployed to your `gh-pages` branch, and made available at
 To view the documentation locally, simply run
 
 ```bash
-make docs
+just docs
 ```
 
 This command will generate and build your documentation, and start the server locally so you can access it at

@@ -26,7 +26,7 @@ git push -u origin main
 Finally, install the environment and the pre-commit hooks with
 
 ```bash
-make install
+just install
 ```
 
 You are now ready to start development on your project!
