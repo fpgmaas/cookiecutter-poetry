@@ -1,12 +1,6 @@
 <p align="center">
-  <img width="600" src="static/cookiecutter.svg">
+  <img width="600" src="https://raw.githubusercontent.com/fpgmaas/cookiecutter-poetry/main/docs/static/cookiecutter.svg">
 </p style = "margin-bottom: 2rem;">
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-</style>
 
 ---
 
@@ -109,16 +103,6 @@ This is a modern Cookiecutter template that can be used to initiate a Python pro
 - Development environment with [VSCode devcontainers](https://code.visualstudio.com/docs/devcontainers/containers)
 
 An example of a repository generated with this package can be found [here](https://github.com/fpgmaas/cookiecutter-poetry-example).
-
-# References
-
-- [Developing Python and Rust projects on NixOS using IntelliJ IDEA and PyCharm](https://o.librepush.net/solutions/nix/developing-python-rust-projects-on-nixos/)
-
-Youtube Videos
-
-- [Package and deploy Python apps faster with Poetry and Nix](https://youtu.be/TbIHRHy7_JM?si=RxsTq_UET7DO_wKK)
-- [How to use Poetry to manage Python projects](https://youtu.be/KVgG5QRypZI?si=pa21B6EFZ1gV6OuG)
-
 
 
 ## Acknowledgements
