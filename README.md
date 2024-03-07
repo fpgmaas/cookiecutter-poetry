@@ -11,7 +11,14 @@
 [![License](https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry)](https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry)
 
 
-This is a modern Cookiecutter template that can be used to initiate a Python project with all the necessary tools for development, testing, and deployment. It supports the following features:
+This is a modern Cookiecutter template that can be used to initiate a Python project with all the necessary tools for development, testing, and deployment. See [Features](#features) for a list of capabilities.
+
+---
+**NOTE**
+
+This version is a for from https://github.com/fpgmaas/cookiecutter-poetry. See [Acknowledgements](#acknowledgements)
+
+---
 
 ## System Configuration (One Time)
 
@@ -107,6 +114,6 @@ An example of a repository generated with this package can be found [here](https
 
 ## Acknowledgements
 
-This project is partially based on [Audrey
-Feldroy's](https://github.com/audreyfeldroy) great
+This project is a fork from [Florian Maas](https://github.com/fpgmaas) which is 
+partially based on [Audrey Feldroy's](https://github.com/audreyfeldroy) great
 [cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage).
