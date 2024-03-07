@@ -1,6 +1,30 @@
 <p align="center">
-  <img width="600" src="https://raw.githubusercontent.com/fpgmaas/cookiecutter-poetry/main/docs/static/cookiecutter.svg">
+  <div class="row">
+  <div class="column">
+    <img width="200" src="https://raw.githubusercontent.com/fpgmaas/cookiecutter-poetry/main/docs/static/partsnap-woman.png">
+  </div>
+  <div class="column">
+  <img width="600" src="https://raw.githubusercontent.com/fpgmaas/cookiecutter-poetry/main/docs/static/cookiecutter.svg"> 
+  </div>
+</div>
+
 </p style = "margin-bottom: 2rem;">
+<style>
+  .md-typeset h1,
+  .md-content__button {
+    display: none;
+  }
+  .column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>  
 
 ---
 
@@ -14,7 +38,7 @@
 This is a modern Cookiecutter template that can be used to initiate a Python project with all the necessary tools for development, testing, and deployment. See [Features](#features) for a list of capabilities.
 
 ---
-**NOTE**
+**NOTE** 
 
 This version is a for from https://github.com/fpgmaas/cookiecutter-poetry. See [Acknowledgements](#acknowledgements)
 
@@ -86,6 +110,8 @@ Finally, install the environment and the pre-commit hooks with
 
 ```bash
 make install
+make check
+make docs
 ```
 
 You are now ready to start development on your project! The CI/CD
