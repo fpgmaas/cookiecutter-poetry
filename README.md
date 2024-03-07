@@ -29,8 +29,6 @@ This version is a fork from https://github.com/fpgmaas/cookiecutter-poetry. See 
 To view the original documentation click [here](https://fpgmaas.github.io/cookiecutter-poetry/)
 
 
-```
-
 ---
 
 ## System Configuration (One Time)
