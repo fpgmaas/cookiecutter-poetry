@@ -1,13 +1,3 @@
-<p align="center">
-
-  <div class="row">
-  <div class="column">
-    <img width="100" src="./docs/static/partsnap-woman.png">
-  </div>
-  <div class="column">
-  <img width="600" src="./docs/static/cookiecutter.svg"> 
-  </div>
-</div>
 <style>
   .md-typeset h1,
   .md-content__button {
@@ -24,6 +14,15 @@
     display: table;
   }
 </style> 
+<p align="center">
+  <div class="row">
+  <div class="column">
+    <img width="100" src="./docs/static/partsnap-woman.png">
+  </div>
+  <div class="column">
+  <img width="600" src="./docs/static/cookiecutter.svg"> 
+  </div>
+</div>
 </p style = "margin-bottom: 2rem;">
  
 
