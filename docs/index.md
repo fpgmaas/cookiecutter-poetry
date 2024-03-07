@@ -1,7 +1,7 @@
 <p align="center">
 <div class="row">
   <div class="column">
-    <img width="200" src="static/partsnap-woman.png">
+    <img width="100" src="static/partsnap-woman.png">
   </div>
   <div class="column">
   <img width="600" src="static/cookiecutter.svg">
