@@ -1,10 +1,10 @@
 <p align="center">
   <div class="row">
   <div class="column">
-    <img width="200" src="https://raw.githubusercontent.com/fpgmaas/cookiecutter-poetry/main/docs/static/partsnap-woman.png">
+    <img width="200" src="https://raw.githubusercontent.com/partsnap/cookiecutter-poetry/main/docs/static/partsnap-woman.png">
   </div>
   <div class="column">
-  <img width="600" src="https://raw.githubusercontent.com/fpgmaas/cookiecutter-poetry/main/docs/static/cookiecutter.svg"> 
+  <img width="600" src="https://raw.githubusercontent.com/partsnap/cookiecutter-poetry/main/docs/static/cookiecutter.svg"> 
   </div>
 </div>
 
