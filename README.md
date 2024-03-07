@@ -7,8 +7,6 @@
   <img width="600" src="./docs/static/cookiecutter.svg"> 
   </div>
 </div>
-
-</p style = "margin-bottom: 2rem;">
 <style>
   .md-typeset h1,
   .md-content__button {
@@ -18,13 +16,15 @@
   float: left;
   width: 33.33%;
   padding: 5px;
-}
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-</style>  
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+</style> 
+</p style = "margin-bottom: 2rem;">
+ 
 
 ---
 
