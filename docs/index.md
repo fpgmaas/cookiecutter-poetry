@@ -10,41 +10,62 @@
 
 ---
 
+
 [![Release](https://img.shields.io/github/v/release/fpgmaas/cookiecutter-poetry)](https://pypi.org/project/cookiecutter-poetry/)
 [![Build status](https://img.shields.io/github/actions/workflow/status/fpgmaas/cookiecutter-poetry/main.yml?branch=main)](https://github.com/fpgmaas/cookiecutter-poetry/actions/workflows/main.yml?query=branch%3Amain)
 [![Supported Python versions](https://img.shields.io/pypi/pyversions/cookiecutter-poetry)](https://pypi.org/project/cookiecutter-poetry/)
 [![License](https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry)](https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry)
 
+
 This is a modern Cookiecutter template that can be used to initiate a Python project with all the necessary tools for development, testing, and deployment. It supports the following features:
 
-- [Poetry](https://python-poetry.org/) for dependency management
-- CI/CD with [GitHub Actions](https://github.com/features/actions)
-- Pre-commit hooks with [pre-commit](https://pre-commit.com/)
-- Code quality with [ruff](https://github.com/charliermarsh/ruff), [mypy](https://mypy.readthedocs.io/en/stable/), [deptry](https://github.com/fpgmaas/deptry/) and [prettier](https://prettier.io/)
-- Publishing to [Pypi](https://pypi.org) or [Artifactory](https://jfrog.com/artifactory) by creating a new release on GitHub
-- Testing and coverage with [pytest](https://docs.pytest.org/en/7.1.x/) and [codecov](https://about.codecov.io/)
-- Documentation with [MkDocs](https://www.mkdocs.org/)
-- Compatibility testing for multiple versions of Python with [Tox](https://tox.wiki/en/latest/)
-- Containerization with [Docker](https://www.docker.com/)
-- Development environment with [VSCode devcontainers](https://code.visualstudio.com/docs/devcontainers/containers)
+## System Configuration (One Time)
 
-An example of a repository generated with this package can be found [here](https://github.com/fpgmaas/cookiecutter-poetry-example).
+install [pipx](https://pipx.pypa.io/stable/installation/)
+
+Add the pipx path to your ``.zshrc`` file (Assuming this is the default shell)
+
+```bash
+echo 'export PATH=${HOME}/.local/bin:$PATH' >> ~/.zshrc
+```
+
+install [NixOS](https://nixos.org/) if you haven't done so already
+install [direnv](https://direnv.net/). On the latest OSX version do:
+
+```bash
+  $ brew install direnv
+  $ echo 'eval "$(direnv hook zsh)"' > ~/.zshrc
+```
+
+configure [direnv](https://direnv.net/man/direnv.toml.1.html) toml file to trust our org
+  
+```bash
+  $ mkdir -p ~/.config/direnv/
+  $ touch ~/.config/direnv/config.toml
+```
+
+copy the following in your `config.toml` file (you can change the path to wherever your GitHub root is. Note that this will trust `ALL` directories underneath)
+
+```
+  [global]
+  warn_timeout="20s"
+  [whitelist]
+  prefix = ["~/github/partsnap"]
+```
+
+install cookiecutter
+
+```bash
+pipx install cookiecutter
+```
 
 ## Quickstart
 
 On your local machine, navigate to the directory in which you want to
 create a project directory, and run the following two commands:
 
-```bash
-pip install cookiecutter-poetry
-ccp
+
 ```
-
-Alternatively, install `cookiecutter` and directly pass the URL to this
-Github repository to the `cookiecutter` command:
-
-```bash
-pip install cookiecutter
 cookiecutter https://github.com/fpgmaas/cookiecutter-poetry.git
 ```
 
@@ -71,6 +92,34 @@ pipeline will be triggered when you open a pull request, merge to main,
 or when you create a new release.
 
 To finalize the set-up for publishing to PyPi or Artifactory, see [here](./features/publishing.md#set-up-for-pypi). For activating the automatic documentation with MkDocs, see [here](./features/mkdocs.md#enabling-the-documentation-on-github). To enable the code coverage reports, see [here](./features/codecov).
+
+## Features
+
+This is a modern Cookiecutter template that can be used to initiate a Python project with all the necessary tools for development, testing, and deployment. It supports the following features:
+
+- [Poetry](https://python-poetry.org/) for dependency management
+- CI/CD with [GitHub Actions](https://github.com/features/actions)
+- Pre-commit hooks with [pre-commit](https://pre-commit.com/)
+- Code quality with [ruff](https://github.com/charliermarsh/ruff), [mypy](https://mypy.readthedocs.io/en/stable/), [deptry](https://github.com/fpgmaas/deptry/) and [prettier](https://prettier.io/)
+- Publishing to [Pypi](https://pypi.org) or [Artifactory](https://jfrog.com/artifactory) by creating a new release on GitHub
+- Testing and coverage with [pytest](https://docs.pytest.org/en/7.1.x/) and [codecov](https://about.codecov.io/)
+- Documentation with [MkDocs](https://www.mkdocs.org/)
+- Compatibility testing for multiple versions of Python with [Tox](https://tox.wiki/en/latest/)
+- Containerization with [Docker](https://www.docker.com/)
+- Development environment with [VSCode devcontainers](https://code.visualstudio.com/docs/devcontainers/containers)
+
+An example of a repository generated with this package can be found [here](https://github.com/fpgmaas/cookiecutter-poetry-example).
+
+# References
+
+- [Developing Python and Rust projects on NixOS using IntelliJ IDEA and PyCharm](https://o.librepush.net/solutions/nix/developing-python-rust-projects-on-nixos/)
+
+Youtube Videos
+
+- [Package and deploy Python apps faster with Poetry and Nix](https://youtu.be/TbIHRHy7_JM?si=RxsTq_UET7DO_wKK)
+- [How to use Poetry to manage Python projects](https://youtu.be/KVgG5QRypZI?si=pa21B6EFZ1gV6OuG)
+
+
 
 ## Acknowledgements
 
