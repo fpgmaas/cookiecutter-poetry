@@ -40,7 +40,7 @@ This is a modern Cookiecutter template that can be used to initiate a Python pro
 ---
 **NOTE** 
 
-This version is a for from https://github.com/fpgmaas/cookiecutter-poetry. See [Acknowledgements](#acknowledgements)
+This version is a fork from https://github.com/fpgmaas/cookiecutter-poetry. See [Acknowledgements](#acknowledgements)
 
 To view the original documentation click [here](https://fpgmaas.github.io/cookiecutter-poetry/)
 
