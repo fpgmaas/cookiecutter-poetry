@@ -1,4 +1,7 @@
 {
+    "author": "First Last",
+    "email": "<user>@partsnap.io",
+    "author_github_handle": "partsnap",
     "project_name": "example-project",
     "project_slug": "{{cookiecutter.project_name|lower|replace('-', '_')}}",
     "include_github_actions": "y",
