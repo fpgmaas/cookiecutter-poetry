@@ -62,7 +62,7 @@ command:
 
 ```bash
 pip install cookiecutter-poetry
-cookiecutter https://github.com/fpgmaas/cookiecutter-poetry.git
+cookiecutter https://github.com/partsnap/partsnap-cookiecutter-poetry.git
 ```
 
 ## Step 4: Set up your Github repository
