@@ -13,5 +13,5 @@
     "codecov": "y",
     "dockerfile": "y",
     "devcontainer": "yes",
-    "open_source_license": "PartSnap LLC - Proprietary"
+    "license_released_under": "PartSnap LLC - Confidential and Proprietary"
 }

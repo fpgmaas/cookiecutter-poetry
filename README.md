@@ -4,11 +4,10 @@
     <img width="100" src="./docs/static/partsnap-woman.png">
   </div>
   <div class="column">
-  <img width="600" src="./docs/static/cookiecutter.svg"> 
+  <img width="600" src="./docs/static/cookiecutter.svg">
   </div>
 </div>
 </p style = "margin-bottom: 2rem;">
- 
 
 ---
 
@@ -17,30 +16,29 @@
 [![Supported Python versions](https://img.shields.io/pypi/pyversions/cookiecutter-poetry)](https://pypi.org/project/cookiecutter-poetry/)
 [![License](https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry)](https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry)
 
-
 This is a modern Cookiecutter template that can be used to initiate a Python project with all the necessary tools for development, testing, and deployment. See [Features](#features) for a list of capabilities.
 
 ---
-**NOTE** 
+
+**NOTE**
 
 This version is a fork from https://github.com/fpgmaas/cookiecutter-poetry. See [Acknowledgements](#acknowledgements)
 
 To view the original documentation click [here](https://fpgmaas.github.io/cookiecutter-poetry/)
-
 
 ---
 
 ## Quickstart
 
 ---
-**NOTE**: Make sure you have performed the 
-[initial system configuration](#system-configuration-one-time) **once**. 
+
+**NOTE**: Make sure you have performed the
+[initial system configuration](#system-configuration-one-time) **once**.
 
 ---
 
 On your local machine, navigate to the directory in which you want to
 create a project directory, and run the following two commands:
-
 
 ```
 cookiecutter https://github.com/partsnap/partsnap-cookiecutter-poetry.git
@@ -72,12 +70,16 @@ or when you create a new release.
 
 To finalize the set-up for publishing to PyPi or Artifactory, see [here](./features/publishing.md#set-up-for-pypi). For activating the automatic documentation with MkDocs, see [here](./features/mkdocs.md#enabling-the-documentation-on-github). To enable the code coverage reports, see [here](./features/codecov).
 
-## Integration with PyCharm
+## Useful Tutorials
+
+### Integration with PyCharm
 
 If you are using NixOS and Pycharm, check this [tutorial](./docs/tutorials/pycharm_nixos.md)
-for setting things up. 
+for setting things up.
 
+### Mermaid Diagram and Charting System
 
+check this [tutorial](./docs/tutorials/mermaid.md)
 
 ## Features
 
@@ -100,7 +102,7 @@ An example of a repository generated with this package can be found [here](https
 
 install [pipx](https://pipx.pypa.io/stable/installation/)
 
-Add the pipx path to your ``.zshrc`` file (Assuming this is the default shell)
+Add the pipx path to your `.zshrc` file (Assuming this is the default shell)
 
 ```bash
 echo 'export PATH=${HOME}/.local/bin:$PATH' >> ~/.zshrc
@@ -115,7 +117,7 @@ install [direnv](https://direnv.net/). On the latest OSX version do:
 ```
 
 configure [direnv](https://direnv.net/man/direnv.toml.1.html) toml file to trust our org
-  
+
 ```bash
   $ mkdir -p ~/.config/direnv/
   $ touch ~/.config/direnv/config.toml
@@ -141,9 +143,8 @@ pipx install cookiecutter
 - [Developing Python and Rust projects on NixOS using IntelliJ IDEA and PyCharm](https://o.librepush.net/solutions/nix/developing-python-rust-projects-on-nixos/)
 - [Package and deploy Python apps faster with Poetry and Nix](https://www.youtube.com/watch?v=TbIHRHy7_JM)
 
-
 ## Acknowledgements
 
-This project is a fork from [Florian Maas](https://github.com/fpgmaas) which is 
+This project is a fork from [Florian Maas](https://github.com/fpgmaas) which is
 partially based on [Audrey Feldroy's](https://github.com/audreyfeldroy) great
 [cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage).

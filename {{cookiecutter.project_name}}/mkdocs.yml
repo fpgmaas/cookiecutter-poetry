@@ -12,6 +12,8 @@ nav:
   - Modules: modules.md
 plugins:
   - search
+  - mermaid2:
+      version: 10.2.4
   - mkdocstrings:
       handlers:
         python:
@@ -52,3 +54,9 @@ markdown_extensions:
       permalink: true
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.superfences:
+      # make exceptions to highlighting of code:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom

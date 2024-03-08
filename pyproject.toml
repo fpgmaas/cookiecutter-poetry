@@ -33,6 +33,8 @@ ruff = "^0.0.235"
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.4.2"
 mkdocs-material = "^8.5.10"
+mkdocs-mermaid2-plugin = "^1.1.1"
+pymdown-extensions = "^10.7.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

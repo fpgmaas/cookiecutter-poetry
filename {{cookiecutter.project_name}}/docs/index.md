@@ -6,3 +6,21 @@
 [![License](https://img.shields.io/github/license/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}})](https://img.shields.io/github/license/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}})
 
 {{cookiecutter.project_description}}
+
+Here is a simple mermaid diagram
+```mermaid
+pie title Pets adopted by volunteers
+    "Dogs" : 386
+    "Cats" : 85
+    "Rats" : 15
+```
+source:
+```
+    ```mermaid
+    pie title Pets adopted by volunteers
+        "Dogs" : 386
+        "Cats" : 85
+        "Rats" : 15
+    ```
+```
+For more information see the [doc on github](https://github.com/partsnap/partsnap-cookiecutter-poetry)

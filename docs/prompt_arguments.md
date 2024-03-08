@@ -73,7 +73,7 @@ will be deployed to the `gh-pages` branch.
 
 `"y"` or `"n"`. Adds a [devcontainer](https://code.visualstudio.com/docs/devcontainers/containers) specification to the project along with pre-installed pre-commit hooks and VSCode python extension configuration.
 
-**open_source_license**
+**license_released_under**
 
 Choose a [license](https://choosealicense.com/). Options:
 `["1. MIT License", "2. BSD license", "3. ISC license",  "4. Apache Software License 2.0", "5. GNU General Public License v3", "6. Not open source"]`

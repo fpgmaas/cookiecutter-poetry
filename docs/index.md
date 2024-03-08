@@ -27,17 +27,16 @@
 
 ---
 
-
 [![Release](https://img.shields.io/github/v/release/fpgmaas/cookiecutter-poetry)](https://pypi.org/project/cookiecutter-poetry/)
 [![Build status](https://img.shields.io/github/actions/workflow/status/fpgmaas/cookiecutter-poetry/main.yml?branch=main)](https://github.com/fpgmaas/cookiecutter-poetry/actions/workflows/main.yml?query=branch%3Amain)
 [![Supported Python versions](https://img.shields.io/pypi/pyversions/cookiecutter-poetry)](https://pypi.org/project/cookiecutter-poetry/)
 [![License](https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry)](https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry)
 
-
 This is a modern Cookiecutter template that can be used to initiate a Python project with all the necessary tools for development, testing, and deployment. See [Features](#features) for a list of capabilities.
 
 ---
-**NOTE** 
+
+**NOTE**
 
 This version is a for from https://github.com/fpgmaas/cookiecutter-poetry. See [Acknowledgements](#acknowledgements)
 
@@ -46,14 +45,14 @@ This version is a for from https://github.com/fpgmaas/cookiecutter-poetry. See [
 ## Quickstart
 
 ---
-**NOTE**: Make sure you have performed the 
-[initial system configuration](#system-configuration-one-time) **once**. 
+
+**NOTE**: Make sure you have performed the
+[initial system configuration](#system-configuration-one-time) **once**.
 
 ---
 
 On your local machine, navigate to the directory in which you want to
 create a project directory, and run the following two commands:
-
 
 ```
 cookiecutter https://github.com/partsnap/partsnap-cookiecutter-poetry.git
@@ -81,13 +80,13 @@ You are now ready to start development on your project! The CI/CD
 pipeline will be triggered when you open a pull request, merge to main,
 or when you create a new release.
 
-To finalize the set-up for publishing to PyPi or Artifactory, see [here](./features/publishing.md#set-up-for-pypi). For activating the automatic documentation with MkDocs, see [here](./features/mkdocs.md#enabling-the-documentation-on-github). To enable the code coverage reports, see [here](./features/codecov).
+To finalize the set-up for publishing to PyPi or Artifactory, see [here](./features/publishing.md#set-up-for-pypi). For activating the automatic documentation with MkDocs, see [here](./features/mkdocs.md#enabling-the-documentation-on-github). To enable the code coverage reports, see [here](./features/codecov.md).
 
 ## System Configuration (One Time)
 
 install [pipx](https://pipx.pypa.io/stable/installation/)
 
-Add the pipx path to your ``.zshrc`` file (Assuming this is the default shell)
+Add the pipx path to your `.zshrc` file (Assuming this is the default shell)
 
 ```bash
 echo 'export PATH=${HOME}/.local/bin:$PATH' >> ~/.zshrc
@@ -102,7 +101,7 @@ install [direnv](https://direnv.net/). On the latest OSX version do:
 ```
 
 configure [direnv](https://direnv.net/man/direnv.toml.1.html) toml file to trust our org
-  
+
 ```bash
   $ mkdir -p ~/.config/direnv/
   $ touch ~/.config/direnv/config.toml
@@ -140,9 +139,8 @@ This is a modern Cookiecutter template that can be used to initiate a Python pro
 
 An example of a repository generated with this package can be found [here](https://github.com/fpgmaas/cookiecutter-poetry-example).
 
-
 ## Acknowledgements
 
-This project is a fork from [Florian Maas](https://github.com/fpgmaas) which is 
+This project is a fork from [Florian Maas](https://github.com/fpgmaas) which is
 partially based on [Audrey Feldroy's](https://github.com/audreyfeldroy) great
 [cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage).

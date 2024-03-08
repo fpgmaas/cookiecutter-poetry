@@ -24,9 +24,12 @@ nav:
   - Tutorials:
       - Getting Started: tutorials/bootstrap.md
       - Pycharm NixOS Setup: tutorials/pycharm_nixos.md
+      - Mermaid Diagrams: tutorials/mermaid.md
   - Prompt Arguments: prompt_arguments.md
 plugins:
   - search
+  - mermaid2:
+      version: 10.2.4
 theme:
   name: material
   feature:
@@ -55,8 +58,15 @@ extra:
       link: https://github.com/fpgmaas/cookiecutter-poetry
     - icon: fontawesome/brands/python
       link: https://pypi.org/project/cookiecutter-poetry/
+
 markdown_extensions:
   - toc:
       permalink: true
+  - pymdownx.superfences:
+      # make exceptions to highlighting of code:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
   - pymdownx.arithmatex:
       generic: true
