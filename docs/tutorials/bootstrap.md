@@ -1,4 +1,4 @@
-# Tutorial
+# Getting Started
 
 This page contains a complete tutorial on how to create your project.
 
@@ -38,27 +38,6 @@ pyenv install -v 3.9.7
 Replacing `3.9.7` with a version of your choosing.
 
 ## Step 3: Generate your project
-
-First, navigate to the directory in which you want the project to be
-created. Then, we need to install `cookiecutter-poetry` with the
-following command:
-
-```bash
-pip install cookiecutter-poetry
-```
-
-Within the directory in which you want to create your project, run:
-
-```bash
-ccp
-```
-
-For an explanation of the prompt arguments, see
-[Prompt Arguments](../prompt_arguments).
-
-An alternative to the steps above would be to install `cookiecutter` and
-directly pass the URL to Github repository to the `cookiecutter`
-command:
 
 ```bash
 pip install cookiecutter-poetry
@@ -110,8 +89,8 @@ If you enabled code coverage with codecov for your project, you should sign up w
 
 If you want to deploy your project to Pypi or Artifactory using the
 Github Actions, you will have to set some repository secrets. For
-instructions on how to do that, see [here](./features/publishing.md#set-up-for-pypi) for PyPi, or
-[here](./features/publishing.md#set-up-for-artifactory) for Artifactory.
+instructions on how to do that, see [here](../features/publishing.md#set-up-for-pypi) for PyPi, or
+[here](../features/publishing.md#set-up-for-artifactory) for Artifactory.
 
 ## Step 9: Create a new release
 
