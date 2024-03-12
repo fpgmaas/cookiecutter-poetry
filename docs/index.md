@@ -85,19 +85,14 @@ To finalize the set-up for publishing to PyPi or Artifactory, see [here](./featu
 ## System Configuration (One Time)
 
 install [pipx](https://pipx.pypa.io/stable/installation/)
-
-Add the pipx path to your `.zshrc` file (Assuming this is the default shell)
-
-```bash
-echo 'export PATH=${HOME}/.local/bin:$PATH' >> ~/.zshrc
-```
+make sure you run ``pipx ensurepath`` and restart your shell
 
 install [NixOS](https://nixos.org/) if you haven't done so already
 install [direnv](https://direnv.net/). On the latest OSX version do:
 
 ```bash
   $ brew install direnv
-  $ echo 'eval "$(direnv hook zsh)"' > ~/.zshrc
+  $ echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc
 ```
 
 configure [direnv](https://direnv.net/man/direnv.toml.1.html) toml file to trust our org
