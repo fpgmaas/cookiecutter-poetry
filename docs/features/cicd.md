@@ -1,6 +1,6 @@
 # CI/CD with Github actions
 
-when `include_github_actions` is set to `"y"`, a `.github` directory is
+A `.github` directory is
 added with the following structure:
 
     .github
@@ -22,12 +22,17 @@ whenever a pull request is opened or updated. They call the `action.yml`
 files to set-up the environment, run the tests, and check the code
 formatting.
 
-`on-release-main.yml` does all of the former whenever a new release is
-made on the `main` branch. In addition, `on-release-main.yml` also
-publishes the project to Pypi or Artifactory if `publish_to` is set to
-`"pypi"` or `"artifactory"`, and it builds and deploys the documentation
-if `mkdocs` is set to `"y"`. To learn more about these features,
-see [Publishing to PyPi or Artifactory](./publishing.md) and [Documentation with MkDocs](./mkdocs.md)
+[//]: # (`on-release-main.yml` does all of the former whenever a new release is)
+
+[//]: # (made on the `main` branch. In addition, `on-release-main.yml` also)
+
+[//]: # (publishes the project to Pypi or Artifactory if `publish_to` is set to)
+
+[//]: # (`"pypi"` or `"artifactory"`, and it builds and deploys the documentation)
+
+[//]: # (if `mkdocs` is set to `"y"`. To learn more about these features,)
+
+[//]: # (see [Publishing to PyPi or Artifactory]&#40;./publishing.md&#41; and [Documentation with MkDocs]&#40;./mkdocs.md&#41;)
 
 Additionally, all workflows check for compatibility with multiple Python
 versions if `tox` is set to `"y"`.

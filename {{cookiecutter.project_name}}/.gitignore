@@ -1,7 +1,6 @@
 docs/source
 
-# From https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore
-.idea/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -157,12 +156,19 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-# Vscode config files
-.vscode/
-
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+# Exclude vscode config files
+.vscode/
+# Exclude Pycharm
+.idea/
+# A scratch areas
+scratch/
+
+# Exclude .DS_Store files from being added
+.DS_Store

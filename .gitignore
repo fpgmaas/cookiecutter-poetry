@@ -3,9 +3,7 @@ cookiecutter-poetry-example
 
 # Pycharm Project
 .idea/
-github.code-workspace
-
-# From https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore
+scratch/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -170,6 +168,8 @@ cython_debug/
 
 # Exclude vscode config files
 .vscode/
-
+# Pycharm Project
+.idea/
+scratch/
 # Exclude .DS_Store files from being added
 .DS_Store

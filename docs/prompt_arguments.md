@@ -13,9 +13,6 @@ Your full name.
 
 Your email address.
 
-**author_github_handle**
-
-Your github handle, i.e. `<handle>` in `https://github.com/<handle>`
 
 **project_name**
 
@@ -41,13 +38,6 @@ A short description of your project.
 workflows to setup the environment and run code formatting checks
 and unittests.
 
-**publish_to**
-
-`"pypi"`, `"artifactory"`, or `"none"`. Adds functionality to the
-`Makefile` and Github workflows to make publishing your code as
-simple as creating a new release release on Github. For more info,
-see
-[Publishing to Pypi or Artifactory](./features/publishing.md).
 
 **deptry**
 

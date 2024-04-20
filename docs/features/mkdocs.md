@@ -16,14 +16,9 @@ make docs
 This command will generate and build your documentation, and start the server locally so you can access it at
 <http://localhost:8000>.
 
-## Enabling the documentation on GitHub
+## Enabling the documentation on ReadTheDocs
 
-To enable your documentation on GitHub, first create a [new release](./cicd.md#how-to-trigger-a-release).
-
-Then, in your repository, navigate to `Settings > Code and Automation > Pages`. If you succesfully created a new release,
-you should see a notification saying ` Your site is ready to be published at https://<author_github_handle>.github.io/<project_name>/`.
-
-To finalize deploying your documentation, under `Source`, select the branch `gh-pages`. Your documentation should then be live within a few minutes.
+FIXME
 
 ## Documenting docstrings
 

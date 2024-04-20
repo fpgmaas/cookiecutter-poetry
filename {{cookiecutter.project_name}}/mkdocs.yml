@@ -1,11 +1,11 @@
 site_name: {{cookiecutter.project_name}}
-repo_url: https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}
-site_url: https://{{cookiecutter.author_github_handle}}.github.io/{{cookiecutter.project_name}}
+repo_url: https://github.com/partsnap/{{cookiecutter.project_name}}
+site_url: https://partsnap.github.io/{{cookiecutter.project_name}}
 site_description: {{cookiecutter.project_description}}
 site_author: {{cookiecutter.author}}
 edit_uri: edit/main/docs/
-repo_name: {{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}
-copyright: Maintained by <a href="https://{{cookiecutter.author_github_handle}}.com">{{cookiecutter.author}}</a>.
+repo_name: partsnap/{{cookiecutter.project_name}}
+copyright: Maintained by <a href="https://partsnap.com">{{cookiecutter.author}}</a>.
 
 nav:
   - Home: index.md
@@ -13,15 +13,23 @@ nav:
 plugins:
   - search
   - mermaid2:
-      version: 10.2.4
+      version: 10.9.0
   - mkdocstrings:
       handlers:
         python:
-            setup_commands:
-                - import sys
-                - sys.path.append('../')
+          docstring_style: google
+          setup_commands:
+            - import sys
+            - sys.path.append('../')
 theme:
   name: material
+  favicon: assets/partsnap-logo.png
+  logo:
+    icon: assets/partsnap-logo.svg
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
   feature:
     tabs: true
   palette:
@@ -45,15 +53,18 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}
+      link: https://github.com/partsnap/{{cookiecutter.project_name}}
     - icon: fontawesome/brands/python
       link: https://pypi.org/project/{{cookiecutter.project_name}}
 
 markdown_extensions:
   - toc:
       permalink: true
+  - admonition:
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.superfences:
       # make exceptions to highlighting of code:
       custom_fences:
