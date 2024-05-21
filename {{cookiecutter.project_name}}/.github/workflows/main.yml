@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: ~/.cache/pre-commit
           key: {% raw %}pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}{% endraw %}
@@ -33,10 +33,10 @@ jobs:
       fail-fast: false
     steps:
       - name: Check out
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: {% raw %}${{ matrix.python-version }}{% endraw %}
 
@@ -44,7 +44,7 @@ jobs:
         uses: snok/install-poetry@v1
 
       - name: Load cached venv
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: .tox
           key: {% raw %}venv-${{ runner.os }}-${{ matrix.python-version }}-${{ hashFiles('poetry.lock') }}{% endraw %}
@@ -58,7 +58,7 @@ jobs:
         run: tox
 {% if cookiecutter.codecov == "y" %}
       - name: Upload coverage reports to Codecov with GitHub Action on Python 3.11
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
         if: {% raw %}${{ matrix.python-version == '3.11' }}{% endraw %}
 {%- endif %}
 
@@ -68,7 +68,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up the environment
         uses: ./.github/actions/setup-poetry-env
