@@ -7,10 +7,14 @@ repos:
       - id: end-of-file-fixer
       - id: trailing-whitespace
 
-  - repo: https://github.com/psf/black
-    rev: "22.8.0"
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: "v0.1.6"
     hooks:
-      - id: black
+      - id: ruff
+        args: [--exit-non-zero-on-fix, --config=pyproject.toml]
+        exclude: ^{{cookiecutter.project_name}}
+      - id: ruff-format
+        args: [--config=pyproject.toml]
         exclude: ^{{cookiecutter.project_name}}
 
   - repo: https://github.com/pre-commit/mirrors-prettier
