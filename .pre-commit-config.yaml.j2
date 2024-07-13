@@ -4,6 +4,12 @@ repos:
     hooks:
       - id: check-case-conflict
       - id: check-merge-conflict
+      - id: check-toml
+{%- if cookiecutter.template_type == 'web-service' %}
+      - id: check-yaml
+        args:
+          - --unsafe
+{%- endif %}
       - id: end-of-file-fixer
       - id: trailing-whitespace
 
@@ -11,6 +17,15 @@ repos:
     rev: "22.8.0"
     hooks:
       - id: black
+        exclude: ^{{cookiecutter.project_name}}
+  
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: "v0.1.6"
+    hooks:
+      - id: ruff
+        args: [--exit-non-zero-on-fix]
+        exclude: ^{{cookiecutter.project_name}}
+      - id: ruff-format
         exclude: ^{{cookiecutter.project_name}}
 
   - repo: https://github.com/pre-commit/mirrors-prettier

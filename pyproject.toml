@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "cookiecutter-poetry"
+name = "{{ cookiecutter.project_slug }}"
 version = "0.1.0"
-description = "A python cookiecutter application to create a new python project that uses poetry to manage its dependencies."
-authors = ["Florian Maas <fpgmaas@gmail.com>"]
-repository = "https://github.com/fpgmaas/cookiecutter-poetry"
-documentation = "https://fpgmaas.github.io/cookiecutter-poetry/"
+description = "{{ cookiecutter.project_description }}"
+authors = ["{{ cookiecutter.author }} <{{ cookiecutter.email }}>"]
+repository = "https://github.com/{{ cookiecutter.author_github_handle }}/{{ cookiecutter.project_slug }}"
+documentation = "https://{{ cookiecutter.author_github_handle }}.github.io/{{ cookiecutter.project_slug }}/"
 readme = "README.md"
 keywords = ['cookiecutter', 'template', 'poetry']
 packages = [
@@ -19,22 +19,44 @@ include = [
 [tool.poetry.dependencies]
 python = ">=3.8,<4.0"
 cookiecutter = "^2.1.1"
+{% if cookiecutter.database == 'y' %}
+sqlmodel = {extras = ["all"], version = "^0.0.16"}
+omegaconf = "^2.3.0"
+sqlalchemy-utils = "^0.41.2"
+fastapi = {extras = ["all"], version = "^0.110.0"}
+typer = "^0.12.3"
+types-requests = "^2.31.0.20240406"
+boto3 = "^1.34.122"
+{% endif %}
+{% if cookiecutter.dockerfile == 'y' %}
+docker = "^7.1.0"
+{% endif %}
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^7.2.0"
-pre-commit = "^2.20.0"
 pytest-cookies = "^0.6.1"
-tox = "^3.25.1"
-deptry = "^0.12.0"
-mypy = "^0.991"
+pytest = "^7.2.0"
 pytest-cov = "^4.0.0"
+{% if cookiecutter.deptry == 'y' %}
+deptry = "^0.12.0"
+{% endif %}
+mypy = "^1.5.1"
+pre-commit = "^3.4.0"
+tox = "^4.11.1"
+pytest-check = "^2.3.1"
+pytest-mock = "^3.14.0"
 ruff = "^0.0.235"
 
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.4.2"
-mkdocs-material = "^8.5.10"
+mkdocs-material = "^9.2.7"
+mkdocstrings = {extras = ["python"], version = "^0.23.0"}
 mkdocs-mermaid2-plugin = "^1.1.1"
 pymdown-extensions = "^10.7.1"
+mkdocs-drawio-file = "^1.5.2"
+
+[tool.poetry.group.test.dependencies]
+pytest-lazy-fixture = "^0.6.3"
+nbmake = "^1.5.4"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -48,16 +70,6 @@ preview = true
 [tool.poetry.scripts]
 ccp = 'cookiecutter_poetry.cli:main'
 
-[tool.pytest.ini_options]
-testpaths = ["tests"]
-
-[tool.coverage.report]
-skip_empty = true
-
-[tool.coverage.run]
-branch = true
-source = ["cookiecutter_poetry"]
-
 [tool.mypy]
 files = ['cookiecutter_poetry']
 disallow_untyped_defs = "True"
@@ -68,6 +80,10 @@ warn_return_any = "True"
 warn_unused_ignores = "True"
 show_error_codes = "True"
 
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+{% if cookiecutter.deptry == 'y' %}
 [tool.deptry]
 extend_exclude = [
   "{{cookiecutter.project_name}}"
@@ -75,6 +91,7 @@ extend_exclude = [
 
 [tool.deptry.per_rule_ignores]
 DEP002 = ["cookiecutter"]
+{% endif %}
 
 [tool.ruff]
 target-version = "py37"
@@ -117,7 +134,37 @@ ignore = [
     "E501",
     # DoNotAssignLambda
     "E731",
+    # F405 `XYZ` may be undefined, or defined from star imports
+    "F405",
+    # F403 `from xyz import *` used; unable to detect undefined names
+    "F403",
 ]
+
+[tool.ruff.format]
+preview = true
+
+[tool.coverage.report]
+skip_empty = true
+
+[tool.coverage.run]
+branch = true
+source = ["cookiecutter_poetry"]
+
+{% if cookiecutter.deptry == 'y' %}
+[tool.deptry]
+ignore = ["DEP003", "DEP001"]
+[tool.deptry.per_rule_ignores]
+DEP002 = ['types-requests']
+{% endif %}
 
 [tool.ruff.per-file-ignores]
 "tests/*" = ["S101"]
+{% if cookiecutter.database == 'y' %}
+# Database id otherwise generates this error
+"{{cookiecutter.project_name}}/*" = ["A003"]
+
+[tool.poetry.scripts]
+start-server = "{{cookiecutter.project_name}}.main:start_server_entry_point"
+# Change name of cli script after project creation
+{{cookiecutter.project_name}} = "{{cookiecutter.project_name}}.cli:cli_app"
+{% endif %}
