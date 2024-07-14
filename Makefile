@@ -73,7 +73,7 @@ docs: ## Build and serve the documentation
 {%- if cookiecutter.dockerfile == 'y' %}
 .PHONY: docker-login
 docker-login: ## Logs in to DockerHub with read priviliges only
-	@docker login -u $(DOCKERHUB_ACCOUNT) -p
+	@docker login -u $(DOCKERHUB_ACCOUNT) -p $(DOCKER_PASSWORD)
 
 .PHONY: docker-build
 docker-build: ## Build the docker image
