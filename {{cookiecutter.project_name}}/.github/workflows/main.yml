@@ -25,37 +25,30 @@ jobs:
       - name: Run checks
         run: make check
 
-  tox:
+  tests-and-type-check:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ['3.8', '3.9', '3.10', '3.11']
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
       fail-fast: false
+    defaults:
+      run:
+        shell: bash
     steps:
       - name: Check out
         uses: actions/checkout@v4
 
-      - name: Set up python
-        uses: actions/setup-python@v5
+      - name: Set up the environment
+        uses: ./.github/actions/setup-poetry-env
         with:
           python-version: {% raw %}${{ matrix.python-version }}{% endraw %}
 
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
+      - name: Run tests
+        run: poetry run pytest tests --cov --cov-config=pyproject.toml --cov-report=xml
 
-      - name: Load cached venv
-        uses: actions/cache@v4
-        with:
-          path: .tox
-          key: {% raw %}venv-${{ runner.os }}-${{ matrix.python-version }}-${{ hashFiles('poetry.lock') }}{% endraw %}
+      - name: Check typing
+        run: poetry run mypy
 
-      - name: Install tox
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install tox tox-gh-actions
-
-      - name: Test with tox
-        run: tox
 {% if cookiecutter.codecov == "y" %}
       - name: Upload coverage reports to Codecov with GitHub Action on Python 3.11
         uses: codecov/codecov-action@v4
