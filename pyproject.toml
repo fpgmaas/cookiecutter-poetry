@@ -25,7 +25,7 @@ pytest = "^7.2.0"
 pre-commit = "^2.20.0"
 pytest-cookies = "^0.6.1"
 tox = "^3.25.1"
-deptry = "^0.12.0"
+deptry = "^0.16.2"
 mypy = "^0.991"
 pytest-cov = "^4.0.0"
 
@@ -36,11 +36,6 @@ mkdocs-material = "^8.5.10"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.black]
-line-length = 120
-target-version = ['py37']
-preview = true
 
 [tool.poetry.scripts]
 ccp = 'cookiecutter_poetry.cli:main'
@@ -67,7 +62,7 @@ show_error_codes = "True"
 
 [tool.deptry]
 extend_exclude = [
-  "{{cookiecutter.project_name}}"
+  ".+/test_foo.py"
 ]
 
 [tool.deptry.per_rule_ignores]
@@ -120,3 +115,6 @@ ignore = [
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S101", "S603"]
+
+[tool.ruff.lint.isort]
+required-imports = ["from __future__ import annotations"]

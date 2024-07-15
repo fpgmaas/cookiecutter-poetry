@@ -19,7 +19,7 @@ pytest = "^7.2.0"
 pytest-cov = "^4.0.0"
 {% endif -%}
 {% if cookiecutter.deptry == 'y' -%}
-deptry = "^0.12.0"
+deptry = "^0.16.2"
 {% endif -%}
 mypy = "^1.5.1"
 pre-commit = "^3.4.0"
@@ -50,7 +50,7 @@ show_error_codes = "True"
 testpaths = ["tests"]
 
 [tool.ruff]
-target-version = "py37"
+target-version = "py39"
 line-length = 120
 fix = true
 select = [
