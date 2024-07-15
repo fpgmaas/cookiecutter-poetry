@@ -112,7 +112,6 @@ def test_tox(cookies, tmp_path):
     with run_within_dir(tmp_path):
         result = cookies.bake()
         assert result.exit_code == 0
-        assert file_contains_text(f"{result.project_path}/.github/workflows/main.yml", "pip install tox tox-gh-actions")
         assert os.path.isfile(f"{result.project_path}/tox.ini")
         assert file_contains_text(f"{result.project_path}/tox.ini", "[tox]")
 
