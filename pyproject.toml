@@ -37,11 +37,6 @@ mkdocs-material = "^8.5.10"
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.black]
-line-length = 120
-target-version = ['py37']
-preview = true
-
 [tool.poetry.scripts]
 ccp = 'cookiecutter_poetry.cli:main'
 
