@@ -59,6 +59,7 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
+junit-*.xml
 
 # Translations
 *.mo
@@ -151,6 +152,9 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+# ruff
+.ruff_cache/
 
 # Pyre type checker
 .pyre/

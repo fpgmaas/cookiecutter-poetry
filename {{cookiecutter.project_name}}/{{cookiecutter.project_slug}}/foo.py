@@ -1,23 +1,23 @@
 """ {{cookiecutter.project_slug}}
 
-- Author: {{cookiecutter.author}}
-- Email: {{cookiecutter.email}}
-- License: {{cookiecutter.license_released_under}}
+    - Author: {{cookiecutter.author}}
+    - Email: {{cookiecutter.email}}
+    - Copyright (C) 2024 PartSnap LLC
 """
 
-def foo() -> str:
+def foo(bar: str) -> str:
     """Summary line.
 
     Extended description of function.
 
     Args:
-        foo (str): Description of arg1
+        bar: Description of input argument.
 
     Returns:
-        str: Description of return value
+        Description of return value
     """
 
-    return "foo"
+    return bar
 
 
 if __name__ == "__main__":  # pragma: no cover

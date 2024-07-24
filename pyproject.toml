@@ -17,33 +17,30 @@ include = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.8,<4.0"
+python = ">=3.12,<3.13"
 cookiecutter = "^2.1.1"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.2.0"
-pre-commit = "^2.20.0"
+pre-commit = "^3.4.0"
 pytest-cookies = "^0.6.1"
-tox = "^3.25.1"
+tox = "^4.11.1"
 deptry = "^0.12.0"
-mypy = "^0.991"
+mypy = "^1.5.1"
 pytest-cov = "^4.0.0"
-ruff = "^0.0.235"
+pytest-check = "^2.3.1"
+pytest-mock = "^3.14.0"
+ruff = "^0.3.4"
 
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.4.2"
-mkdocs-material = "^8.5.10"
+mkdocs-material = "^9.2.7"
 mkdocs-mermaid2-plugin = "^1.1.1"
 pymdown-extensions = "^10.7.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.black]
-line-length = 120
-target-version = ['py37']
-preview = true
 
 [tool.poetry.scripts]
 ccp = 'cookiecutter_poetry.cli:main'
@@ -80,6 +77,8 @@ DEP002 = ["cookiecutter"]
 target-version = "py37"
 line-length = 120
 fix = true
+
+[tool.ruff.lint]
 select = [
     # flake8-2020
     "YTT",
@@ -119,5 +118,5 @@ ignore = [
     "E731",
 ]
 
-[tool.ruff.per-file-ignores]
-"tests/*" = ["S101"]
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "S603"]

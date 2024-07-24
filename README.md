@@ -9,16 +9,18 @@
 </div>
 </p style = "margin-bottom: 2rem;">
 
----
+[![Documentation Status](https://readthedocs.com/projects/partsnap-llc-partsnap-cookiecutter-poetry/badge/?version=latest&token=fbd35572c635fc26d72e64f71a1b36006f1d65c3a70a5fa09bcfdfabc64da3d4)](https://partsnap-llc-partsnap-cookiecutter-poetry.readthedocs-hosted.com/en/latest/?badge=latest)
 
-[![Release](https://img.shields.io/github/v/release/fpgmaas/cookiecutter-poetry)](https://pypi.org/project/cookiecutter-poetry/)
-[![Build status](https://img.shields.io/github/actions/workflow/status/fpgmaas/cookiecutter-poetry/main.yml?branch=main)](https://github.com/fpgmaas/cookiecutter-poetry/actions/workflows/main.yml?query=branch%3Amain)
-[![Supported Python versions](https://img.shields.io/pypi/pyversions/cookiecutter-poetry)](https://pypi.org/project/cookiecutter-poetry/)
-[![License](https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry)](https://img.shields.io/github/license/fpgmaas/cookiecutter-poetry)
+<!-- [![Space Metric](https://partsnap.testspace.com/spaces/276170/badge?token=61b8e588504e74168bfe61130177943269d116ee)](https://partsnap.testspace.com/spaces/276170?utm_campaign=metric&utm_medium=referral&utm_source=badge "Test Cases") -->
+<!-- [![Space Metric](https://partsnap.testspace.com/spaces/276170/metrics/616814/badge?token=c8134493abfdc1f719ecc94703e37e77d778b63f)](https://partsnap.testspace.com/spaces/276170/current/Code%20Coverage?utm_campaign=metric&utm_medium=referral&utm_source=badge "Code Coverage (lines)") -->
+<!-- [![Space Metric](https://partsnap.testspace.com/spaces/276170/metrics/616813/badge?token=ed02f64788f25309f24a951cf3cae40e97c41487)](https://partsnap.testspace.com/spaces/276170/current/Code%20Coverage?utm_campaign=metric&utm_medium=referral&utm_source=badge "Code Coverage (branches)") -->
 
-This is a modern Cookiecutter template that can be used to initiate a Python project with all the necessary tools for development, testing, and deployment. See [Features](#features) for a list of capabilities.
+> This is the latest version that is supporting web services and library projects for PARTSNAP LLC.
+> To use the original version, invoke cookiecutter with template version 1.0.0
 
----
+`cookiecutter git@github.com:partsnap/partsnap-cookiecutter-poetry.git -c 1.0.0`
+
+> For more information or to report any bug, see [DOPS-19 PartSnap Cookie Cutter Improvements](https://partsnap.atlassian.net/browse/DOPS-19)
 
 **NOTE**
 
@@ -27,6 +29,65 @@ This version is a fork from https://github.com/fpgmaas/cookiecutter-poetry. See 
 To view the original documentation click [here](https://fpgmaas.github.io/cookiecutter-poetry/)
 
 ---
+
+## System Configuration (One Time)
+
+install [NixOS](https://nixos.org/) if you don't have NixOS installed yet
+install [direnv](https://direnv.net/). On the latest OSX version do:
+
+```bash
+  $ brew install direnv
+  $ echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc
+```
+
+configure [direnv](https://direnv.net/man/direnv.toml.1.html) toml file to trust our org
+
+```bash
+  $ mkdir -p ~/.config/direnv/
+  $ touch ~/.config/direnv/config.toml
+```
+
+copy the following in your `config.toml` file (you can change the path to wherever your GitHub root is. Note that this will trust `ALL` directories underneath)
+
+```
+  [global]
+  warn_timeout="20s"
+  [whitelist]
+  prefix = ["~/github/partsnap"]
+```
+
+We want to make sure Nix OS doesn't break if you update your Mac OS to the newest version.
+To do this we need to edit the .zshrc with nano.
+
+```bash
+  $ nano ~/.zshrc
+```
+
+Make sure everything is here. (your_user) is going to depend on your system user you are using located on that export PATH.
+
+```
+    export PATH="$PATH:/Users/(your_user_)/.local/bin"
+    eval "$(direnv hook zsh)"
+    # Nix
+    if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+    . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+    fi
+    # End Nix
+```
+
+After closing nano and returning to bash make sure to source the changes.
+
+```bash
+  $ source ~/.zshrc
+```
+
+Now Nix-OS should be properly set for any projects located in the specified location you put.
+
+install cookiecutter
+
+```bash
+pipx install cookiecutter
+```
 
 ## Quickstart
 
@@ -70,6 +131,12 @@ or when you create a new release.
 
 To finalize the set-up for publishing to PyPi or Artifactory, see [here](./features/publishing.md#set-up-for-pypi). For activating the automatic documentation with MkDocs, see [here](./features/mkdocs.md#enabling-the-documentation-on-github). To enable the code coverage reports, see [here](./features/codecov).
 
+## Testspace Integration
+
+This template supports Testspace from the start. You just need to go to [Testspace PartSnap LLC](https://partsnap.testspace.com/).
+Top right "+ New Project" button and tie the repostiory you just created with Testspace. Documenation for Testspace on project creation
+is commented out by default and will have to be manually updated once you connect the new repoistory to Testspace.
+
 ## Useful Tutorials
 
 ### Integration with PyCharm
@@ -97,42 +164,6 @@ This is a modern Cookiecutter template that can be used to initiate a Python pro
 - Development environment with [VSCode devcontainers](https://code.visualstudio.com/docs/devcontainers/containers)
 
 An example of a repository generated with this package can be found [here](https://github.com/fpgmaas/cookiecutter-poetry-example).
-
-## System Configuration (One Time)
-
-install [pipx](https://pipx.pypa.io/stable/installation/)
-Make sure you ran ``pipx ensurepath``
-
-
-install [NixOS](https://nixos.org/) if you haven't done so already
-install [direnv](https://direnv.net/). On the latest OSX version do:
-
-```bash
-  $ brew install direnv
-  $ echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc
-```
-
-configure [direnv](https://direnv.net/man/direnv.toml.1.html) toml file to trust our org
-
-```bash
-  $ mkdir -p ~/.config/direnv/
-  $ touch ~/.config/direnv/config.toml
-```
-
-copy the following in your `config.toml` file (you can change the path to wherever your GitHub root is. Note that this will trust `ALL` directories underneath)
-
-```
-  [global]
-  warn_timeout="20s"
-  [whitelist]
-  prefix = ["~/github/partsnap"]
-```
-
-install cookiecutter
-
-```bash
-pipx install cookiecutter
-```
 
 ## Reference
 

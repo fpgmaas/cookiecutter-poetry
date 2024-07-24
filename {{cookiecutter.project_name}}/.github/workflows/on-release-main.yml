@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up the environment
         uses: ./.github/actions/setup-poetry-env
@@ -40,7 +40,6 @@ jobs:
           {%- endraw -%}
           {%- endif %}
   {% endif %}
-  {%- if cookiecutter.mkdocs == "y" %}
   deploy-docs:
     {%- if cookiecutter.publish_to != "none" %}
     needs: publish
@@ -48,11 +47,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up the environment
         uses: ./.github/actions/setup-poetry-env
 
       - name: Deploy documentation
         run: poetry run mkdocs gh-deploy --force
-  {% endif %}

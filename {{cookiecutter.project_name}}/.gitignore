@@ -2,14 +2,19 @@ docs/source
 
 # From https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore
 .idea/
-
+tmp/
+scratch/
+.tmp_sqlite_db
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
+.DS_Store
 # C extensions
 *.so
+# SQL Lite database files
+*.db
+*.mp4
 
 # Distribution / packaging
 .Python
@@ -55,6 +60,7 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
+junit-*.xml
 
 # Translations
 *.mo
@@ -147,6 +153,9 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+# ruff
+.ruff_cache/
 
 # Pyre type checker
 .pyre/

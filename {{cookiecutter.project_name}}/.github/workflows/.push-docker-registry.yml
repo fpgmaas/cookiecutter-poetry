@@ -1,0 +1,47 @@
+name: Push Docker Registry
+
+on:
+  push:
+    tags:
+      - "*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "tag for docker image"
+        required: true
+        default: "latest"
+        type: string
+
+jobs:
+  docker_{{cookiecutter.project_slug}}:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set tag depending on trigger
+        id: set-tag
+        shell: bash
+        {%- raw -%}
+        run: |
+          if [ "${{ inputs.tag }}" == "" ]; then
+            echo "tag=$GITHUB_REF_NAME" >> $GITHUB_OUTPUT
+          else
+            echo "tag=${{ inputs.tag }}" >> $GITHUB_OUTPUT
+          fi
+        {%- endraw -%}
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        {%- raw -%}
+        with:
+          username: ${{ secrets.PS_DOCKERHUB_USERNAME }}
+          password: ${{ secrets.PS_DOCKERHUB_TOKEN }}
+        {%- endraw -%}
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          platforms: linux/arm64,linux/amd64
+          tags: pslbrack/{{cookiecutter.project_slug}}:${{'{{ steps.set-tag.outputs.tag }}'}}

@@ -85,7 +85,7 @@ To finalize the set-up for publishing to PyPi or Artifactory, see [here](./featu
 ## System Configuration (One Time)
 
 install [pipx](https://pipx.pypa.io/stable/installation/)
-make sure you run ``pipx ensurepath`` and restart your shell
+make sure you run `pipx ensurepath` and restart your shell
 
 install [NixOS](https://nixos.org/) if you haven't done so already
 install [direnv](https://direnv.net/). On the latest OSX version do:

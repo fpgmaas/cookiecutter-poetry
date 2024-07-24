@@ -1,0 +1,17 @@
+{% raw -%}
+samples:
+  cmd: samples create {{word_string}} --description {{description}}
+  data: # Any whitespace will break yml generation
+    - word_string: "Hello"
+      description: "first"
+    - word_string: "world"
+      description: "second"
+    - word_string: "this"
+      description: "third"
+    - word_string: "is"
+      description: "fourth"
+    - word_string: "a"
+      description: "fifth"
+    - word_string: "template"
+      description: "sixth"
+{% endraw -%}
