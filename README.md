@@ -10,10 +10,10 @@
 </p style = "margin-bottom: 2rem;">
 
 [![Documentation Status](https://readthedocs.com/projects/partsnap-llc-partsnap-cookiecutter-poetry/badge/?version=latest&token=fbd35572c635fc26d72e64f71a1b36006f1d65c3a70a5fa09bcfdfabc64da3d4)](https://partsnap-llc-partsnap-cookiecutter-poetry.readthedocs-hosted.com/en/latest/?badge=latest)
+[![Space Metric](https://partsnap.testspace.com/spaces/281541/badge?token=d5cdcee51a222bddbda4b92735465fdd55fe244f)](https://partsnap.testspace.com/spaces/281541?utm_campaign=metric&utm_medium=referral&utm_source=badge "Test Cases")
+[![Space Metric](https://partsnap.testspace.com/spaces/281541/metrics/643202/badge?token=26b7878c42df6234bc06187d572092e99b032866)](https://partsnap.testspace.com/spaces/281541/current/Code%20Coverage?utm_campaign=metric&utm_medium=referral&utm_source=badge "Code Coverage (lines)")
 
-<!-- [![Space Metric](https://partsnap.testspace.com/spaces/276170/badge?token=61b8e588504e74168bfe61130177943269d116ee)](https://partsnap.testspace.com/spaces/276170?utm_campaign=metric&utm_medium=referral&utm_source=badge "Test Cases") -->
-<!-- [![Space Metric](https://partsnap.testspace.com/spaces/276170/metrics/616814/badge?token=c8134493abfdc1f719ecc94703e37e77d778b63f)](https://partsnap.testspace.com/spaces/276170/current/Code%20Coverage?utm_campaign=metric&utm_medium=referral&utm_source=badge "Code Coverage (lines)") -->
-<!-- [![Space Metric](https://partsnap.testspace.com/spaces/276170/metrics/616813/badge?token=ed02f64788f25309f24a951cf3cae40e97c41487)](https://partsnap.testspace.com/spaces/276170/current/Code%20Coverage?utm_campaign=metric&utm_medium=referral&utm_source=badge "Code Coverage (branches)") -->
+<!-- [![Space Metric](https://partsnap.testspace.com/spaces/281541/metrics/643202/badge?token=ed02f64788f25309f24a951cf3cae40e97c41487)](https://partsnap.testspace.com/spaces/276170/current/Code%20Coverage?utm_campaign=metric&utm_medium=referral&utm_source=badge "Code Coverage (branches)") -->
 
 > This is the latest version that is supporting web services and library projects for PARTSNAP LLC.
 > To use the original version, invoke cookiecutter with template version 1.0.0
@@ -146,7 +146,7 @@ for setting things up.
 
 ### Mermaid Diagram and Charting System
 
-check this [tutorial](./docs/tutorials/mermaid.md)
+Check this [tutorial](./docs/tutorials/mermaid.md)
 
 ## Features
 
