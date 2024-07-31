@@ -19,14 +19,14 @@ jobs:
       - name: Set tag depending on trigger
         id: set-tag
         shell: bash
-        {%- raw -%}
+        {% raw %}
         run: |
           if [ "${{ inputs.tag }}" == "" ]; then
             echo "tag=$GITHUB_REF_NAME" >> $GITHUB_OUTPUT
           else
             echo "tag=${{ inputs.tag }}" >> $GITHUB_OUTPUT
           fi
-        {%- endraw -%}
+        {% endraw %}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -34,11 +34,11 @@ jobs:
         uses: docker/setup-buildx-action@v3
       - name: Login to Docker Hub
         uses: docker/login-action@v3
-        {%- raw -%}
+        {% raw %}
         with:
           username: ${{ secrets.PS_DOCKERHUB_USERNAME }}
           password: ${{ secrets.PS_DOCKERHUB_TOKEN }}
-        {%- endraw -%}
+        {% endraw %}
       - name: Build and push
         uses: docker/build-push-action@v5
         with:

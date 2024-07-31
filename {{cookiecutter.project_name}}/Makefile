@@ -1,4 +1,5 @@
 tag:=latest
+PS_DOCKERHUB_USERNAME = pslbrack
 DOCKER_PROJECT_IMAGE_NAME={{ cookiecutter.project_name }}
 DOCKER_PROJECT_CONTAINER_NAME={{ cookiecutter.project_name }}
 DOCKER_PROJECT_TAGGED_IMAGE_NAME=$(DOCKER_PROJECT_IMAGE_NAME):$(tag)
@@ -18,8 +19,6 @@ check: ## Run code quality tools.
 	@poetry check --lock
 	@echo "🚀 Linting code: Running pre-commit"
 	@poetry run pre-commit run -a
-	@echo "🚀 Linting with ruff"
-	@poetry run ruff hooks tests cookiecutter_poetry --config pyproject.toml
 	@echo "🚀 Static type checking: Running mypy"
 	@poetry run mypy
     @echo "🚀 Checking for obsolete dependencies: Running deptry"

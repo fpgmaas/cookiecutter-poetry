@@ -99,7 +99,7 @@ pipx install cookiecutter
 ---
 
 On your local machine, navigate to the directory in which you want to
-create a project directory, and run the following two commands:
+create a project directory, and run the following command:
 
 ```
 cookiecutter https://github.com/partsnap/partsnap-cookiecutter-poetry.git
@@ -122,6 +122,7 @@ Finally, install the environment and the pre-commit hooks with
 ```bash
 make install
 make check
+make test
 make docs
 ```
 

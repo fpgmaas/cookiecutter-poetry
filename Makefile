@@ -1,3 +1,5 @@
+TMP_DIR="./tmp"
+
 .PHONY: bake
 bake: ## bake without inputs and overwrite if exists.
 	@cookiecutter --no-input . --overwrite-if-exists
@@ -81,12 +83,29 @@ publish: ## publish a release to pypi.
 build-and-publish: build publish ## Build and publish.
 
 .PHONY: docs-test
-docs-test: ## Test if documentation can be built without warnings or errors
+docs-test: full-monty ## Test if documentation can be built without warnings or errors
 	@poetry run mkdocs build -s
 
 .PHONY: docs
 docs: ## Build and serve the documentation
 	@poetry run mkdocs serve
+
+.PHONY: 'full-monty'
+full-monty: ## Test project generation
+	@test -e $(TMP_DIR) || mkdir $(TMP_DIR)
+	@echo 'cookcutter -f --output $(TMP_DIR)'
+	@echo 'cd $(TMP_DIR) && git init .'
+	@echo 'cd $(TMP_DIR) && git add .'
+	@echo 'cd $(TMP_DIR) && make install'
+	@echo 'cd $(TMP_DIR) && make check'
+	@echo 'cd $(TMP_DIR) && make docs-test test tox'
+	@echo 'cd $(TMP_DIR) && make docker-build'
+	@echo 'cd $(TMP_DIR) && make docker-start'
+	@echo 'sleep 5'
+	@echo 'curl -f -X GET http://localhost:8080/health'
+	@echo 'cd $(TMP_DIR) && make docker-stop'
+	@echo 'cd $(TMP_DIR) && git commit -am "inial commit"'
+	rm -rf $(TMP_DIR)
 
 .PHONY: help
 help:

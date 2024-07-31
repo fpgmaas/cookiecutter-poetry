@@ -2,7 +2,6 @@
     "author": "First Last",
     "partsnap_user_id": "",
     "email": "{{cookiecutter.partsnap_user_id}}@partsnap.io",
-    "author_github_handle": "partsnap",
     "project_name": "example-project",
     "project_slug": "{{cookiecutter.project_name|lower|replace('-', '')}}",
     "project_caps": "{{cookiecutter.project_slug|upper}}",

@@ -3,15 +3,15 @@ name = "{{cookiecutter.project_slug}}"
 version = "0.0.1"
 description = "{{cookiecutter.project_description}}"
 authors = ["{{cookiecutter.author}} <f{{cookiecutter.email}}>"]
-repository = "https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}"
-documentation = "https://{{cookiecutter.author_github_handle}}.github.io/{{cookiecutter.project_name}}/"
+repository = "https://github.com/partsnap/{{cookiecutter.project_name}}"
+documentation = "https://partsnap.github.io/{{cookiecutter.project_name}}/"
 readme = "README.md"
 packages = [
   {include = "{{cookiecutter.project_slug}}"}
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.12,<3.13"
+python = ">=3.11,<3.13"
 {% if cookiecutter.database == 'y' -%}
 sqlmodel = {extras = ["all"], version = "^0.0.16"}
 omegaconf = "^2.3.0"

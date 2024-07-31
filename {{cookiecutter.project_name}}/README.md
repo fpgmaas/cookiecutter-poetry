@@ -1,11 +1,11 @@
 # {{cookiecutter.project_name}}
 
 <!-- This is templated badges that you can remove if you wish to do so. -->
-[![Release](https://img.shields.io/github/v/release/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}})](https://img.shields.io/github/v/release/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}})
-[![Build status](https://img.shields.io/github/actions/workflow/status/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}/main.yml?branch=main)](https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}/actions/workflows/main.yml?query=branch%3Amain)
-[![codecov](https://codecov.io/gh/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}/branch/main/graph/badge.svg)](https://codecov.io/gh/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}})
-[![Commit activity](https://img.shields.io/github/commit-activity/m/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}})](https://img.shields.io/github/commit-activity/m/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}})
-[![License](https://img.shields.io/github/license/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}})](https://img.shields.io/github/license/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}})
+[![Release](https://img.shields.io/github/v/release/partsnap/{{cookiecutter.project_name}})](https://img.shields.io/github/v/release/partsnap/{{cookiecutter.project_name}})
+[![Build status](https://img.shields.io/github/actions/workflow/status/partsnap/{{cookiecutter.project_name}}/main.yml?branch=main)](https://github.com/partsnap/{{cookiecutter.project_name}}/actions/workflows/main.yml?query=branch%3Amain)
+[![codecov](https://codecov.io/gh/partsnap/{{cookiecutter.project_name}}/branch/main/graph/badge.svg)](https://codecov.io/gh/partsnap/{{cookiecutter.project_name}})
+[![Commit activity](https://img.shields.io/github/commit-activity/m/partsnap/{{cookiecutter.project_name}})](https://img.shields.io/github/commit-activity/m/partsnap/{{cookiecutter.project_name}})
+[![License](https://img.shields.io/github/license/partsnap/{{cookiecutter.project_name}})](https://img.shields.io/github/license/partsnap/{{cookiecutter.project_name}})
 
 <!-- Uncomment and **UPDATE** the following links to integrate documentation status for Read the Docs and Testspace. -->
 <!-- [![Documentation Status](https://readthedocs.com/projects/partsnap-llc-{{cookiecutter.project_name}}/badge/?version=latest&token=fbd35572c635fc26d72e64f71a1b36006f1d65c3a70a5fa09bcfdfabc64da3d4)](https://partsnap-llc-partsnap-cookiecutter-poetry.readthedocs-hosted.com/en/latest/?badge=latest) -->
@@ -15,8 +15,8 @@
 
 {{cookiecutter.project_description}}
 
-- **Github repository**: <https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}/>
-- **Documentation** <https://{{cookiecutter.author_github_handle}}.github.io/{{cookiecutter.project_name}}/>
+- **Github repository**: <https://github.com/partsnap/{{cookiecutter.project_name}}/>
+- **Documentation** <https://partsnap.github.io/{{cookiecutter.project_name}}/>
 
 ## System Configuration (One Time)
 
@@ -86,7 +86,7 @@ First, create a repository on GitHub with the same name as this project, and the
 git init -b main
 git add .
 git commit -m "init commit"
-git remote add origin git@github.com:{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}.git
+git remote add origin git@github.com:partsnap/{{cookiecutter.project_name}}.git
 git push -u origin main
 ```
 
@@ -94,6 +94,8 @@ Finally, install the environment and the pre-commit hooks with
 
 ```bash
 make install
+make check
+make test
 ```
 
 You are now ready to start development on your project!
@@ -114,15 +116,15 @@ Use these commands to populate and clear the database:
 ## Releasing a new version
 
 - Create an API Token on [Pypi](https://pypi.org/).
-- Add the API Token to your projects secrets with the name `PYPI_TOKEN` by visiting [this page](https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}/settings/secrets/actions/new).
-- Create a [new release](https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}/releases/new) on Github.
+- Add the API Token to your projects secrets with the name `PYPI_TOKEN` by visiting [this page](https://github.com/partsnap/{{cookiecutter.project_name}}/settings/secrets/actions/new).
+- Create a [new release](https://github.com/partsnap/{{cookiecutter.project_name}}/releases/new) on Github.
 - Create a new tag in the form `*.*.*`.
 
 For more details, see [here](https://fpgmaas.github.io/cookiecutter-poetry/features/cicd/#how-to-trigger-a-release).
 {%- elif cookiecutter.publish_to == "artifactory" -%}
 
-- Add the `ARTIFACTORY_URL`, `ARTIFACTORY_USERNAME`, and `ARTIFACTORY_PASSWORD` to your projects secrets by visiting [this page](https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}/settings/secrets/actions/new).
-- Create a [new release](https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}/releases/new) on Github.
+- Add the `ARTIFACTORY_URL`, `ARTIFACTORY_USERNAME`, and `ARTIFACTORY_PASSWORD` to your projects secrets by visiting [this page](https://github.com/partsnap/{{cookiecutter.project_name}}/settings/secrets/actions/new).
+- Create a [new release](https://github.com/partsnap/{{cookiecutter.project_name}}/releases/new) on Github.
 - Create a new tag in the form `*.*.*`.
 
 For more details, see [here](https://fpgmaas.github.io/cookiecutter-poetry/features/cicd/#how-to-trigger-a-release).

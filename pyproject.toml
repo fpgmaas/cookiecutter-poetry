@@ -17,7 +17,7 @@ include = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.12,<3.13"
+python = ">=3.11,<3.13"
 cookiecutter = "^2.1.1"
 
 [tool.poetry.group.dev.dependencies]
