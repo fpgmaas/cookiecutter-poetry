@@ -1,8 +1,8 @@
-""" CLI
+"""CLI
 
-    - Author: {{cookiecutter.author}}
-    - Email: {{cookiecutter.email}}
-    - Copyright (C) 2024 PartSnap LLC
+- Author: {{cookiecutter.author}}
+- Email: {{cookiecutter.email}}
+- Copyright (C) 2024 PartSnap LLC
 """
 
 import os
@@ -48,9 +48,7 @@ def main(
     if test_client is True:
         typer.secho("Using Test Client", fg=typer.colors.YELLOW)
         fast_api_app = create_fastapi_app()
-        ctx.obj["db_session"] = PSTestClient(
-            app=fast_api_app, headers={"content-type": "application/json"}
-        )
+        ctx.obj["db_session"] = PSTestClient(app=fast_api_app, headers={"content-type": "application/json"})
         ctx.obj["test_client"] = True
     else:
         typer.secho(f"Using Request hostname={host}, port={port}", fg=typer.colors.YELLOW)

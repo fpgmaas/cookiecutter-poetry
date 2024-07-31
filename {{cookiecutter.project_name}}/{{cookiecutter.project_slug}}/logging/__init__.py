@@ -1,8 +1,8 @@
-""" Logging facility for {{cookiecutter.project_slug}}.
+"""Logging facility for {{cookiecutter.project_slug}}.
 
-    - Author: {{cookiecutter.author}}
-    - Email: {{cookiecutter.email}}
-    - Copyright (C) 2024 PartSnap LLC
+- Author: {{cookiecutter.author}}
+- Email: {{cookiecutter.email}}
+- Copyright (C) 2024 PartSnap LLC
 """
 
 import logging
@@ -34,7 +34,7 @@ def psnap_set_log_level(level: int | str, name: str = "") -> str | int:
         raise TypeError(msg)
     ps_base_logger.debug(f"Setting log level {name} to {level}")
     logger.setLevel(level)
-    return logging.getLevelName(logger.getEffectiveLevel())  # type: ignore[no-any-return]
+    return logging.getLevelName(logger.getEffectiveLevel())
 
 
 def psnap_get_logger_names() -> list[str]:

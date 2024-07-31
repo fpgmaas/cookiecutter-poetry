@@ -1,8 +1,8 @@
-""" Sample Data Model
+"""Sample Data Model
 
-    - Author: {{cookiecutter.author}}
-    - Email: {{cookiecutter.email}}
-    - Copyright (C) 2024 PartSnap LLC
+- Author: {{cookiecutter.author}}
+- Email: {{cookiecutter.email}}
+- Copyright (C) 2024 PartSnap LLC
 """
 
 import contextlib
@@ -27,16 +27,14 @@ class SampleDBModel(SampleAPIModelRead, table=True):
     __tablename__ = {{cookiecutter.project_slug}}DBTables.samples
 
     @classmethod
-    def create(
-        cls, db_session: Session, sample_model: SampleAPIModelCreate
-    ) -> Union["SampleDBModel", JSONResponse]:
+    def create(cls, db_session: Session, sample_model: SampleAPIModelCreate) -> Union["SampleDBModel", JSONResponse]:
         db_error_handling = {}  # type: ignore[var-annotated]
         response = db_crud.create(
             model_cls=SampleDBModel,  # type: ignore[arg-type]
             db_session=db_session,
             logger=LOGGER,
             data=sample_model,  # type: ignore[arg-type]
-            db_error_handling=db_error_handling,  # type: ignore[arg-type]
+            db_error_handling=db_error_handling,
         )
         if isinstance(response, SampleDBModel):
             # First we create the read model instance
@@ -47,7 +45,10 @@ class SampleDBModel(SampleAPIModelRead, table=True):
 
     @classmethod
     def update(
-        cls, db_session: Session, sample_id: str | int, sample_model: SampleAPIModelUpdate,
+        cls,
+        db_session: Session,
+        sample_id: str | int,
+        sample_model: SampleAPIModelUpdate,
     ) -> Union["SampleDBModel", JSONResponse]:
         db_error_handling = {
             NoResultFound: db_crud.DBErrorHandling(
@@ -107,7 +108,7 @@ class SampleDBModel(SampleAPIModelRead, table=True):
         sample_id: str | int | None = None,
         word_string: str | None = None,
         db_model: bool = False,
-        list_wanted: bool = False
+        list_wanted: bool = False,
     ) -> SampleAPIModelRead | list[SampleAPIModelRead] | JSONResponse:
         # Define error handling based on the provided parameters
         if sample_id is not None:
@@ -118,9 +119,7 @@ class SampleDBModel(SampleAPIModelRead, table=True):
             error_message = "No sample found with the provided criteria."
 
         db_error_handling = {
-            NoResultFound: db_crud.DBErrorHandling(
-                http_status=http_status.HTTP_404_NOT_FOUND, msg=error_message
-            )
+            NoResultFound: db_crud.DBErrorHandling(http_status=http_status.HTTP_404_NOT_FOUND, msg=error_message)
         }
 
         statement = None
@@ -129,7 +128,7 @@ class SampleDBModel(SampleAPIModelRead, table=True):
             with contextlib.suppress(ValueError):
                 statement = select(SampleDBModel).where(int(sample_id) == SampleDBModel.id)
         elif word_string is not None:
-            statement = select(SampleDBModel).where(SampleDBModel.word_string.contains(word_string))
+            statement = select(SampleDBModel).where(SampleDBModel.word_string.contains(word_string))  # type: ignore[attr-defined]
 
         response = db_crud.get(
             model_cls=SampleDBModel,  # type: ignore[arg-type]

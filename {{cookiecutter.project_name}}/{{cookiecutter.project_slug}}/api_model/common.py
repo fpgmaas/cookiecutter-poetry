@@ -1,16 +1,16 @@
-""" PartSnap Base Model
+"""PartSnap Base Model
 
-    Whenever a record is created or updated, it shall be stamped
-    with the date and time of the transaction as well as with the
-    information related to the user performing such transaction.
+Whenever a record is created or updated, it shall be stamped
+with the date and time of the transaction as well as with the
+information related to the user performing such transaction.
 
-    Each model should derive from this class to add the required
-    database fields. Stamping is automatically handled by the
-    mixin in {{cookiecutter.project_slug}}.model.mixins
+Each model should derive from this class to add the required
+database fields. Stamping is automatically handled by the
+mixin in {{cookiecutter.project_slug}}.model.mixins
 
-    - Author: {{cookiecutter.author}}
-    - Email: {{cookiecutter.email}}
-    - Copyright (C) 2024 PartSnap LLC
+- Author: {{cookiecutter.author}}
+- Email: {{cookiecutter.email}}
+- Copyright (C) 2024 PartSnap LLC
 """
 
 from typing import Optional

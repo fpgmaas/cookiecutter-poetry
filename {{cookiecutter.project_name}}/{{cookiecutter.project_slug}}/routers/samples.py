@@ -1,19 +1,18 @@
-""" Sample routes
+"""Sample routes
 
-    - Author: {{cookiecutter.author}}
-    - Email: {{cookiecutter.email}}
-    - Copyright (C) 2024 PartSnap LLC
+- Author: {{cookiecutter.author}}
+- Email: {{cookiecutter.email}}
+- Copyright (C) 2024 PartSnap LLC
 """
 
 import json
-from typing import Annotated
+from typing import Annotated, Union
 
 import sqlalchemy
-from fastapi import APIRouter, Depends, Query
+from fastapi import APIRouter, Depends
 from fastapi import status as http_status
 from fastapi.responses import JSONResponse
 from sqlmodel import Session
-from typing import Union
 
 from {{cookiecutter.project_slug}}.dependencies import ps_db_session
 from {{cookiecutter.project_slug}}.logging import psnap_get_logger
@@ -24,7 +23,7 @@ router = APIRouter(prefix="/samples", tags=["samples"])
 LOGGER = psnap_get_logger("router.samples")
 
 
-def can_convert_to_int(value):
+def can_convert_to_int(value: str | int) -> bool:
     """Check if a value can be converted to an integer."""
     try:
         int(value)
@@ -54,12 +53,13 @@ async def get_sample(
         sample_id = sample_data
         # Fetch by sample_id
         with Session(db_engine) as db_session:
-            return SampleDBModel.get(db_session=db_session, sample_id=sample_id)  # type: ignore[return-value]
+            return SampleDBModel.get(db_session=db_session, sample_id=sample_id)
     else:
         word_string = sample_data
         # Fetch by word_string
         with Session(db_engine) as db_session:
-            return SampleDBModel.get(db_session=db_session, word_string=word_string)  # type: ignore[return-value]
+            return SampleDBModel.get(db_session=db_session, word_string=word_string)  # type: ignore[arg-type]
+
 
 @router.post(
     "/",
@@ -85,7 +85,7 @@ async def create_sample(
             LOGGER.error(
                 f"POST [FAILED]  /samples/ data={sample_data} response {response.status_code} {response.body.decode('utf-8')}"
             )
-        return response  # type: ignore[return-value]
+        return response
 
 
 @router.put(
@@ -133,9 +133,7 @@ async def delete_sample(
     with Session(db_engine) as db_session:
         response = SampleDBModel.delete(db_session=db_session, sample_id=sample_id)
         if isinstance(response, SampleAPIModelRead):
-            LOGGER.debug(
-                f"DELETE [OK]  /samples/{sample_id} response {json.dumps(response.model_dump(), indent=2)}"
-            )
+            LOGGER.debug(f"DELETE [OK]  /samples/{sample_id} response {json.dumps(response.model_dump(), indent=2)}")
         if isinstance(response, JSONResponse):
             LOGGER.error(
                 f"DELETE [FAILED]  /samples/{sample_id} response {response.status_code} {response.body.decode('utf-8')}"

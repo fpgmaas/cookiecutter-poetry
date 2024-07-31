@@ -1,8 +1,8 @@
-""" CLI for Database interface
+"""CLI for Database interface
 
-    - Author: {{cookiecutter.author}}
-    - Email: {{cookiecutter.email}}
-    - Copyright (C) 2024 PartSnap LLC
+- Author: {{cookiecutter.author}}
+- Email: {{cookiecutter.email}}
+- Copyright (C) 2024 PartSnap LLC
 """
 
 import os
@@ -15,9 +15,8 @@ from omegaconf import OmegaConf as oconf
 from typing_extensions import Annotated
 
 from {{cookiecutter.project_slug}}.dbms.sqlite_db import SQLiteDBUtils
-from {{cookiecutter.project_slug}}.utils.typer import PSTyperRunner
 from {{cookiecutter.project_slug}}.model.sample import SampleAPIModelCreate
-
+from {{cookiecutter.project_slug}}.utils.typer import PSTyperRunner
 
 db_app = typer.Typer()
 
@@ -60,7 +59,7 @@ def format_command(cmd_template: str, data: Dict[str, Any]) -> str:
 
         cmd = cmd.replace(f"{{{{{key}}}}}", str(value))
     return cmd
-{% endraw -%}
+{% endraw %}
 
 
 def run_command(runner: PSTyperRunner, validator_cls: Any, entity: str, entity_data: Any) -> None:

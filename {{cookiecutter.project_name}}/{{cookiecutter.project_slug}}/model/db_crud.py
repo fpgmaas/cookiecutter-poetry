@@ -1,39 +1,39 @@
-""" Mixin for the datbase model
+"""Mixin for the datbase model
 
-    This module contains CRUD support functions for the database model.
+This module contains CRUD support functions for the database model.
 
-    Each class functions takes the following arguments:
+Each class functions takes the following arguments:
 
-    - model_cls: model class to use
-    - db_session: a valid datbase session
-    - A logger object
-    - a dictionary keyed with the database exception and containing the
-      http status code and message in the event of such exception
-    - The data to be handles
+- model_cls: model class to use
+- db_session: a valid datbase session
+- A logger object
+- a dictionary keyed with the database exception and containing the
+    http status code and message in the event of such exception
+- The data to be handles
 
-    Each API returns either the data resulting from the query or a
-    JSON response with the http status code and error message in the
-    case of an exception.
+Each API returns either the data resulting from the query or a
+JSON response with the http status code and error message in the
+case of an exception.
 
-    Below is a simple example of "query statement" which can be invoked
-    to resolve the id by name for example.
+Below is a simple example of "query statement" which can be invoked
+to resolve the id by name for example.
 
-    .. code-block:: python
-        statement = select(SomeDBModel).where(SomeDBModel.name == db_model_id)
-        with contextlib.suppress(ValueError):
-            statement = select(SomeDBModel).where(SomeDBModel.id == int(location_type_id))
+.. code-block:: python
+    statement = select(SomeDBModel).where(SomeDBModel.name == db_model_id)
+    with contextlib.suppress(ValueError):
+        statement = select(SomeDBModel).where(SomeDBModel.id == int(location_type_id))
 
-    The example below shows how the conversion from db error to http error can be performed.
+The example below shows how the conversion from db error to http error can be performed.
 
-    .. code-block:: python
-        db_error_handling = {NoResultFound: DBErrorHandling(
-            http_status=http_status.HTTP_404_NOT_FOUND,
-            msg=f"LocationType {location_type_id} not found!"
-        )}
+.. code-block:: python
+    db_error_handling = {NoResultFound: DBErrorHandling(
+        http_status=http_status.HTTP_404_NOT_FOUND,
+        msg=f"LocationType {location_type_id} not found!"
+    )}
 
-    - Author: {{cookiecutter.author}}
-    - Email: {{cookiecutter.email}}
-    - Copyright (C) 2024 PartSnap LLC
+- Author: {{cookiecutter.author}}
+- Email: {{cookiecutter.email}}
+- Copyright (C) 2024 PartSnap LLC
 """
 
 from dataclasses import dataclass
@@ -255,7 +255,7 @@ def get(
     query_statement: Any | None,
     db_error_handling: dict[DatabaseError, DBErrorHandling],
     list_wanted: bool = False,
-) -> PartSnapBaseModel | JSONResponse | list[PartSnapBaseModel]:
+) -> PartSnapBaseModel | JSONResponse | list[PartSnapBaseModel] | Any:
     """Retrieves one or all records from the database.
 
     If query_statement is None, this will query all objects in the database.
@@ -291,7 +291,8 @@ def get(
                 if len(db_records) == 1:
                     # Makes sure to not return the list since there is only one record object
                     return db_records[0]
-                return db_records  # Return the list of records
+                # Return the list of records
+                return db_records
             else:
                 db_record = db_session.exec(query_statement).one()
                 return db_record
@@ -309,11 +310,10 @@ def get(
                 content={"detail": handler.msg},
             )
 
-        return db_record  # type: ignore[no-any-return]
     logger.debug(f"Getting all records from {table_name}")
     response = db_session.exec(select(model_cls)).all()  # type: ignore[call-overload]
     logger.debug(f"response {response}")
-    return response  # type: ignore[return-value]
+    return response
 
 
 def get_list(

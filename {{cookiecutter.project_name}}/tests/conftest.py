@@ -1,4 +1,4 @@
-""" Conftest for tests
+"""Conftest for tests
 
     - Author: {{cookiecutter.author}}
     - Email: {{cookiecutter.email}}

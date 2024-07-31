@@ -1,4 +1,4 @@
-""" Api Conftest
+"""Api Conftest
 
     - Author: {{cookiecutter.author}}
     - Email: {{cookiecutter.email}}

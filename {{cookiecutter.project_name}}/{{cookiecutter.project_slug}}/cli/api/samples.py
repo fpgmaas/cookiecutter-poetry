@@ -1,10 +1,10 @@
-""" Sample Type API commands
+"""Sample Type API commands
 
-    This file contains command implementation to perform CRUD operations on samples.
+This file contains command implementation to perform CRUD operations on samples.
 
-    - Author: {{cookiecutter.author}}
-    - Email: {{cookiecutter.email}}
-    - Copyright (C) 2024 PartSnap LLC
+- Author: {{cookiecutter.author}}
+- Email: {{cookiecutter.email}}
+- Copyright (C) 2024 PartSnap LLC
 """
 # ruff: noqa: B006
 

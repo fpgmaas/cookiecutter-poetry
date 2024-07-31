@@ -1,4 +1,4 @@
-""" Endpoints Conftest
+"""Endpoints Conftest
 
     - Author: {{cookiecutter.author}}
     - Email: {{cookiecutter.email}}

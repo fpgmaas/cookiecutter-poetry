@@ -1,4 +1,4 @@
-""" Models Conftest
+"""Models Conftest
 
     - Author: {{cookiecutter.author}}
     - Email: {{cookiecutter.email}}

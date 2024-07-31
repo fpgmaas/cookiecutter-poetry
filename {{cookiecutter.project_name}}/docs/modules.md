@@ -1,5 +1,5 @@
-{%- if cookiecutter.database == 'n' %}
+{%- if cookiecutter.database == 'n' -%}
 ::: {{cookiecutter.project_slug}}.foo
-{%- else %}
+{%- else -%}
 ::: {{cookiecutter.project_slug}}
 {%- endif %}

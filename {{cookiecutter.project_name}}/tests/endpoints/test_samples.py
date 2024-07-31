@@ -1,8 +1,8 @@
-""" Simple tests sample endpoints.
+"""Simple tests sample endpoints
 
-    - Author: {{cookiecutter.author}}
-    - Email: {{cookiecutter.email}}
-    - Copyright (C) 2024 PartSnap LLC
+- Author: {{cookiecutter.author}}
+- Email: {{cookiecutter.email}}
+- Copyright (C) 2024 PartSnap LLC
 """
 
 import pytest
@@ -69,9 +69,7 @@ def test_create_samples(client, word_string, description):
     resp_sample = SampleAPIModelCreate(**response.json())
     with check:
         assert response.status_code == status.HTTP_201_CREATED
-    assert (
-        SampleAPIModelCreate(**resp_sample.model_dump(exclude=["created_by", "updated_by"])) == new_sample
-    )
+    assert (SampleAPIModelCreate(**resp_sample.model_dump(exclude=["created_by", "updated_by"])) == new_sample)
 
 
 def test_samples_put(client):

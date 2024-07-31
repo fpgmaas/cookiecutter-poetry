@@ -1,8 +1,8 @@
-""" SQL Lite Database Module
+"""SQL Lite Database Module
 
-    - Author: {{cookiecutter.author}}
-    - Email: {{cookiecutter.email}}
-    - Copyright (C) 2024 PartSnap LLC
+- Author: {{cookiecutter.author}}
+- Email: {{cookiecutter.email}}
+- Copyright (C) 2024 PartSnap LLC
 """
 
 import shutil
@@ -12,9 +12,9 @@ import sqlalchemy
 from sqlmodel import SQLModel, create_engine
 
 from {{cookiecutter.project_slug}}.logging import psnap_get_logger
-from {{cookiecutter.project_slug}}.model import *
 
 # Forward declaration
+
 
 class SQLiteDBUtils:
     __instance: object | None = None
