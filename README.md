@@ -105,11 +105,12 @@ create a project directory, and run the following command:
 cookiecutter https://github.com/partsnap/partsnap-cookiecutter-poetry.git
 ```
 
-Create a repository on GitHub, and then run the following command:
+Create a repository on GitHub, and then run the following commands:
 
 ```bash
 cd <project_name>
 git init -b main
+git add .
 ```
 
 After project creation open your project and install the environment and run the pre-commit hooks:
@@ -136,7 +137,6 @@ Once you have installed the environment and run the pre-commit hooks,
 run the following commands, replacing `<project-name>`, with the name that you gave the Github repository:
 
 ```bash
-git add .
 git commit -m "Init commit"
 git remote add origin git@github.com:partsnap/<project_name>.git
 ```

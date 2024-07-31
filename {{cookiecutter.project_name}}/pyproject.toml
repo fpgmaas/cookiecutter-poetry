@@ -65,6 +65,11 @@ testpaths = ["tests"]
 target-version = "py37"
 line-length = 120
 fix = true
+
+[tool.ruff.format]
+preview = true
+
+[tool.lint]
 select = [
     # flake8-2020
     "YTT",
@@ -108,9 +113,6 @@ ignore = [
     "F403",
 ]
 
-[tool.ruff.format]
-preview = true
-
 [tool.coverage.report]
 skip_empty = true
 
@@ -123,7 +125,7 @@ ignore = ["DEP003", "DEP001"]
 [tool.deptry.per_rule_ignores]
 DEP002 = ['types-requests']
 
-[tool.ruff.per-file-ignores]
+[tool.lint.per-file-ignores]
 "tests/*" = ["S101"]
 {% if cookiecutter.database == "y"-%}
 # Database id otherwise generates this error
@@ -132,4 +134,4 @@ DEP002 = ['types-requests']
 [tool.poetry.scripts]
 start-server = "{{cookiecutter.project_slug}}.main:start_server_entry_point"
 {{cookiecutter.project_slug}} = "{{cookiecutter.project_slug}}.cli:cli_app"
-{% endif -%}
+{% endif %}

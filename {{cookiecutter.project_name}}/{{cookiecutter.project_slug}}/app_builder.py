@@ -15,6 +15,7 @@ from fastapi.responses import FileResponse, RedirectResponse, Response
 from {{cookiecutter.project_slug}}._server_doc import server_metadata
 from {{cookiecutter.project_slug}}.logging import fapi_route, psnap_get_logger, psnap_set_log_level
 from {{cookiecutter.project_slug}}.routers import (
+    health,
     samples,
     tags_metadata,  # Endpoint Documentation
 )
@@ -34,6 +35,7 @@ def create_fastapi_app(storage_connection: bool = False) -> FastAPI:
     fastapi_app = FastAPI(openapi_tags=tags_metadata, **server_metadata)  # type: ignore[arg-type]
     fastapi_app.include_router(samples.router)
     fastapi_app.include_router(fapi_route.log_router)
+    fastapi_app.include_router(health.router)
 
     LOGGER.warning("We should redirected / to /docs")
 

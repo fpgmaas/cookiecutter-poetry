@@ -1,13 +1,5 @@
 # {{cookiecutter.project_name}}
 
-<!-- This is templated badges that you can remove if you wish to do so. -->
-
-[![Release](https://img.shields.io/github/v/release/partsnap/{{cookiecutter.project_name}})](https://img.shields.io/github/v/release/partsnap/{{cookiecutter.project_name}})
-[![Build status](https://img.shields.io/github/actions/workflow/status/partsnap/{{cookiecutter.project_name}}/main.yml?branch=main)](https://github.com/partsnap/{{cookiecutter.project_name}}/actions/workflows/main.yml?query=branch%3Amain)
-[![codecov](https://codecov.io/gh/partsnap/{{cookiecutter.project_name}}/branch/main/graph/badge.svg)](https://codecov.io/gh/partsnap/{{cookiecutter.project_name}})
-[![Commit activity](https://img.shields.io/github/commit-activity/m/partsnap/{{cookiecutter.project_name}})](https://img.shields.io/github/commit-activity/m/partsnap/{{cookiecutter.project_name}})
-[![License](https://img.shields.io/github/license/partsnap/{{cookiecutter.project_name}})](https://img.shields.io/github/license/partsnap/{{cookiecutter.project_name}})
-
 <!-- Uncomment and **UPDATE** the following links to integrate documentation status for Read the Docs and Testspace. -->
 <!-- [![Documentation Status](https://readthedocs.com/projects/partsnap-llc-{{cookiecutter.project_name}}/badge/?version=latest&token=fbd35572c635fc26d72e64f71a1b36006f1d65c3a70a5fa09bcfdfabc64da3d4)](https://partsnap-llc-partsnap-cookiecutter-poetry.readthedocs-hosted.com/en/latest/?badge=latest) -->
 <!-- [![Space Metric](https://partsnap.testspace.com/spaces/276170/badge?token=61b8e588504e74168bfe61130177943269d116ee)](https://partsnap.testspace.com/spaces/276170?utm_campaign=metric&utm_medium=referral&utm_source=badge "Test Cases") -->
