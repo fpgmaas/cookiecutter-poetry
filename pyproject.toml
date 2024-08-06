@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cookiecutter-poetry"
-version = "0.1.0"
+version = "0.1.1"
 description = "A python cookiecutter application to create a new python project that uses poetry to manage its dependencies."
 authors = ["Florian Maas <fpgmaas@gmail.com>"]
 repository = "https://github.com/fpgmaas/cookiecutter-poetry"
