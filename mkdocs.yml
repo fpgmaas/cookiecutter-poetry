@@ -14,7 +14,7 @@ nav:
       - Linting & code quality: features/linting.md
       - Makefile: features/makefile.md
       - Dependency management with Poetry: features/poetry.md
-      - Publishing to PyPi or Artifactory: features/publishing.md
+      - Publishing to PyPI or Artifactory: features/publishing.md
       - Testing with Pytest: features/pytest.md
       - Test coverage with codecov: features/codecov.md
       - Documentation with MkDocs: features/mkdocs.md
