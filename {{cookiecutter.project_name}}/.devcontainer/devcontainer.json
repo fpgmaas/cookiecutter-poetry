@@ -14,10 +14,7 @@
     // Configure tool-specific properties.
     "customizations": {
         "vscode": {
-            "extensions": [
-                "ms-python.python",
-                "editorconfig.editorconfig",
-            ],
+            "extensions": ["ms-python.python", "editorconfig.editorconfig"],
             "settings": {
                 "python.testing.pytestArgs": ["tests"],
                 "python.testing.unittestEnabled": false,

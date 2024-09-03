@@ -6,7 +6,7 @@ on:
     branches: [main]
 
 jobs:
-  {% if cookiecutter.publish_to != "none" %}
+{%- if cookiecutter.publish_to != "none" %}
   publish:
     runs-on: ubuntu-latest
     steps:
@@ -39,8 +39,8 @@ jobs:
           RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
           {%- endraw -%}
           {%- endif %}
-  {% endif %}
-  {%- if cookiecutter.mkdocs == "y" %}
+{%- endif -%}
+{%- if cookiecutter.mkdocs == "y" %}
   deploy-docs:
     {%- if cookiecutter.publish_to != "none" %}
     needs: publish
@@ -55,4 +55,4 @@ jobs:
 
       - name: Deploy documentation
         run: poetry run mkdocs gh-deploy --force
-  {% endif %}
+{% endif %}
