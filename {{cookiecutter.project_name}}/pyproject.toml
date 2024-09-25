@@ -29,7 +29,7 @@ tox = "^4.11.1"
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.4.2"
 mkdocs-material = "^9.2.7"
-mkdocstrings = {extras = ["python"], version = "^0.23.0"}
+mkdocstrings = {extras = ["python"], version = "^0.26.1"}
 {%- endif %}
 
 [build-system]
