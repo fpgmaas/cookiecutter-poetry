@@ -1,9 +1,9 @@
-name: release-main
+name: release-{{ cookiecutter.branch_name }}
 
 on:
   release:
     types: [published]
-    branches: [main]
+    branches: [{{ cookiecutter.branch_name }}]
 
 jobs:
 {%- if cookiecutter.publish_to != "none" %}

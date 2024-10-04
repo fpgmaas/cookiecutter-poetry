@@ -4,7 +4,7 @@ on:
   pull_request:
     paths: [codecov.yaml]
   push:
-    branches: [main]
+    branches: [{{ cookiecutter.branch_name }}]
 
 jobs:
   validate-codecov-config:

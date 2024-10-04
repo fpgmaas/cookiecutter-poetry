@@ -52,8 +52,7 @@ Please note this documentation assumes you already have `poetry` and `Git` insta
 2. Clone your fork locally:
 
 ```bash
-cd <directory_in_which_repo_should_be_created>
-git clone git@github.com:YOUR_NAME/{{cookiecutter.project_name}}.git
+git clone git@github.com:YOUR_USERNAME/{{cookiecutter.project_name}}.git
 ```
 
 3. Now we need to install the environment. Navigate into the directory

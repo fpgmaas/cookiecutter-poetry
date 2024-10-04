@@ -15,13 +15,27 @@ runs:
       with:
         python-version: {% raw %}${{ inputs.python-version }}{% endraw %}
 
-    - name: Install Poetry
+    - name: Install Poetry on Windows
+      if: runner.os == 'Windows'
+      env:
+        POETRY_VERSION: "1.7.1"
+      run: (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python - -y
+      shell: pwsh
+
+    - name: Install Poetry on Linux/macOS
+      if: runner.os != 'Windows'
       env:
         POETRY_VERSION: "1.7.1"
       run: curl -sSL https://install.python-poetry.org | python - -y
       shell: bash
 
-    - name: Add Poetry to Path
+    - name: Add Poetry to Path on Windows
+      if: runner.os == 'Windows'
+      run: echo "$env:APPDATA\Python\Scripts" | Out-File -Append -FilePath $env:GITHUB_PATH -Encoding utf8
+      shell: pwsh
+
+    - name: Add Poetry to Path on Linux/macOS
+      if: runner.os != 'Windows'
       run: echo "$HOME/.local/bin" >> $GITHUB_PATH
       shell: bash
 

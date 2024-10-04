@@ -135,7 +135,10 @@ def test_codecov(cookies, tmp_path):
     with run_within_dir(tmp_path):
         result = cookies.bake()
         assert result.exit_code == 0
-        assert is_valid_yaml(result.project_path / ".github" / "workflows" / "main.yml")
+
+        main_yml_file = f"{result.project_path}/.github/workflows/main.yml"
+        assert is_valid_yaml(main_yml_file)
+        assert file_contains_text(main_yml_file, "--cov --cov-config=pyproject.toml --cov-report=xml")
         assert os.path.isfile(f"{result.project_path}/codecov.yaml")
         assert os.path.isfile(f"{result.project_path}/.github/workflows/validate-codecov-config.yml")
 
@@ -144,7 +147,10 @@ def test_not_codecov(cookies, tmp_path):
     with run_within_dir(tmp_path):
         result = cookies.bake(extra_context={"codecov": "n"})
         assert result.exit_code == 0
-        assert is_valid_yaml(result.project_path / ".github" / "workflows" / "main.yml")
+
+        main_yml_file = f"{result.project_path}/.github/workflows/main.yml"
+        assert is_valid_yaml(main_yml_file)
+        assert not file_contains_text(main_yml_file, "--cov --cov-config=pyproject.toml --cov-report=xml")
         assert not os.path.isfile(f"{result.project_path}/codecov.yaml")
         assert not os.path.isfile(f"{result.project_path}/.github/workflows/validate-codecov-config.yml")
 
@@ -192,3 +198,53 @@ def test_mypy(cookies, tmp_path):
         # check the tox file
         assert file_contains_text(f"{result.project_path}/tox.ini", "mypy")
         assert not file_contains_text(f"{result.project_path}/tox.ini", "pyright")
+
+
+def test_branch_name_prompt(cookies, tmp_path):
+    with run_within_dir(tmp_path):
+        result = cookies.bake(extra_context={"branch_name": "master"})
+
+        assert result.exit_code == 0
+        assert os.path.isfile(f"{result.project_path}/.github/workflows/master.yml")
+        assert os.path.isfile(f"{result.project_path}/.github/workflows/on-release-master.yml")
+
+
+def test_minor_python_version_prompt(cookies, tmp_path):
+    with run_within_dir(tmp_path):
+        result = cookies.bake(extra_context={"minor_python_version": "3.10"})
+
+        assert result.exit_code == 0
+
+        main_yml_file = f"{result.project_path}/.github/workflows/main.yml"
+        assert os.path.isfile(main_yml_file)
+        assert not file_contains_text(main_yml_file, "3.8")
+        assert not file_contains_text(main_yml_file, "3.9")
+        assert file_contains_text(main_yml_file, "3.10")
+        assert file_contains_text(main_yml_file, "3.11")
+        assert file_contains_text(main_yml_file, "3.12")
+
+        tox_ini_file = f"{result.project_path}/tox.ini"
+        assert os.path.isfile(tox_ini_file)
+        assert not file_contains_text(tox_ini_file, "3.8: py38")
+        assert not file_contains_text(tox_ini_file, "3.9: py39")
+        assert file_contains_text(tox_ini_file, "3.10: py310")
+        assert file_contains_text(tox_ini_file, "3.11: py311")
+        assert file_contains_text(tox_ini_file, "3.12: py312")
+
+        pyproject_toml_file = f"{result.project_path}/pyproject.toml"
+        assert os.path.isfile(pyproject_toml_file)
+        assert file_contains_text(pyproject_toml_file, ">=3.10,<3.13")
+
+
+def test_test_on_os_prompt(cookies, tmp_path):
+    with run_within_dir(tmp_path):
+        result = cookies.bake(extra_context={"test_on_windows": "y", "test_on_macos": "n", "test_on_ubuntu": "y"})
+
+        assert result.exit_code == 0
+
+        main_yml_file = f"{result.project_path}/.github/workflows/main.yml"
+
+        assert os.path.isfile(main_yml_file)
+        assert file_contains_text(main_yml_file, "windows-latest")
+        assert file_contains_text(main_yml_file, "ubuntu-latest")
+        assert not file_contains_text(main_yml_file, "macos-latest")

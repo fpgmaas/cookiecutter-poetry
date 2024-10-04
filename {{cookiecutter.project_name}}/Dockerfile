@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM python:3.9-slim-buster
+FROM python:{{cookiecutter.minor_python_version}}-slim-buster
 
 ENV POETRY_VERSION=1.4 \
     POETRY_VIRTUALENVS_CREATE=false

@@ -1,13 +1,13 @@
 .PHONY: install
 install: ## Install the poetry environment and install the pre-commit hooks
-	@echo "🚀 Creating virtual environment using pyenv and poetry"
+	@echo "🚀 Creating virtual environment poetry"
 	@poetry install
-	@ poetry run pre-commit install
+	@poetry run pre-commit install
 	@poetry shell
 
 .PHONY: check
 check: ## Run code quality tools.
-	@echo "🚀 Checking Poetry lock file consistency with 'pyproject.toml': Running poetry check --lock"
+	@echo "🚀 Checking Poetry lock file consistency with 'pyproject.toml'"
 	@poetry check --lock
 	@echo "🚀 Linting code: Running pre-commit"
 	@poetry run pre-commit run -a
@@ -34,7 +34,7 @@ build: clean-build ## Build wheel file using poetry
 
 .PHONY: clean-build
 clean-build: ## clean build artifacts
-	@rm -rf dist
+	@python -c "import shutil; shutil.rmtree('dist', ignore_errors=True)"
 
 {%- if cookiecutter.publish_to == "pypi"%}
 
@@ -46,8 +46,6 @@ publish: ## publish a release to pypi.
 	@echo "🚀 Publishing."
 	@poetry publish
 
-.PHONY: build-and-publish
-build-and-publish: build publish ## Build and publish.
 {%- elif cookiecutter.publish_to == "artifactory" %}
 
 .PHONY: publish
@@ -58,9 +56,10 @@ publish: ## Publish to the Artifactory repository using poetry. Requires ARTIFAC
 	@echo "🚀 Publishing."
 	@poetry publish --repository artifactory --username $(ARTIFACTORY_USERNAME) --password $(ARTIFACTORY_PASSWORD)
 
+{%- endif%}
+
 .PHONY: build-and-publish
 build-and-publish: build publish ## Build and publish.
-{%- endif%}
 
 {%- if cookiecutter.mkdocs == "y" %}
 

@@ -20,3 +20,29 @@ if not re.match(PROJECT_SLUG_REGEX, project_slug):
     )
     # Exit to cancel project
     sys.exit(1)
+
+# Update python version matrix
+"""
+{% set python_version_matrix = [] %}
+{% for ver in range(
+    cookiecutter.minor_python_version|replace("3.", "")|int, 13
+) %}
+{% set _ = python_version_matrix.append("3." ~ ver) %}
+{% endfor %}
+{{ cookiecutter.update({"_python_version_matrix": python_version_matrix}) }}
+"""
+
+# Update OS matrix
+"""
+{% set os_matrix = [] %}
+{% if cookiecutter.test_on_windows == "y" %}
+{% set _ = os_matrix.append("windows-latest") %}
+{% endif %}
+{% if cookiecutter.test_on_macos == "y" %}
+{% set _ = os_matrix.append("macos-latest") %}
+{% endif %}
+{% if cookiecutter.test_on_ubuntu == "y" or os_matrix|length == 0 %}
+{% set _ = os_matrix.append("ubuntu-latest") %}
+{% endif %}
+{{ cookiecutter.update({"_os_matrix": os_matrix}) }}
+"""

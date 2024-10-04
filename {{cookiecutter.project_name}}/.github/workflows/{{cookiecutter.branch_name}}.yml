@@ -1,9 +1,9 @@
-name: Main
+name: {{ cookiecutter.branch_name|capitalize }}
 
 on:
   push:
     branches:
-      - main
+      - {{ cookiecutter.branch_name }}
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
 
@@ -26,11 +26,12 @@ jobs:
         run: make check
 
   tests-and-type-check:
-    runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+        os: {{ cookiecutter._os_matrix }}
+        python-version: {{ cookiecutter._python_version_matrix }}
       fail-fast: false
+    runs-on: {% raw %}${{ matrix.os }}{% endraw %}
     defaults:
       run:
         shell: bash
@@ -44,14 +45,21 @@ jobs:
           python-version: {% raw %}${{ matrix.python-version }}{% endraw %}
 
       - name: Run tests
+{%- if cookiecutter.codecov == "y"%}
         run: poetry run pytest tests --cov --cov-config=pyproject.toml --cov-report=xml
+{%- else %}
+        run: poetry run pytest tests
+{%- endif %}
 
       - name: Check typing
         run: poetry run {{ cookiecutter.typechecking }}
+
 {% if cookiecutter.codecov == "y" %}
       - name: Upload coverage reports to Codecov with GitHub Action on Python 3.11
         uses: codecov/codecov-action@v4
         if: {% raw %}${{ matrix.python-version == '3.11' }}{% endraw %}
+        env:
+          CODECOV_TOKEN: {% raw %}${{ secrets.CODECOV_TOKEN }}{% endraw %}
 {%- endif %}
 
 {%- if cookiecutter.mkdocs == "y" %}
